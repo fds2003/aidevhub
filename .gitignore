@@ -1,0 +1,6 @@
+node_modules/
+.next/
+out/
+scripts/data/
+.env.local
+.env.production

@@ -3,6 +3,9 @@ import RSS from 'rss'
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from '@/lib/constants'
 import { getAllPosts } from '@/lib/content'
 
+/** 与 `output: 'export'` 兼容：构建时预渲染为静态 rss.xml */
+export const dynamic = 'force-static'
+
 export async function GET() {
   const posts = getAllPosts()
 

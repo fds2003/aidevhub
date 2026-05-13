@@ -36,13 +36,25 @@ type CadenceStat = {
 
 export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStatsProps) {
   const stats: (CountStat | CadenceStat)[] = [
-    { key: 'tools', kind: 'count', value: String(toolCount), unit: '款工具', icon: Code2 },
-    { key: 'posts', kind: 'count', value: String(articleCount), unit: '篇文章', icon: BookOpen },
+    {
+      key: 'tools',
+      kind: 'count',
+      value: String(toolCount),
+      unit: toolCount === 1 ? 'tool' : 'tools',
+      icon: Code2,
+    },
+    {
+      key: 'posts',
+      kind: 'count',
+      value: String(articleCount),
+      unit: articleCount === 1 ? 'article' : 'articles',
+      icon: BookOpen,
+    },
     {
       key: 'cadence',
       kind: 'cadence',
-      title: '每周更新',
-      sub: `工作流模板 ${workflowCount} 条，数字与内容库一致`,
+      title: 'Weekly updates',
+      sub: `${workflowCount} workflow template${workflowCount === 1 ? '' : 's'} · Totals match the content library`,
       icon: RefreshCw,
     },
   ]
@@ -84,7 +96,7 @@ export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStat
           </Button>
         </div>
 
-        {/* Stats — 真实数字，避免虚标 */}
+        {/* Stats — real counts from the content library */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '240ms' }}>
           {stats.map((stat) => (
             <div

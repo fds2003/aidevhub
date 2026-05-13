@@ -1,14 +1,14 @@
-/** MCP 宿主客户端对某服务器的典型接入方式（非官方认证，仅供选型参考） */
+/** Typical wiring level for a host against a given server (not vendor-certified; triage only). */
 export type MCPHostLevel = 'native' | 'stdio' | 'limited' | 'unknown'
 
 export type MCPServerCategory = 'official' | 'community' | 'commercial'
 
 export interface MCPServerHosts {
-  /** Claude Code / `claude mcp` 配置 */
+  /** Claude Code / `claude mcp` configuration */
   claudeCode: MCPHostLevel
-  /** Claude Desktop JSON 配置 */
+  /** Claude Desktop JSON configuration */
   claudeDesktop: MCPHostLevel
-  /** Cursor MCP 设置 */
+  /** Cursor MCP settings */
   cursor: MCPHostLevel
   /** Windsurf / Cascade MCP */
   windsurf: MCPHostLevel
@@ -17,15 +17,15 @@ export interface MCPServerHosts {
 export interface MCPServerEntry {
   slug: string
   name: string
-  /** 一句话 */
+  /** One-line summary */
   summary: string
   category: MCPServerCategory
-  /** npm / PyPI 安装或文档指引；以 `npx` / `uvx` 为主 */
+  /** npm / PyPI install or doc pointer; usually `npx` / `uvx` */
   installCommand: string
-  /** 典型使用场景（短句列表） */
+  /** Typical use cases (short bullets) */
   useCases: string[]
   repository: string
-  /** npm 包名（若有），便于检索 */
+  /** npm package name when applicable (search aid) */
   packageName?: string
   hosts: MCPServerHosts
   tags?: string[]

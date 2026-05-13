@@ -2,7 +2,7 @@ import type { Post } from '@/types'
 
 const LEGACY_CUTOFF = new Date('2025-01-01T00:00:00.000Z').getTime()
 
-/** 发布时间早于 2025-01-01 视为需在 2026 平台标注语境的旧文（可被 hideLegacy2026Banner 关闭） */
+/** Posts published before 2025-01-01 get the 2026 legacy banner unless hideLegacy2026Banner is set. */
 export function postNeedsLegacy2026Banner(post: Post): boolean {
   if (post.hideLegacy2026Banner) return false
   const t = new Date(post.publishedAt || post.createdAt).getTime()

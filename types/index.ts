@@ -33,9 +33,9 @@ export interface Post {
   updatedAt: string
   publishedAt?: string
   featured?: boolean
-  /** Markdown：2026 年对旧文的补充，展示在正文前 */
+  /** Optional 2026 editorial note (Markdown) shown before the article body */
   updateNote2026?: string
-  /** 为 true 时不展示「旧文默认提示框」（仍会展示 updateNote2026 若有） */
+  /** When true, skip the default legacy banner (custom updateNote2026 still renders if set) */
   hideLegacy2026Banner?: boolean
 }
 

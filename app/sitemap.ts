@@ -3,7 +3,7 @@ import { SITE_URL, CATEGORIES } from '@/lib/constants'
 import { getAllTools, getAllPosts, getAllWorkflows } from '@/lib/content'
 import { getMCPServerSlugs } from '@/lib/mcp-directory'
 
-/** `output: 'export'` 下需显式声明为静态生成 */
+/** With `output: 'export'`, mark routes as statically generated. */
 export const dynamic = 'force-static'
 
 function lastModifiedFrom(isoPrimary?: string, isoFallback?: string): Date {

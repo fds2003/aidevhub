@@ -1,5 +1,5 @@
 // Cloudflare D1 Database Client
-// 替代 Supabase，使用 Cloudflare D1
+// Cloudflare D1 instead of Supabase for this codebase path
 
 export interface Tool {
     id: number;

@@ -9,11 +9,11 @@ import {
   postShows2026UpdateSection,
 } from '@/lib/blog-legacy-2026'
 
-const DEFAULT_NOTE = `以下为 **2026 年** 编辑部提示，**不替代**下文历史正文：
+const DEFAULT_NOTE = `Editorial note for **2026**. This **does not replace** the historical article below.
 
-- 框架、API 与包名请以当前官方文档为准；文中代码多为教学脉络，迁移时请对照发行说明。
-- **Llama / RAG / Prompt** 等方向生态迭代快，可结合站内 **2026 年** 新文与工具目录交叉阅读。
-- 若你发现事实性过期表述，欢迎通过页脚渠道反馈，我们会迭代「更新说明」或拆新题单篇。`
+- Prefer current official docs for frameworks, APIs, and package names; sample code here is mostly pedagogical—check release notes when migrating.
+- **Llama / RAG / Prompt** ecosystems move fast; pair this post with **2026** articles and the tools directory on this site.
+- If you spot factual drift, reach out via the footer—we will refresh this note or spin up a follow-up post.`
 
 export function BlogPostUpdate2026({ post }: { post: Post }) {
   if (!postShows2026UpdateSection(post)) return null
@@ -31,10 +31,10 @@ export function BlogPostUpdate2026({ post }: { post: Post }) {
           <CalendarClock className="w-5 h-5 text-[#00D9FF] shrink-0 mt-0.5" />
           <div>
             <h2 className="text-lg font-semibold text-white tracking-tight">
-              2026 年更新说明
+              2026 update note
             </h2>
             <p className="text-xs text-zinc-500 font-mono mt-1">
-              {legacyOnly ? '原文发布时间较早 · 语境补充' : '编辑补充 · 与正文并列阅读'}
+              {legacyOnly ? 'Older publish date · context add-on' : 'Editorial add-on · read alongside the article'}
             </p>
           </div>
         </div>
@@ -48,9 +48,9 @@ export function BlogPostUpdate2026({ post }: { post: Post }) {
         </div>
 
         <p className="text-xs text-zinc-600 mt-4 font-mono">
-          当月新文示例：{' '}
+          Recent picks:{' '}
           <Link href="/blog/llm-observability-baseline-2026-05" className="text-[#00D9FF] hover:underline">
-            可观测性
+            Observability
           </Link>
           {' · '}
           <Link href="/blog/graph-rag-when-why-2026-05" className="text-[#00D9FF] hover:underline">
@@ -58,11 +58,11 @@ export function BlogPostUpdate2026({ post }: { post: Post }) {
           </Link>
           {' · '}
           <Link href="/blog/prompt-caching-tool-design-2026-05" className="text-[#00D9FF] hover:underline">
-            Prompt / 工具
+            Prompting & tools
           </Link>
           {' · '}
           <Link href="/blog/small-model-deployment-tradeoffs-2026-05" className="text-[#00D9FF] hover:underline">
-            小模型部署
+            Small-model deployment
           </Link>
         </p>
       </GlassCard>

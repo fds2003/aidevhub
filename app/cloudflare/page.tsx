@@ -66,8 +66,8 @@ export default function CloudflarePage() {
   return (
     <>
       <SEOHead
-        title="Cloudflare 专题 - 一站式边缘计算平台"
-        description="学习使用 Cloudflare 全家桶：Workers、R2、D1、KV、Pages、Queues 和 Workers AI。零 egress 费用，零冷启动，无限免费额度。"
+        title="Cloudflare hub — edge platform in one place"
+        description="Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers."
         tags={[
           'cloudflare',
           'cloudflare workers',

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { SITE_URL } from '@/lib/constants'
 
-/** `output: 'export'` 下需显式声明为静态生成 */
+/** With `output: 'export'`, mark routes as statically generated. */
 export const dynamic = 'force-static'
 
 function siteHost(): string {

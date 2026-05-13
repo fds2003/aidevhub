@@ -6,7 +6,7 @@ import { GlassButton } from "./glass-button";
 import { SearchInput } from "./search-input";
 import { ArrowRight, Terminal } from "lucide-react";
 
-/** 与 {@link computeContentStats} 结果绑定；禁止在此写死「40+」「52」等占位数字 */
+/** Must track {@link computeContentStats}; do not hard-code vanity counts like “40+”. */
 export function HeroSection({ stats }: { stats: SiteContentStats }) {
   const categoryLinks = [
     { name: "AI Coding", count: stats.aiCodingToolsCount, href: "/categories/ai-coding-tools" },

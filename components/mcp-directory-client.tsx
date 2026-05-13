@@ -12,9 +12,9 @@ import { cn } from '@/lib/utils'
 type FilterKey = 'all' | MCPServerCategory
 
 const CATEGORY_LABEL: Record<MCPServerCategory, string> = {
-  official: '官方参考',
-  community: '社区',
-  commercial: '商业',
+  official: 'Official reference',
+  community: 'Community',
+  commercial: 'Commercial',
 }
 
 function hostBadgeClass(level: MCPServerEntry['hosts'][keyof MCPServerEntry['hosts']]) {
@@ -33,13 +33,13 @@ function hostBadgeClass(level: MCPServerEntry['hosts'][keyof MCPServerEntry['hos
 function hostShort(level: MCPServerEntry['hosts'][keyof MCPServerEntry['hosts']]) {
   switch (level) {
     case 'native':
-      return '原生'
+      return 'Native'
     case 'stdio':
       return 'stdio'
     case 'limited':
-      return '有限'
+      return 'Limited'
     default:
-      return '待核'
+      return 'TBD'
   }
 }
 
@@ -87,7 +87,7 @@ export function McpDirectoryClient({ servers }: McpDirectoryClientProps) {
                   : 'border-[#1c1c2e] bg-[#111118] text-zinc-400 hover:border-zinc-600 hover:text-zinc-200'
               )}
             >
-              {key === 'all' ? '全部' : CATEGORY_LABEL[key]}
+              {key === 'all' ? 'All' : CATEGORY_LABEL[key]}
             </button>
           ))}
         </div>
@@ -96,15 +96,15 @@ export function McpDirectoryClient({ servers }: McpDirectoryClientProps) {
           <Input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="搜索名称、场景、包名、命令…"
+            placeholder="Search name, use case, package, command…"
             className="border-[#1c1c2e] bg-[#0a0a10] pl-9 text-zinc-200 placeholder:text-zinc-600"
-            aria-label="搜索 MCP 服务器"
+            aria-label="Search MCP servers"
           />
         </div>
       </div>
 
       <p className="text-sm text-zinc-500">
-        当前显示 <span className="text-zinc-300">{filtered.length}</span> / {servers.length} 条
+        Showing <span className="text-zinc-300">{filtered.length}</span> / {servers.length}
       </p>
 
       <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -138,12 +138,12 @@ export function McpDirectoryClient({ servers }: McpDirectoryClientProps) {
                   </span>
                 ))}
               </div>
-              <p className="mb-2 text-xs font-medium text-zinc-500">安装</p>
+              <p className="mb-2 text-xs font-medium text-zinc-500">Install</p>
               <pre className="mb-3 max-h-20 overflow-auto rounded-lg border border-[#1c1c2e] bg-black/40 p-2 text-[11px] leading-snug text-zinc-300 whitespace-pre-wrap break-all">
                 {s.installCommand}
               </pre>
               <div className="mb-3">
-                <p className="mb-1 text-xs font-medium text-zinc-500">场景</p>
+                <p className="mb-1 text-xs font-medium text-zinc-500">Use cases</p>
                 <ul className="list-inside list-disc text-xs text-zinc-500 space-y-0.5">
                   {s.useCases.slice(0, 3).map((u) => (
                     <li key={u}>{u}</li>
@@ -155,7 +155,7 @@ export function McpDirectoryClient({ servers }: McpDirectoryClientProps) {
                   href={`/mcp/${s.slug}`}
                   className="text-sm text-purple-400 hover:text-purple-300"
                 >
-                  详情
+                  Details
                 </Link>
                 <a
                   href={s.repository}
@@ -163,7 +163,7 @@ export function McpDirectoryClient({ servers }: McpDirectoryClientProps) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm text-zinc-500 hover:text-zinc-300"
                 >
-                  仓库
+                  Repository
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </div>
@@ -173,7 +173,7 @@ export function McpDirectoryClient({ servers }: McpDirectoryClientProps) {
       </ul>
 
       {filtered.length === 0 ? (
-        <p className="py-12 text-center text-zinc-500">没有匹配条目，请调整筛选或关键词。</p>
+        <p className="py-12 text-center text-zinc-500">No matches. Try another filter or search keyword.</p>
       ) : null}
     </div>
   )

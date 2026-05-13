@@ -20,9 +20,9 @@ interface PageProps {
 }
 
 const CATEGORY_LABEL = {
-  official: '官方参考',
-  community: '社区',
-  commercial: '商业',
+  official: 'Official reference',
+  community: 'Community',
+  commercial: 'Commercial',
 } as const
 
 const HOST_ROWS: { key: keyof MCPServerEntry['hosts']; label: string }[] = [
@@ -35,13 +35,13 @@ const HOST_ROWS: { key: keyof MCPServerEntry['hosts']; label: string }[] = [
 function levelLabel(level: MCPServerEntry['hosts'][keyof MCPServerEntry['hosts']]) {
   switch (level) {
     case 'native':
-      return '原生 / 一等文档'
+      return 'Native / first-class docs'
     case 'stdio':
-      return 'stdio 配置可用'
+      return 'stdio wiring supported'
     case 'limited':
-      return '部分支持或文档较少'
+      return 'Partial support or thin docs'
     default:
-      return '待自行核对'
+      return 'Verify against latest docs'
   }
 }
 
@@ -66,10 +66,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params
   const server = getMCPServerBySlug(slug)
   if (!server) {
-    return { title: '未找到' }
+    return { title: 'Not found' }
   }
   const title = `${server.name} MCP`
-  const desc = `${server.summary} 安装：${server.installCommand.slice(0, 120)}${server.installCommand.length > 120 ? '…' : ''}`
+  const desc = `${server.summary} Install: ${server.installCommand.slice(0, 120)}${server.installCommand.length > 120 ? '…' : ''}`
   const canonical = `${SITE_URL}/mcp/${slug}`
   return {
     title,
@@ -97,7 +97,7 @@ export default async function MCPServerDetailPage({ params }: PageProps) {
       <div className="container max-w-3xl py-10 md:py-14">
         <Breadcrumbs
           items={[
-            { label: 'MCP 目录', href: '/mcp' },
+            { label: 'MCP directory', href: '/mcp' },
             { label: server.name },
           ]}
         />
@@ -107,7 +107,7 @@ export default async function MCPServerDetailPage({ params }: PageProps) {
           className="mb-6 inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-purple-400"
         >
           <ArrowLeft className="h-4 w-4" />
-          返回目录
+          Back to directory
         </Link>
 
         <header className="mb-8">
@@ -126,7 +126,7 @@ export default async function MCPServerDetailPage({ params }: PageProps) {
         <GlassCard variant="default" padding="lg" className="mb-6">
           <div className="mb-2 flex items-center justify-between gap-2">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
-              安装命令
+              Install command
             </h2>
             <CopyToClipboard text={server.installCommand} />
           </div>
@@ -139,14 +139,14 @@ export default async function MCPServerDetailPage({ params }: PageProps) {
             rel="noopener noreferrer"
             className="mt-4 inline-flex items-center gap-1.5 text-sm text-purple-400 hover:text-purple-300"
           >
-            查看源码 / 文档
+            View source / docs
             <ExternalLink className="h-4 w-4" />
           </a>
         </GlassCard>
 
         <GlassCard variant="default" padding="lg" className="mb-6">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-500">
-            典型使用场景
+            Typical use cases
           </h2>
           <ul className="list-inside list-disc space-y-2 text-zinc-300">
             {server.useCases.map((u) => (
@@ -157,10 +157,11 @@ export default async function MCPServerDetailPage({ params }: PageProps) {
 
         <GlassCard variant="default" padding="lg" className="mb-6">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-500">
-            与常见客户端的对接方式（经验标注）
+            Client wiring (heuristic labels)
           </h2>
           <p className="mb-4 text-xs text-zinc-500">
-            以下为站内用于选型的粗粒度标签，非厂商认证；接入前请对照各客户端最新 MCP 文档。
+            Coarse-grained tags for internal triage only—not vendor certifications. Double-check each client’s latest
+            MCP documentation before shipping.
           </p>
           <ul className="divide-y divide-[#1c1c2e] border border-[#1c1c2e] rounded-lg overflow-hidden">
             {HOST_ROWS.map(({ key, label }) => (
@@ -187,7 +188,7 @@ export default async function MCPServerDetailPage({ params }: PageProps) {
         {related.length > 0 ? (
           <section aria-labelledby="related-mcp">
             <h2 id="related-mcp" className="mb-3 text-lg font-semibold text-zinc-100">
-              同类目条目
+              More in this category
             </h2>
             <ul className="space-y-2">
               {related.map((r) => (

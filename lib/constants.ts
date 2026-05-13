@@ -1,4 +1,8 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'
+
+/** Google Analytics 4 measurement ID (override via NEXT_PUBLIC_GA4_MEASUREMENT_ID) */
+export const GA4_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || 'G-XW0J813JL9'
 export const SITE_NAME = 'AI Dev Hub'
 export const SITE_DESCRIPTION = 'Your definitive resource for AI-powered development tools, MCP servers, AI agents, and workflow automation. Discover, compare, and master the best AI tools for modern developers.'
 export const SITE_KEYWORDS = 'AI coding tools, AI agents, MCP, Model Context Protocol, AI workflow automation, Cursor, Claude Code, Windsurf, GitHub Copilot, AI development tools'

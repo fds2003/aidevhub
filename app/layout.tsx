@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Layout } from '@/components/layout'
-import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
+import {
+  GA4_MEASUREMENT_ID,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from '@/lib/constants'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -69,6 +75,9 @@ export default function RootLayout({
       </head>
       <body className="dark">
         <Layout>{children}</Layout>
+        {process.env.NODE_ENV === 'production' && GA4_MEASUREMENT_ID ? (
+          <GoogleAnalytics gaId={GA4_MEASUREMENT_ID} />
+        ) : null}
       </body>
     </html>
   )

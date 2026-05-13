@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-d1
 title: "Cloudflare D1 - Serverless SQLite at the Edge"
-description: "The serverless SQLite database that runs at the edge. 5M free reads/day, global replication, and zero cold starts. PlanetScale alternative that doesn't cost a fortune."
+description: Serverless SQLite database running on Cloudflare edge network with 5M free reads/day, global replication, and zero cold starts.
 category: Cloudflare
 tags: [cloudflare, cloudflare-d1, d1-database, serverless-sqlite, edge-database, planetscale-alternative, supabase-alternative]
 website: https://developers.cloudflare.com/d1/

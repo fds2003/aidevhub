@@ -5,7 +5,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: SITE_NAME,
+    default: `${SITE_NAME} — AI Development Tools & Resources`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -15,12 +15,18 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://aidevhub.net',
     siteName: SITE_NAME,
-    title: SITE_NAME,
+    title: `${SITE_NAME} — AI Development Tools & Resources`,
     description: SITE_DESCRIPTION,
+    images: [{
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: SITE_NAME,
+    }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: SITE_NAME,
+    title: `${SITE_NAME} — AI Development Tools & Resources`,
     description: SITE_DESCRIPTION,
   },
   robots: {
@@ -37,7 +43,29 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate" type="application/rss+xml" title="AI Dev Hub" href="/rss.xml" />
+        <meta name="theme-color" content="#080810" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": SITE_NAME,
+              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net',
+              "description": SITE_DESCRIPTION,
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'}/tools?search={search_term_string}`
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
       <body className="dark">
         <Layout>{children}</Layout>

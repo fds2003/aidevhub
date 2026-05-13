@@ -32,7 +32,7 @@ export const ToolCard = forwardRef<HTMLDivElement, ToolCardProps>(
         <Link href={`/tools/${slug}`}>
           <GlassCard ref={ref} hover padding="sm" className={cn("flex items-center gap-4", className)} {...props}>
             <div className="w-10 h-10 rounded-lg bg-[#1c1c2e] border border-[#282838] flex items-center justify-center text-lg font-bold text-white shrink-0 font-mono">
-              {logo || name[0]}
+              {logo || (name ? name[0] : '?')}
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
@@ -64,7 +64,7 @@ export const ToolCard = forwardRef<HTMLDivElement, ToolCardProps>(
             <div className="flex items-center gap-3">
               {/* Logo */}
               <div className="w-12 h-12 rounded-xl bg-[#111118] border border-[#1c1c2e] flex items-center justify-center text-xl font-bold text-white group-hover:border-[#282838] transition-colors font-mono">
-                {logo || name[0]}
+                {logo || (name ? name[0] : '?')}
               </div>
               <div>
                 <div className="flex items-center gap-2">

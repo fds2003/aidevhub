@@ -15,9 +15,9 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const workflows = getAllWorkflows()
-  return workflows.map((wf) => ({ slug: wf.slug }))
+  return workflows.map((workflow) => ({ slug: workflow.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

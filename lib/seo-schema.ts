@@ -15,8 +15,8 @@ export function generateArticleSchema(post: Post, siteUrl: string) {
     headline: post.title,
     description: post.description,
     image: post.coverImage ? `${siteUrl}${post.coverImage}` : `${siteUrl}/og-image.png`,
-    datePublished: post.publishedAt,
-    dateModified: post.updatedAt || post.publishedAt,
+    datePublished: post.publishedAt ? new Date(post.publishedAt).toISOString() : new Date().toISOString(),
+    dateModified: post.updatedAt ? new Date(post.updatedAt).toISOString() : post.publishedAt ? new Date(post.publishedAt).toISOString() : new Date().toISOString(),
     author: {
       '@type': 'Person',
       name: post.author || 'AI Dev Hub',

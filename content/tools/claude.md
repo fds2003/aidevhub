@@ -1,7 +1,7 @@
 ---
 name: Claude
 slug: claude
-description: 如果你觉得ChatGPT注册和用起来比较麻烦的话，你可以使用Claude，注册起来没有ChatGPT那么的苛刻，而且回答问题的准确性并不比ChatGPT差。
+description: Anthropic's flagship AI assistant built on constitutional AI principles, offering advanced reasoning, long-context windows, and developer-friendly API access.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Claude
 
-如果你觉得ChatGPT注册和用起来比较麻烦的话，你可以使用Claude，注册起来没有ChatGPT那么的苛刻，而且回答问题的准确性并不比ChatGPT差。
+Claude is Anthropic's AI assistant that offers easier registration than alternatives while delivering high-quality responses and superior reasoning capabilities.
 
 ## Getting Started
 

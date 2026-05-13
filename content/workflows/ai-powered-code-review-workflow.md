@@ -11,46 +11,40 @@ tools:
   - claude-code
 steps:
   - order: 1
-    title: 产品介绍
+    title: Product Introduction
     description: >-
-      Learn how to 产品介绍 in this step of the AI-Powered Code Review Workflow
-      workflow.
-    prompt: Guide me through 产品介绍 for this workflow.
+      Learn how AI code review tools work in this step of the AI-Powered Code Review Workflow.
+    prompt: Guide me through setting up AI code review for this project.
     code: ''
   - order: 2
-    title: CodeGeeX
+    title: CodeGeeX Setup
     description: >-
-      Learn how to codegeex in this step of the AI-Powered Code Review Workflow
-      workflow.
-    prompt: Guide me through codegeex for this workflow.
+      Learn how to use CodeGeeX in this step of the AI-Powered Code Review Workflow.
+    prompt: Guide me through configuring CodeGeeX for code review.
     code: ''
   - order: 3
-    title: 特性
+    title: Key Features
     description: >-
-      Learn how to 特性 in this step of the AI-Powered Code Review Workflow
-      workflow.
-    prompt: Guide me through 特性 for this workflow.
+      Learn about the key features of AI code review tools in this step of the workflow.
+    prompt: Guide me through the key features available for this workflow.
     code: ''
   - order: 4
-    title: 产品介绍
+    title: Integration Guide
     description: >-
-      Learn how to 产品介绍 in this step of the AI-Powered Code Review Workflow
-      workflow.
-    prompt: Guide me through 产品介绍 for this workflow.
+      Learn how to integrate AI code review tools in this step of the workflow.
+    prompt: Guide me through integrating AI code review with my existing workflow.
     code: ''
   - order: 5
     title: ChatReviewer
     description: >-
-      Learn how to chatreviewer in this step of the AI-Powered Code Review
-      Workflow workflow.
-    prompt: Guide me through chatreviewer for this workflow.
+      Learn how to use ChatReviewer in this step of the AI-Powered Code Review Workflow.
+    prompt: Guide me through using ChatReviewer for automated code review.
     code: ''
   - order: 6
-    title: 特性
+    title: Best Practices
     description: >-
-      Learn how to 特性 in this step of the AI-Powered Code Review Workflow
-      workflow.
-    prompt: Guide me through 特性 for this workflow.
+      Learn the best practices for AI-powered code review in this step of the workflow.
+    prompt: Guide me through the best practices for this workflow.
     code: ''
 createdAt: '2026-05-09'
 updatedAt: '2026-05-09'
@@ -70,24 +64,23 @@ Use AI tools to automate and improve your code review process
 
 ## Steps
 
-### 1. 产品介绍
-Learn how to 产品介绍 in this step of the AI-Powered Code Review Workflow workflow.
+### 1. Product Introduction
+Learn how AI code review tools work in this step of the AI-Powered Code Review Workflow.
 
-### 2. CodeGeeX
-Learn how to codegeex in this step of the AI-Powered Code Review Workflow workflow.
+### 2. CodeGeeX Setup
+Learn how to use CodeGeeX in this step of the AI-Powered Code Review Workflow.
 
-### 3. 特性
-Learn how to 特性 in this step of the AI-Powered Code Review Workflow workflow.
+### 3. Key Features
+Learn about the key features of AI code review tools in this step of the workflow.
 
-### 4. 产品介绍
-Learn how to 产品介绍 in this step of the AI-Powered Code Review Workflow workflow.
+### 4. Integration Guide
+Learn how to integrate AI code review tools in this step of the workflow.
 
 ### 5. ChatReviewer
-Learn how to chatreviewer in this step of the AI-Powered Code Review Workflow workflow.
+Learn how to use ChatReviewer for automated code review in this step of the workflow.
 
-### 6. 特性
-Learn how to 特性 in this step of the AI-Powered Code Review Workflow workflow.
-
+### 6. Best Practices
+Learn the best practices for AI-powered code review in this step of the workflow.
 
 ## Conclusion
 

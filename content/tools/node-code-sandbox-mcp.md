@@ -1,7 +1,7 @@
 ---
 name: Node-code-sandbox-mcp
 slug: node-code-sandbox-mcp
-description: Node.js Sandbox MCP Server是一个用Docker隔离运行JavaScript代码并动态安装npm依赖的Node.js服务器。
+description: Docker-isolated Node.js execution environment for LLMs with on-demand npm dependency resolution, filesystem sandboxing, and configurable timeout controls.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Node-code-sandbox-mcp
 
-Node.js Sandbox MCP Server是一个用Docker隔离运行JavaScript代码并动态安装npm依赖的Node.js服务器。
+Node.js Sandbox MCP Server is a Docker-isolated Node.js server for running JavaScript code and dynamically installing npm dependencies.
 
 ## Getting Started
 

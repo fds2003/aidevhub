@@ -1,7 +1,7 @@
 ---
 name: Continue
 slug: continue
-description: Continue是领先的开源AI代码助手，支持在VS Code和JetBrains中构建自定义自动补全和聊天体验。
+description: Open-source AI code assistant framework for VS Code and JetBrains, supporting custom autocomplete models and configurable multi-provider chat backends.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Continue
 
-Continue是领先的开源AI代码助手，支持在VS Code和JetBrains中构建自定义自动补全和聊天体验。
+Continue is the leading open-source AI code assistant that supports building custom autocomplete and chat experiences in VS Code and JetBrains IDEs.
 
 ## Getting Started
 

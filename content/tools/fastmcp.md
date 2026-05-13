@@ -1,7 +1,7 @@
 ---
 name: Fastmcp
 slug: fastmcp
-description: FastMCP是一个简洁高效的Python库，用于快速构建MCP服务器，支持LLMs功能。
+description: Minimal Python framework for building MCP-compliant servers in under 20 lines of code, with built-in tool registration and schema validation.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Fastmcp
 
-FastMCP是一个简洁高效的Python库，用于快速构建MCP服务器，支持LLMs功能。
+FastMCP is a clean, efficient Python library for rapidly building MCP servers that support LLM functionality.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: Claude Code
 slug: claude-code
-description: Anthropic's CLI tool for AI-assisted coding
+description: Anthropic's terminal-native AI coding agent that operates directly on your codebase with file editing, shell command execution, and Git integration.
 longDescription: Claude Code is Anthropic's official CLI tool that brings Claude's AI capabilities directly to your terminal. It's designed for developers who prefer working in the command line.
 category: ai-coding-tools
 tags: [ai, cli, anthropic, claude, terminal]

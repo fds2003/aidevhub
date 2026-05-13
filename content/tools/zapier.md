@@ -1,7 +1,7 @@
 ---
 name: Zapier
 slug: zapier
-description: '工作流程自动化软件,连接6000+应用程序'
+description: Enterprise workflow automation platform connecting 6,000+ SaaS applications through trigger-action pipelines with AI-powered natural language step composition.
 longDescription: ''
 category: ai-workflow
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Zapier
 
-工作流程自动化软件,连接6000+应用程序
+Zapier is a workflow automation software that connects 6000+ applications for seamless data integration.
 
 ## Getting Started
 

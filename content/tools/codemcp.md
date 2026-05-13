@@ -1,7 +1,7 @@
 ---
 name: Codemcp
 slug: codemcp
-description: codemcp是Claude Pro的编程助手，可直接编辑代码、运行测试，告别代码复制，并通过Git确保修改可回滚。
+description: Claude Pro add-on performing direct file edits and test execution with Git-tracked rollback capabilities for risk-free AI-assisted development.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Codemcp
 
-codemcp是Claude Pro的编程助手，可直接编辑代码、运行测试，告别代码复制，并通过Git确保修改可回滚。
+Codemcp is a Claude Pro coding assistant that can directly edit code, run tests, and ensure modifications are reversible through Git.
 
 ## Getting Started
 

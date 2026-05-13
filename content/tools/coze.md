@@ -1,7 +1,7 @@
 ---
 name: Coze
 slug: coze
-description: 字节推出了国内版的 Coze 扣子
+description: ByteDance's AI agent builder platform supporting custom bot creation, plugin ecosystems, and multi-channel deployment for conversational AI applications.
 longDescription: ''
 category: ai-agents
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Coze
 
-字节推出了国内版的 Coze 扣子
+Coze is ByteDance's AI bot building platform that lets you create, customize, and deploy AI assistants.
 
 ## Getting Started
 

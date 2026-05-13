@@ -1,7 +1,7 @@
 ---
 name: codegeex
 slug: codegeex
-description: 多语言代码生成模型
+description: Multilingual AI code generation model supporting 20+ languages with context-aware completions and natural language-to-code translation.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # codegeex
 
-多语言代码生成模型
+CodeGex is a multilingual code generation model that helps developers write code faster with AI assistance.
 
 ## Getting Started
 

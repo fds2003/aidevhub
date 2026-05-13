@@ -1,7 +1,7 @@
 ---
 name: Praisonai
 slug: praisonai
-description: '先进的、低代码的中心化框架，旨在简化多智能体系统(Large Language Models, LLMs)的创建和协调工作'
+description: Low-code multi-agent orchestration framework supporting role-based LLM agents, tool registration, and inter-agent delegation with visual monitoring.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Praisonai
 
-先进的、低代码的中心化框架，旨在简化多智能体系统(Large Language Models, LLMs)的创建和协调工作
+PraisonAI is an advanced, low-code centralized framework designed to simplify creating and orchestrating multi-agent systems (LLMs).
 
 ## Getting Started
 

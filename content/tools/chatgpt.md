@@ -1,7 +1,7 @@
 ---
 name: chatgpt
 slug: chatgpt
-description: 注册和登录GooGPT需要使用魔法上网，并使用国外IP地址进行访问。大陆、香港、澳门等地区无法使用，但是日本、美国和新加坡等地区可以使用。
+description: Conversational AI assistant by OpenAI for real-time code generation, debugging, and technical problem-solving through natural language interaction.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # chatgpt
 
-注册和登录GooGPT需要使用魔法上网，并使用国外IP地址进行访问。大陆、香港、澳门等地区无法使用，但是日本、美国和新加坡等地区可以使用。
+ChatGPT is a conversational AI assistant that helps developers with coding, debugging, and problem-solving through natural language interaction.
 
 ## Getting Started
 

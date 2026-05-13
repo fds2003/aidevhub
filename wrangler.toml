@@ -1,11 +1,11 @@
 name = "aidevhub-api"
-main = "src/workers/index.ts"
+main = "workers/index.ts"
 compatibility_date = "2024-01-01"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "aidevhub-db"
-database_id = "YOUR_D1_DATABASE_ID"
+database_id = "bc70e4b8-2bff-40ae-91c9-3b2867d3a10a"
 
 [[r2_buckets]]
 binding = "ASSETS"
@@ -13,7 +13,11 @@ bucket_name = "aidevhub-assets"
 
 [[kv_namespaces]]
 binding = "CACHE"
-id = "YOUR_KV_ID"
+id = "d10501900f204e5ea0fcb557b5d49f19"
 
 [vars]
 NEXT_PUBLIC_SITE_URL = "https://aidevhub.net"
+
+# Cloudflare Pages 配置
+pages_build_output_dir = ".next"
+

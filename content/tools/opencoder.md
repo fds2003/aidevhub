@@ -1,7 +1,7 @@
 ---
 name: Opencoder
 slug: opencoder
-description: OpenCoder是Claude Code的开源替代品，基于Vercel AI SDK，支持跨平台和多种LLM，提供强大的工具和MCP功能。
+description: Open-source Claude Code alternative built on Vercel AI SDK with pluggable LLM providers, multi-platform support, and extensible tool/MCP integration.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Opencoder
 
-OpenCoder是Claude Code的开源替代品，基于Vercel AI SDK，支持跨平台和多种LLM，提供强大的工具和MCP功能。
+OpenCoder is an open-source alternative to Claude Code, built on the Vercel AI SDK, supporting cross-platform and multiple LLMs.
 
 ## Getting Started
 

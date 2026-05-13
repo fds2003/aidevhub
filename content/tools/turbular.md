@@ -1,7 +1,7 @@
 ---
 name: Turbular
 slug: turbular
-description: Turbular是一个开源模型上下文协议(MCP)服务器，为LLM提供统一API，连接多种数据库，实现无缝数据交互。
+description: Open-source MCP server multiplexer providing a unified database-agnostic query interface for PostgreSQL, MySQL, SQLite, and DuckDB via LLMs.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Turbular
 
-Turbular是一个开源模型上下文协议(MCP)服务器，为LLM提供统一API，连接多种数据库，实现无缝数据交互。
+Turbular is an open-source Model Context Protocol (MCP) server that provides a unified API for LLMs to connect with multiple databases.
 
 ## Getting Started
 

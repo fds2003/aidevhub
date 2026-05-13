@@ -1,7 +1,7 @@
 ---
 name: Facebook-ads-library-mcp
 slug: facebook-ads-library-mcp
-description: Facebook广告库MCP服务器
+description: MCP server providing programmatic access to the Facebook Ads Library for ad intelligence, competitive analysis, and creative research.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Facebook-ads-library-mcp
 
-Facebook广告库MCP服务器
+Facebook Ads Library MCP Server provides access to the Facebook Ads Library for ad data and analytics.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: GitHub Copilot
 slug: github-copilot
-description: Microsoft's AI pair programmer
+description: Microsoft and OpenAI AI pair programmer providing real-time code suggestions and chat-based development assistance across all major editors.
 longDescription: GitHub Copilot is an AI pair programmer developed by GitHub and Microsoft. It uses OpenAI's Codex to suggest code completions and entire functions.
 category: ai-coding-tools
 tags: [ai, code-completion, microsoft, github, autocomplete]

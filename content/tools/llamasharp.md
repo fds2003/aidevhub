@@ -1,9 +1,8 @@
 ---
 name: Llamasharp
 slug: llamasharp
-description: >-
-  LLamaSharp是[llama.cpp](https://github.com/ggerganov/llama.cpp)的C#/.NET绑定，它提供了在本地设备上使用C#/.NET部署LLaMA模型的高级API，并且支持在Windows
-longDescription: ''
+description: High-performance C#/.NET binding for llama.cpp, providing managed APIs for local LLM inference on Windows, Linux, and macOS with GPU acceleration.
+longDescription: ""
 category: ai-coding-tools
 tags:
   - ai-coding-tools
@@ -21,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Llamasharp
 
-LLamaSharp是[llama.cpp](https://github.com/ggerganov/llama.cpp)的C#/.NET绑定，它提供了在本地设备上使用C#/.NET部署LLaMA模型的高级API，并且支持在Windows
+LLamaSharp is the C#/.NET binding for llama.cpp, providing high-level APIs for deploying LLaMA models locally on devices.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-r2
 title: "Cloudflare R2 - S3-Compatible Storage Without Egress Fees"
-description: "Store unlimited data in Cloudflare R2 with zero egress fees. S3-compatible API means easy migration. 10GB free storage,永远 zero egress."
+description: S3-compatible object storage with zero egress fees and 10GB free tier. Migrate existing S3 workloads without code changes.
 category: Cloudflare
 tags: [cloudflare, cloudflare-r2, r2-storage, s3-alternative, object-storage, zero-egress, aws-s3-alternative]
 website: https://developers.cloudflare.com/r2/

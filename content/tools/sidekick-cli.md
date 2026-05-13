@@ -1,7 +1,7 @@
 ---
 name: Sidekick-cli
 slug: sidekick-cli
-description: Sidekick是一款基于CLI的开源AI工具，旨在提供灵活的LLM选择和强大的agentic工作流，助力开发者提高效率。
+description: Terminal-native AI assistant with pluggable LLM backends, agentic workflow execution, and filesystem integration for developer productivity tasks.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Sidekick-cli
 
-Sidekick是一款基于CLI的开源AI工具，旨在提供灵活的LLM选择和强大的agentic工作流，助力开发者提高效率。
+Sidekick is a CLI-based open-source AI tool designed to offer flexible LLM selection and powerful agentic workflows for developer productivity.
 
 ## Getting Started
 

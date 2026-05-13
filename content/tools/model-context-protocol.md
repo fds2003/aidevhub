@@ -1,7 +1,7 @@
 ---
 name: Model-context-protocol
 slug: model-context-protocol
-description: Anthropic推出的模型上下文协议(MCP)是一种新标准，旨在连接AI助手与各种数据源，优化响应质量。
+description: Anthropic open standard establishing bidirectional communication between AI assistants and external tools, data sources, and services.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Model-context-protocol
 
-Anthropic推出的模型上下文协议(MCP)是一种新标准，旨在连接AI助手与各种数据源，优化响应质量。
+Anthropic's Model Context Protocol (MCP) is a new standard for connecting AI assistants with various data sources to optimize response quality.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-queues
 title: "Cloudflare Queues - Durable Message Queue Without the Complexity"
-description: "Send messages between services without managing infrastructure. SQS and RabbitMQ alternative with zero egress fees. At-least-once delivery guaranteed."
+description: Managed message queue service with at-least-once delivery guarantees, zero egress fees, and SQS-compatible semantics for distributed systems.
 category: Cloudflare
 tags: [cloudflare, cloudflare-queues, message-queue, sqs-alternative, rabbitmq-alternative, durable-queue, zero-egress]
 website: https://developers.cloudflare.com/queues/

@@ -12,8 +12,8 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
-export async function generateStaticParams() {
-  return CATEGORIES.map((category) => ({ slug: category.slug }))
+export function generateStaticParams() {
+  return CATEGORIES.map((cat) => ({ slug: cat.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

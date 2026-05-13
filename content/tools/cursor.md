@@ -1,7 +1,7 @@
 ---
 name: Cursor
 slug: cursor
-description: The AI-first code editor built for pair programming with AI
+description: AI-native code editor forked from VS Code with deep IDE integration, multi-file editing, and agentic code generation powered by Claude and GPT-4.
 longDescription: Cursor is an AI-first code editor that combines the power of AI with a familiar VS Code interface. It features AI pair programming, intelligent code completion, and natural language editing.
 category: ai-coding-tools
 tags: [ai, code-editor, vscode, pair-programming, autocomplete]

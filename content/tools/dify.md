@@ -1,7 +1,7 @@
 ---
 name: Dify
 slug: dify
-description: 一个用于开发LLM(大型语言模型)应用的平台
+description: Visual workflow platform for building LLM-powered applications with drag-and-drop pipeline design, RAG integration, and one-click deployment.
 longDescription: ''
 category: ai-agents
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Dify
 
-一个用于开发LLM(大型语言模型)应用的平台
+Dify is a platform for developing LLM (Large Language Model) applications with an intuitive visual workflow builder.
 
 ## Getting Started
 

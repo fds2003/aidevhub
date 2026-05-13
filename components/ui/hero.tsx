@@ -90,7 +90,7 @@ export function HeroSection() {
               href={cat.href}
               className="group px-4 py-2 bg-[#111118] border border-[#1c1c2e] rounded-lg text-sm text-zinc-400 hover:text-[#00D9FF] hover:border-[#00D9FF]/30 transition-all duration-150 font-mono"
             >
-              <span className="text-[#00D9FF] opacity-0 group-hover:opacity-100 transition-opacity">// </span>
+              <span className="text-[#00D9FF] opacity-0 group-hover:opacity-100 transition-opacity">{'// '}</span>
               {cat.name}
               <span className="ml-2 text-zinc-600 group-hover:text-[#00D9FF]/40 transition-colors">({cat.count})</span>
             </Link>

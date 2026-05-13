@@ -1,7 +1,7 @@
 ---
 name: Grok
 slug: grok
-description: 马斯克旗下xAI推出的人工智能助手
+description: xAI conversational AI with real-time web knowledge access providing technically detailed responses with low-latency inference and personality.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Grok
 
-马斯克旗下xAI推出的人工智能助手
+Grok is an AI assistant developed by xAI, Elon Musk's AI company, designed for natural conversation and problem-solving.
 
 ## Getting Started
 

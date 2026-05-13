@@ -1,7 +1,7 @@
 ---
 name: Translatebookwithllm
 slug: translatebookwithllm
-description: TranslateBookWithLLM是基于Ollama API的Python应用，用于本地LLM驱动的大规模文本翻译，提供Web和CLI界面。
+description: Ollama-powered batch translation tool providing CLI and web interfaces for LLM-driven large-scale document translation with context preservation.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Translatebookwithllm
 
-TranslateBookWithLLM是基于Ollama API的Python应用，用于本地LLM驱动的大规模文本翻译，提供Web和CLI界面。
+TranslateBookWithLLM is a Python application based on the Ollama API for local LLM-driven large-scale text translation with Web and CLI interfaces.
 
 ## Getting Started
 

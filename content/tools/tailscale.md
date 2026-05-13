@@ -1,7 +1,7 @@
 ---
 slug: tailscale
 title: "Tailscale - Zero-Config VPN for Teams"
-description: "Mesh VPN that just works. Connect all your devices securely with WireGuard. Free for personal use, 100 devices included."
+description: WireGuard-based mesh VPN offering zero-configuration networking across 100 devices for free, with built-in ACLs and SSO authentication.
 category: Tools
 tags: [tailscale, vpn, wireguard, networking, self-hosted, homelab, zero-trust, mesh-vpn]
 website: https://tailscale.com/

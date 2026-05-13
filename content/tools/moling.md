@@ -1,7 +1,7 @@
 ---
 name: Moling
 slug: moling
-description: MoLing是一个免依赖的MCP服务器，通过系统API实现文件操作、命令执行和浏览器控制。
+description: Zero-dependency MCP server exposing system-level file operations, command execution, and browser automation through a unified tool interface.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Moling
 
-MoLing是一个免依赖的MCP服务器，通过系统API实现文件操作、命令执行和浏览器控制。
+MoLing is a dependency-free MCP server that enables file operations, command execution, and browser control through system APIs.
 
 ## Getting Started
 

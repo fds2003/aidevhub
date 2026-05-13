@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-workers-ai
 title: "Cloudflare Workers AI - Run AI Models at the Edge"
-description: "Run open-source AI models globally with no GPU setup required. Llama 3, Mistral, Stable Diffusion and more. 10k free neurons/day. OpenAI alternative."
+description: Serverless AI inference platform running Llama 3, Mistral, and Stable Diffusion at the edge with 10K free neurons/day and zero GPU management.
 category: Cloudflare
 tags: [cloudflare, workers-ai, edge-ai, llama3, openai-alternative, replicate-alternative, stable-diffusion, local-llm-alternative]
 website: https://developers.cloudflare.com/workers-ai/

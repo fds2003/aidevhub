@@ -1,7 +1,7 @@
 ---
 name: Llms-from-scratch
 slug: llms-from-scratch
-description: 这本书通过代码示例，详细介绍从零开始构建大型语言模型的方法。
+description: Hands-on guide building transformer-based language models from scratch using NumPy and PyTorch, covering tokenization through multi-GPU training parallelism.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Llms-from-scratch
 
-这本书通过代码示例，详细介绍从零开始构建大型语言模型的方法。
+This book provides detailed, code-driven instructions on building large language models from scratch.
 
 ## Getting Started
 

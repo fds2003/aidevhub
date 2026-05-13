@@ -25,7 +25,7 @@ export function AffiliateLink({
     const handleClick = useCallback(async () => {
         // Track affiliate click
         try {
-            await fetch("/api/track", {
+            await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/track`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

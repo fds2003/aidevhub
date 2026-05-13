@@ -1,7 +1,7 @@
 ---
 name: Layernorm
 slug: layernorm
-description: GitHub上karpathy/llm.c项目中关于layernorm的文档
+description: Reference implementation and mathematical derivation of layer normalization from karpathy/llm.c, optimized for educational clarity and GPU performance.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Layernorm
 
-GitHub上karpathy/llm.c项目中关于layernorm的文档
+Documentation about layernorm from the karpathy/llm.c GitHub project.
 
 ## Getting Started
 

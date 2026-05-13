@@ -1,7 +1,7 @@
 ---
 name: Pocketflow-template-python
 slug: pocketflow-template-python
-description: Pocket Flow项目模板利用100行LLM框架，配合编辑器，助你通过Agentic Coding构建LLM项目。
+description: Scaffolded project template for Pocket Flow integrating editor workflows with a sub-200-line LLM orchestration core for agentic coding.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Pocketflow-template-python
 
-Pocket Flow项目模板利用100行LLM框架，配合编辑器，助你通过Agentic Coding构建LLM项目。
+Pocket Flow project template uses a 100-line LLM framework with Agentic Coding to help you build LLM projects efficiently.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: Claude-code-mcp
 slug: claude-code-mcp
-description: Claude Code MCP Server是一个MCP服务器，它允许以绕过权限的方式运行Claude Code，从而增强 Claude 的代码处理能力。
+description: MCP server providing privileged code execution capabilities to Claude Code, enabling bypass-restricted operations for advanced development workflows.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Claude-code-mcp
 
-Claude Code MCP Server是一个MCP服务器，它允许以绕过权限的方式运行Claude Code，从而增强 Claude 的代码处理能力。
+Claude Code MCP Server is an MCP server that allows running Claude Code with bypass permissions to enhance code processing capabilities.
 
 ## Getting Started
 

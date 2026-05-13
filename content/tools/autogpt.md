@@ -1,7 +1,7 @@
 ---
 name: Autogpt
 slug: autogpt
-description: 让每个人都可以使用和构建的可访问人工智能的愿景。
+description: Autonomous AI agent that decomposes complex goals into actionable sub-tasks, leveraging tools and internet access for self-directed execution.
 longDescription: ''
 category: ai-agents
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Autogpt
 
-让每个人都可以使用和构建的可访问人工智能的愿景。
+AutoGPT is an open-source autonomous AI agent designed to accomplish tasks by breaking them down into sub-tasks and using various tools and internet access.
 
 ## Getting Started
 

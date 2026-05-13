@@ -1,7 +1,7 @@
 ---
 name: Swe-agent
 slug: swe-agent
-description: 利用语言模型（LM），比如GPT-4，将其变成能够修复GitHub仓库中的BUG和问题的软件工程代理
+description: Autonomous software engineering agent using LLM-guided program synthesis and interactive debug cycles to resolve GitHub issues with executable patches.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Swe-agent
 
-利用语言模型（LM），比如GPT-4，将其变成能够修复GitHub仓库中的BUG和问题的软件工程代理
+SWE-Agent uses language models like GPT-4 to act as software engineering agents that can fix bugs and resolve issues in GitHub repositories.
 
 ## Getting Started
 

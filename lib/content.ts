@@ -3,7 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import type { Tool, Post, Workflow } from '@/types'
 
-const CONTENT_DIR = path.join(process.cwd(), 'src/content')
+const CWD = process.cwd()
+const CONTENT_DIR = path.join(CWD, 'content')
 
 // Get all files from a directory
 function getFiles(dir: string): string[] {
@@ -18,6 +19,15 @@ function parseFrontmatter<T>(filePath: string): T & { content?: string } {
   return { ...data, content } as T & { content?: string }
 }
 
+// Normalize tool data: handle files using 'title' instead of 'name'
+function normalizeTool(data: Tool): Tool {
+  const raw = data as unknown as Record<string, unknown>
+  if (!raw.name && raw.title) {
+    raw.name = raw.title as string
+  }
+  return raw as unknown as Tool
+}
+
 // Tools
 export function getAllTools(): Tool[] {
   const toolsDir = path.join(CONTENT_DIR, 'tools')
@@ -25,14 +35,14 @@ export function getAllTools(): Tool[] {
   
   return files.map((file) => {
     const filePath = path.join(toolsDir, file)
-    return parseFrontmatter<Tool>(filePath)
+    return normalizeTool(parseFrontmatter<Tool>(filePath))
   })
 }
 
 export function getToolBySlug(slug: string): Tool | null {
   const filePath = path.join(CONTENT_DIR, 'tools', `${slug}.md`)
   if (!fs.existsSync(filePath)) return null
-  return parseFrontmatter<Tool>(filePath)
+  return normalizeTool(parseFrontmatter<Tool>(filePath))
 }
 
 export function getToolsByCategory(category: string): Tool[] {

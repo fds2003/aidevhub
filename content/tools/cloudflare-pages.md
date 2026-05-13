@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-pages
 title: "Cloudflare Pages - Free Static Hosting with Infinite Scale"
-description: "Deploy unlimited static sites for free. Instant preview deployments, built-in CDN, zero config. The Netlify and Vercel killer."
+description: Unlimited static site hosting with instant preview deployments, global CDN, and seamless Workers integration. Free alternative to Vercel and Netlify.
 category: Cloudflare
 tags: [cloudflare, cloudflare-pages, static-hosting, vercel-alternative, netlify-alternative, free-hosting, jamstack]
 website: https://pages.cloudflare.com/
@@ -22,7 +22,7 @@ pros:
   - "Branch previews work great"
 cons:
   - "Static only (use Workers for dynamic)"
-  - "No server-side rendering by default (use Workers)")
+  - "No server-side rendering by default (use Workers)"
   - "Build minutes limited (500/min on free)"
 alternatives:
   - Vercel

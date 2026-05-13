@@ -1,7 +1,7 @@
 ---
 name: Langchain
 slug: langchain
-description: LangChain 是一个用于开发基于语言模型的应用程序的框架，使得应用程序能够具备上下文感知和推理的能力。
+description: Production framework for building context-aware LLM applications with composable chains, agent orchestration, RAG pipelines, and tool-use abstractions.
 longDescription: ''
 category: ai-agents
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Langchain
 
-LangChain 是一个用于开发基于语言模型的应用程序的框架，使得应用程序能够具备上下文感知和推理的能力。
+LangChain is a framework for developing language model-powered applications, enabling context-aware and reasoning capabilities.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: Zin-mcp-client
 slug: zin-mcp-client
-description: 轻量级CLI MCP客户端：桥接本地LLM与MCP服务器
+description: Lightweight terminal-based MCP client bridging local LLM runtimes with remote MCP-compatible tool servers through stdin/stdout transport.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Zin-mcp-client
 
-轻量级CLI MCP客户端：桥接本地LLM与MCP服务器
+Zin MCP Client is a lightweight CLI MCP client that bridges local LLMs with MCP servers for enhanced functionality.
 
 ## Getting Started
 

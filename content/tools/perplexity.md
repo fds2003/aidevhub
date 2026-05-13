@@ -1,7 +1,7 @@
 ---
 name: Perplexity
 slug: perplexity
-description: 英伟达CEO黄仁勋频繁使用，一款挑战谷歌搜索引擎主导地位的AI工具
+description: AI-native search engine combining real-time web indexing with LLM synthesis for citation-backed answers across technical and general knowledge domains.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Perplexity
 
-英伟达CEO黄仁勋频繁使用，一款挑战谷歌搜索引擎主导地位的AI工具
+Perplexity AI is an AI-powered search tool that challenges Google's search engine dominance with real-time answers.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: Copilotforxcode
 slug: copilotforxcode
-description: GitHub Copilot for Xcode 是一款智能代码建议工具，助力开发者提升编码效率。
+description: First-party GitHub Copilot integration for Xcode providing inline code completions, chat assistance, and Swift/SwiftUI-aware suggestions.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Copilotforxcode
 
-GitHub Copilot for Xcode 是一款智能代码建议工具，助力开发者提升编码效率。
+GitHub Copilot for Xcode is an intelligent code suggestion tool that helps developers boost coding efficiency directly in Xcode.
 
 ## Getting Started
 

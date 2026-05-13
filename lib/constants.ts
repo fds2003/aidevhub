@@ -1,7 +1,7 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'
 export const SITE_NAME = 'AI Dev Hub'
-export const SITE_DESCRIPTION = 'Your premier destination for AI Coding Tools, MCP Ecosystem, AI Agents, and Workflow automation. Discover the best AI tools for developers.'
-export const SITE_KEYWORDS = 'AI coding tools, AI agents, MCP, Model Context Protocol, AI workflow, Cursor, Claude Code, Windsurf, Copilot'
+export const SITE_DESCRIPTION = 'Your definitive resource for AI-powered development tools, MCP servers, AI agents, and workflow automation. Discover, compare, and master the best AI tools for modern developers.'
+export const SITE_KEYWORDS = 'AI coding tools, AI agents, MCP, Model Context Protocol, AI workflow automation, Cursor, Claude Code, Windsurf, GitHub Copilot, AI development tools'
 export const AUTHOR = 'AI Dev Hub'
 export const AUTHOR_EMAIL = 'hello@aidevhub.net'
 

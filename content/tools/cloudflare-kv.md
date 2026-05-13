@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-kv
 title: "Cloudflare KV - Global Key-Value Store"
-description: "The global key-value store that reads in milliseconds. 1M free reads/day, built for high-read workloads. Redis alternative that runs at the edge."
+description: Global low-latency key-value store with 1M free reads/day, designed for high-read workloads as a Redis alternative at the edge.
 category: Cloudflare
 tags: [cloudflare, cloudflare-kv, kv-store, key-value, redis-alternative, edge-cache, global-cache]
 website: https://developers.cloudflare.com/kv/

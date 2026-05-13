@@ -1,10 +1,8 @@
 ---
 name: Gemini-ai-code-reviewer
 slug: gemini-ai-code-reviewer
-description: >-
-  Gemini AI Code Reviewer 是一个 GitHub Action，利用 Google 的 Gemini AI
-  自动审核拉取请求并提供改进建议。
-longDescription: ''
+description: GitHub Action that applies Google Gemini multi-modal code analysis to pull requests, generating contextual improvement suggestions across the diff.
+longDescription: ""
 category: comparisons
 tags:
   - comparisons
@@ -22,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Gemini-ai-code-reviewer
 
-Gemini AI Code Reviewer 是一个 GitHub Action，利用 Google 的 Gemini AI 自动审核拉取请求并提供改进建议。
+Gemini AI Code Reviewer is a GitHub Action that leverages Google's Gemini AI to automatically review pull requests and provide improvement suggestions.
 
 ## Getting Started
 

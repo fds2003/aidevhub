@@ -1,7 +1,7 @@
 ---
 slug: cloudflare-workers
 title: "Cloudflare Workers - Serverless at the Edge"
-description: "Deploy serverless functions globally in 30+ regions with 0ms cold starts. Cloudflare Workers lets you run JavaScript, Python, Rust, and Go at the edge with no egress fees."
+description: Serverless edge computing platform supporting JavaScript, Python, Rust, and Go across 300+ global data centers with sub-millisecond cold starts.
 category: Cloudflare
 tags: [cloudflare, cloudflare-workers, serverless, edge-computing, lambda-alternative, vercel-functions-alternative, zero-cold-start]
 website: https://workers.cloudflare.com/

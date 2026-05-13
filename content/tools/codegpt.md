@@ -1,7 +1,7 @@
 ---
 name: Codegpt
 slug: codegpt
-description: JetBrains插件，用来自动生成代码
+description: JetBrains IDE plugin that generates code from natural language prompts, supporting completions across major .NET, Java, and Python frameworks.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Codegpt
 
-JetBrains插件，用来自动生成代码
+CodeGPT is a JetBrains plugin that automatically generates code from natural language descriptions.
 
 ## Getting Started
 

@@ -14,7 +14,7 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const tools = getAllTools()
   return tools.map((tool) => ({ slug: tool.slug }))
 }

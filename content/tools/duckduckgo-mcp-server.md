@@ -1,7 +1,7 @@
 ---
 name: Duckduckgo-mcp-server
 slug: duckduckgo-mcp-server
-description: DuckDuckGo Search MCP Server是基于DuckDuckGo的网页搜索服务器，具有内容抓取、速率限制等功能，专为LLM优化输出。
+description: MCP-compatible web search server powered by DuckDuckGo, featuring rate limiting, content scraping, and structured output optimized for LLM consumption.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Duckduckgo-mcp-server
 
-DuckDuckGo Search MCP Server是基于DuckDuckGo的网页搜索服务器，具有内容抓取、速率限制等功能，专为LLM优化输出。
+DuckDuckGo Search MCP Server is a web search server built on DuckDuckGo with content scraping, rate limiting, and LLM-optimized output.
 
 ## Getting Started
 

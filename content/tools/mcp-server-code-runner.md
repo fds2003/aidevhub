@@ -1,7 +1,7 @@
 ---
 name: Mcp-server-code-runner
 slug: mcp-server-code-runner
-description: Code Runner MCP Server是一个用于运行代码片段并显示结果的MCP服务器，支持多种编程语言。
+description: Polyglot code execution MCP server supporting Python, JavaScript, Go, and Rust with resource-isolated sandboxes and real-time stdout capture.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Mcp-server-code-runner
 
-Code Runner MCP Server是一个用于运行代码片段并显示结果的MCP服务器，支持多种编程语言。
+Code Runner MCP Server is an MCP server for executing code snippets and displaying results, supporting multiple programming languages.
 
 ## Getting Started
 

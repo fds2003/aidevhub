@@ -1,7 +1,7 @@
 ---
 name: leonardo
 slug: leonardo
-description: AI 艺术图片生成平台
+description: Generative AI art platform offering fine-tuned Stable Diffusion models, real-time generation, and training capabilities for consistent style outputs.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # leonardo
 
-AI 艺术图片生成平台
+Leonardo AI is an AI art image generation platform for creating stunning visuals.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: copilot
 slug: copilot
-description: 文字生成代码
+description: GitHub's AI pair programmer offering real-time code suggestions, multi-line completions, and chat-based code refinement across all major IDEs.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # copilot
 
-文字生成代码
+GitHub Copilot generates code from text descriptions, helping developers write better code faster.
 
 ## Getting Started
 

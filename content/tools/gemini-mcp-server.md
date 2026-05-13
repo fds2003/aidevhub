@@ -1,7 +1,7 @@
 ---
 name: Gemini-mcp-server
 slug: gemini-mcp-server
-description: Claude Code 增强：Gemini MCP 服务器
+description: MCP adapter exposing Google Gemini Pro and Ultra models as drop-in tools within Claude Code existing agentic workflow.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Gemini-mcp-server
 
-Claude Code 增强：Gemini MCP 服务器
+Claude Code Enhancement: Gemini MCP Server adds Google's powerful Gemini AI models to your Claude Code workflow.
 
 ## Getting Started
 

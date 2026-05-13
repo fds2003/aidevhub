@@ -1,7 +1,7 @@
 ---
 name: Mcp-server-milvus
 slug: mcp-server-milvus
-description: MCP Server for Milvus提供了一个桥梁，让LLM应用可以通过模型上下文协议(MCP)访问Milvus向量数据库的功能。
+description: Bidirectional MCP bridge connecting LLM agents to Milvus vector databases for semantic search, hybrid retrieval, and high-dimensional ANN queries.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Mcp-server-milvus
 
-MCP Server for Milvus提供了一个桥梁，让LLM应用可以通过模型上下文协议(MCP)访问Milvus向量数据库的功能。
+MCP Server for Milvus provides a bridge for LLM applications to access Milvus vector database functionality through the Model Context Protocol.
 
 ## Getting Started
 

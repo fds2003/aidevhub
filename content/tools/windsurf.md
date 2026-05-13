@@ -1,7 +1,7 @@
 ---
 name: Windsurf
 slug: windsurf
-description: Codeium's AI-powered code editor with Cascade
+description: Codeium AI-native IDE with Cascade agentic flow, multi-file editing, deep codebase indexing, and real-time collaborative AI assistance.
 longDescription: Windsurf is Codeium's AI code editor that introduces Cascade, an AI agent designed to handle complex development workflows while keeping you in control.
 category: ai-coding-tools
 tags: [ai, code-editor, codeium, cascade, ide]

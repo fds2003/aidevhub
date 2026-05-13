@@ -66,9 +66,9 @@ export default function CloudflarePage() {
   return (
     <>
       <SEOHead
-        title="Cloudflare 专题 - 一站式边缘计算平台"
-        description="学习使用 Cloudflare 全家桶：Workers、R2、D1、KV、Pages、Queues 和 Workers AI。零 egress 费用，零冷启动，无限免费额度。"
-        keywords="cloudflare, cloudflare workers, cloudflare pages, cloudflare r2, cloudflare d1, zero egress, serverless, edge computing"
+        title="Cloudflare - All-in-One Edge Computing Platform"
+        description="Learn to use the full Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees, zero cold starts, unlimited free tier."
+        tags={['cloudflare', 'workers', 'pages', 'r2', 'd1', 'zero egress', 'serverless', 'edge computing']}
       />
 
       {/* Hero Section */}
@@ -77,7 +77,7 @@ export default function CloudflarePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/20 rounded-full blur-[120px]" />
         
         <div className="relative max-w-4xl mx-auto text-center">
-          <Badge variant="glow" className="mb-4">
+          <Badge variant="outline" className="mb-4 border-orange-500/50 text-orange-400">
             ☁️ Stop Paying Seventeen Different Bills
           </Badge>
           
@@ -88,31 +88,31 @@ export default function CloudflarePage() {
           </h1>
           
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-            一个平台，搞定所有。云函数、存储、数据库、缓存、消息队列、AI...
-            <span className="text-orange-400 font-semibold"> 零 egress 费用</span>。
+            One platform for everything. Serverless compute, storage, databases, caching, queues, AI...
+            <span className="text-orange-400 font-semibold"> Zero egress fees</span>.
           </p>
 
           {/* Comparison Table */}
           <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
             <GlassCard className="p-6 border-red-500/20">
-              <h3 className="text-lg font-semibold text-red-400 mb-3">❌ 你现在的账单</h3>
+              <h3 className="text-lg font-semibold text-red-400 mb-3">❌ Your Current Bill</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Vercel: $20/月</li>
-                <li>AWS S3: 存储 + egress</li>
-                <li>PlanetScale: $29/月</li>
-                <li>Redis: $50/月</li>
-                <li className="text-red-400 font-semibold">总计: $100+/月</li>
+                <li>Vercel: $20/mo</li>
+                <li>AWS S3: Storage + egress</li>
+                <li>PlanetScale: $29/mo</li>
+                <li>Redis: $50/mo</li>
+                <li className="text-red-400 font-semibold">Total: $100+/mo</li>
               </ul>
             </GlassCard>
             
             <GlassCard className="p-6 border-green-500/20">
-              <h3 className="text-lg font-semibold text-green-400 mb-3">✅ Cloudflare 全家桶</h3>
+              <h3 className="text-lg font-semibold text-green-400 mb-3">✅ Cloudflare Stack</h3>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Workers: 100k req/天免费</li>
-                <li>R2: 10GB存储 + 零egress</li>
-                <li>D1: 5M reads/天免费</li>
-                <li>KV: 1M reads/天免费</li>
-                <li className="text-green-400 font-semibold">总计: $0/月</li>
+                <li>Workers: 100k req/day free</li>
+                <li>R2: 10GB storage + zero egress</li>
+                <li>D1: 5M reads/day free</li>
+                <li>KV: 1M reads/day free</li>
+                <li className="text-green-400 font-semibold">Total: $0/mo</li>
               </ul>
             </GlassCard>
           </div>
@@ -121,7 +121,7 @@ export default function CloudflarePage() {
             href="/blog/just-fucking-use-cloudflare"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold rounded-lg hover:opacity-90 transition-opacity"
           >
-            阅读完整指南 →
+            Read the Full Guide →
           </Link>
         </div>
       </section>
@@ -129,8 +129,8 @@ export default function CloudflarePage() {
       {/* Products Grid */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Cloudflare 产品矩阵</h2>
-          <p className="text-gray-400 text-center mb-12">每个产品都是业界顶级的替代方案</p>
+          <h2 className="text-3xl font-bold text-center mb-4">Cloudflare Product Matrix</h2>
+          <p className="text-gray-400 text-center mb-12">Every product is a best-in-class industry alternative</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
@@ -152,7 +152,7 @@ export default function CloudflarePage() {
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/5">
                     <span className="text-sm text-orange-400 group-hover:underline">
-                      了解更多 →
+                      Learn more →
                     </span>
                   </div>
                 </GlassCard>
@@ -165,19 +165,19 @@ export default function CloudflarePage() {
       {/* The Stack */}
       <section className="py-16 px-4 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">现代化全栈架构</h2>
-          <p className="text-gray-400 mb-8">一个公司，一个账单，一个 API</p>
+          <h2 className="text-3xl font-bold mb-4">Modern Full-Stack Architecture</h2>
+          <p className="text-gray-400 mb-8">One company, one bill, one API</p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { name: '前端', tool: 'Next.js → Pages', color: 'from-blue-500 to-cyan-500' },
-              { name: '后端', tool: 'Cloudflare Workers', color: 'from-orange-500 to-yellow-500' },
-              { name: '数据库', tool: 'Cloudflare D1', color: 'from-green-500 to-emerald-500' },
-              { name: '存储', tool: 'Cloudflare R2', color: 'from-purple-500 to-pink-500' },
-              { name: '缓存', tool: 'Cloudflare KV', color: 'from-red-500 to-orange-500' },
-              { name: '消息队列', tool: 'Cloudflare Queues', color: 'from-indigo-500 to-blue-500' },
+              { name: 'Frontend', tool: 'Next.js → Pages', color: 'from-blue-500 to-cyan-500' },
+              { name: 'Backend', tool: 'Cloudflare Workers', color: 'from-orange-500 to-yellow-500' },
+              { name: 'Database', tool: 'Cloudflare D1', color: 'from-green-500 to-emerald-500' },
+              { name: 'Storage', tool: 'Cloudflare R2', color: 'from-purple-500 to-pink-500' },
+              { name: 'Cache', tool: 'Cloudflare KV', color: 'from-red-500 to-orange-500' },
+              { name: 'Queues', tool: 'Cloudflare Queues', color: 'from-indigo-500 to-blue-500' },
               { name: 'AI', tool: 'Workers AI', color: 'from-violet-500 to-purple-500' },
-              { name: '域名', tool: 'Registrar', color: 'from-teal-500 to-green-500' },
+              { name: 'Domain', tool: 'Registrar', color: 'from-teal-500 to-green-500' },
             ].map((item) => (
               <div
                 key={item.name}
@@ -196,21 +196,23 @@ export default function CloudflarePage() {
       {/* Tools Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">工具详情</h2>
-          <p className="text-gray-400 text-center mb-12">深入了解每个产品的特性和使用方法</p>
+          <h2 className="text-3xl font-bold text-center mb-4">Tools Overview</h2>
+          <p className="text-gray-400 text-center mb-12">Detailed information about each product&apos;s features and usage</p>
 
           <div className="grid md:grid-cols-2 gap-6">
             {cloudflareTools.map((tool) => (
               <ToolCard
                 key={tool.slug}
-                slug={tool.slug}
-                name={tool.name}
-                tagline={tool.description}
-                pricing={tool.pricing}
-                categories={[tool.category]}
-                rating={5}
-                users="100K+"
-                trending={true}
+                tool={{
+                  slug: tool.slug,
+                  name: tool.name,
+                  tagline: tool.description,
+                  pricing: tool.pricing,
+                  categories: [tool.category],
+                  rating: 5,
+                  users: '100K+',
+                  trending: true,
+                }}
               />
             ))}
           </div>
@@ -221,17 +223,17 @@ export default function CloudflarePage() {
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
           <GlassCard className="p-12 border-orange-500/30">
-            <h2 className="text-3xl font-bold mb-4">停止多平台账单焦虑</h2>
+            <h2 className="text-3xl font-bold mb-4">Stop Multi-Platform Bill Anxiety</h2>
             <p className="text-gray-400 mb-8">
-              用 Cloudflare 全家桶，一个平台搞定所有需求。<br />
-              免费额度足够大多数项目使用。
+              One platform handles everything. The free tier is enough for most projects.<br />
+              No more juggling multiple bills.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/blog/just-fucking-use-cloudflare"
                 className="px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-500 text-black font-semibold rounded-lg hover:opacity-90 transition-opacity"
               >
-                开始阅读
+                Read the Guide
               </Link>
               <Link
                 href="https://dash.cloudflare.com/signup"
@@ -239,7 +241,7 @@ export default function CloudflarePage() {
                 rel="noopener noreferrer"
                 className="px-6 py-3 border border-orange-500 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-colors"
               >
-                创建免费账号
+                Create Free Account
               </Link>
             </div>
           </GlassCard>

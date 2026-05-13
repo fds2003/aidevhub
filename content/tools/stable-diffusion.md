@@ -1,7 +1,7 @@
 ---
 name: stable-diffusion
 slug: stable-diffusion
-description: 文本到图像扩散模型
+description: Open-source latent diffusion model family supporting text-to-image, inpainting, and image-to-image generation with community-optimized checkpoint ecosystem.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # stable-diffusion
 
-文本到图像扩散模型
+Stable Diffusion is a text-to-image diffusion model that generates images from textual descriptions.
 
 ## Getting Started
 

@@ -1,10 +1,8 @@
 ---
 name: Blackboxai
 slug: blackboxai
-description: >-
-  黑盒AI是一款基于Chrome扩展的自动生成代码工具，旨在帮助开发人员从多种格式中有效地复制代码并增强编码体验。它提供超过20种编程语言的代码自动完成功能，能够直接从Visual
-  Studio Code访问超过1亿个开源代码库，从视频、图像
-longDescription: ''
+description: Multi-format code extraction and generation tool that surfaces relevant snippets from 100M+ open-source repositories across 20+ languages.
+longDescription: ""
 category: ai-coding-tools
 tags:
   - ai-coding-tools
@@ -22,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Blackboxai
 
-黑盒AI是一款基于Chrome扩展的自动生成代码工具，旨在帮助开发人员从多种格式中有效地复制代码并增强编码体验。它提供超过20种编程语言的代码自动完成功能，能够直接从Visual Studio Code访问超过1亿个开源代码库，从视频、图像
+Blackbox AI is a Chrome extension-powered code generation tool that helps developers efficiently copy code from multiple formats and enhance coding experience.
 
 ## Getting Started
 

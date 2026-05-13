@@ -1,7 +1,7 @@
 ---
 name: Notion-mcp-server
 slug: notion-mcp-server
-description: notion-mcp-server是Notion API的MCP服务器实现，支持通过指令或内容ID与Notion交互。
+description: MCP-compliant interface to the Notion API supporting page creation, database queries, block manipulation, and content synchronization workflows.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Notion-mcp-server
 
-notion-mcp-server是Notion API的MCP服务器实现，支持通过指令或内容ID与Notion交互。
+Notion-MCP-Server is an MCP server implementation for the Notion API, supporting interaction with Notion through instructions or content IDs.
 
 ## Getting Started
 

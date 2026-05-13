@@ -10,46 +10,40 @@ tools:
   - chatgpt-prompt-genius
 steps:
   - order: 1
-    title: ChatGPT 的申请
+    title: Getting Started with ChatGPT
     description: >-
-      Learn how to chatgpt 的申请 in this step of the ChatGPT Prompt Engineering
-      Workflow workflow.
-    prompt: Guide me through chatgpt 的申请 for this workflow.
+      Learn how to sign up and get started with ChatGPT in this step of the Prompt Engineering Workflow.
+    prompt: Guide me through setting up a ChatGPT account for this workflow.
     code: ''
   - order: 2
-    title: 注册步骤
+    title: Registration Steps
     description: >-
-      Learn how to 注册步骤 in this step of the ChatGPT Prompt Engineering Workflow
-      workflow.
-    prompt: Guide me through 注册步骤 for this workflow.
+      Learn the registration process for ChatGPT in this step of the Prompt Engineering Workflow.
+    prompt: Guide me through the registration steps for this workflow.
     code: ''
   - order: 3
-    title: ChatGPT的使用
+    title: Using ChatGPT
     description: >-
-      Learn how to chatgpt的使用 in this step of the ChatGPT Prompt Engineering
-      Workflow workflow.
-    prompt: Guide me through chatgpt的使用 for this workflow.
+      Learn how to use ChatGPT effectively in this step of the Prompt Engineering Workflow.
+    prompt: Guide me through using ChatGPT for prompt engineering.
     code: ''
   - order: 4
-    title: 简单试用
+    title: Quick Trial
     description: >-
-      Learn how to 简单试用 in this step of the ChatGPT Prompt Engineering Workflow
-      workflow.
-    prompt: Guide me through 简单试用 for this workflow.
+      Run a quick trial of ChatGPT's capabilities in this step of the Prompt Engineering Workflow.
+    prompt: Guide me through a quick trial of ChatGPT for this workflow.
     code: ''
   - order: 5
-    title: ChatGPT 智能提示
+    title: Smart Prompting
     description: >-
-      Learn how to chatgpt 智能提示 in this step of the ChatGPT Prompt Engineering
-      Workflow workflow.
-    prompt: Guide me through chatgpt 智能提示 for this workflow.
+      Learn smart prompting techniques for ChatGPT in this step of the Prompt Engineering Workflow.
+    prompt: Guide me through smart prompting techniques for this workflow.
     code: ''
   - order: 6
-    title: 概述
+    title: Overview & Review
     description: >-
-      Learn how to 概述 in this step of the ChatGPT Prompt Engineering Workflow
-      workflow.
-    prompt: Guide me through 概述 for this workflow.
+      Review what you've learned in this step of the ChatGPT Prompt Engineering Workflow.
+    prompt: Guide me through reviewing the key concepts for this workflow.
     code: ''
 createdAt: '2026-05-09'
 updatedAt: '2026-05-09'
@@ -68,24 +62,23 @@ Master prompt engineering techniques to get the best results from ChatGPT
 
 ## Steps
 
-### 1. ChatGPT 的申请
-Learn how to chatgpt 的申请 in this step of the ChatGPT Prompt Engineering Workflow workflow.
+### 1. Getting Started with ChatGPT
+Learn how to sign up and get started with ChatGPT.
 
-### 2. 注册步骤
-Learn how to 注册步骤 in this step of the ChatGPT Prompt Engineering Workflow workflow.
+### 2. Registration Steps
+Learn the registration process for ChatGPT.
 
-### 3. ChatGPT的使用
-Learn how to chatgpt的使用 in this step of the ChatGPT Prompt Engineering Workflow workflow.
+### 3. Using ChatGPT
+Learn how to use ChatGPT effectively.
 
-### 4. 简单试用
-Learn how to 简单试用 in this step of the ChatGPT Prompt Engineering Workflow workflow.
+### 4. Quick Trial
+Run a quick trial of ChatGPT's capabilities.
 
-### 5. ChatGPT 智能提示
-Learn how to chatgpt 智能提示 in this step of the ChatGPT Prompt Engineering Workflow workflow.
+### 5. Smart Prompting
+Learn smart prompting techniques for ChatGPT.
 
-### 6. 概述
-Learn how to 概述 in this step of the ChatGPT Prompt Engineering Workflow workflow.
-
+### 6. Overview & Review
+Review what you've learned.
 
 ## Conclusion
 

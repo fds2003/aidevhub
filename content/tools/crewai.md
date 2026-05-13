@@ -1,7 +1,7 @@
 ---
 name: Crewai
 slug: crewai
-description: 协调角色扮演的自主AI代理之间的合作，使它们能够无缝协作完成复杂任务
+description: Multi-agent orchestration framework that coordinates role-playing LLM agents through structured task decomposition and inter-agent communication.
 longDescription: ''
 category: ai-agents
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Crewai
 
-协调角色扮演的自主AI代理之间的合作，使它们能够无缝协作完成复杂任务
+CrewAI coordinates role-playing autonomous AI agents to collaborate seamlessly on complex tasks.
 
 ## Getting Started
 

@@ -1,7 +1,7 @@
 ---
 name: Mcp-playwright
 slug: mcp-playwright
-description: Playwright MCP Server是一个使用Playwright的MCP服务器，让LLM能自动化浏览器操作，截图和执行JavaScript。
+description: MCP server wrapping Playwright for LLM-driven browser automation supporting navigation, screenshot capture, element interaction, and JavaScript execution.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Mcp-playwright
 
-Playwright MCP Server是一个使用Playwright的MCP服务器，让LLM能自动化浏览器操作，截图和执行JavaScript。
+Playwright MCP Server is an MCP server that uses Playwright to enable LLMs to automate browser operations, take screenshots, and execute JavaScript.
 
 ## Getting Started
 

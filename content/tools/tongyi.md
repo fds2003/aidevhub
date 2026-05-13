@@ -1,7 +1,7 @@
 ---
 name: tongyi
 slug: tongyi
-description: 阿里巴巴大模型能力测试体验
+description: Alibaba Cloud large language model family with multilingual capabilities supporting text generation, code synthesis, and enterprise API deployment.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # tongyi
 
-阿里巴巴大模型能力测试体验
+Tongyi is Alibaba's large language model platform for testing and experiencing AI capabilities.
 
 ## Getting Started
 

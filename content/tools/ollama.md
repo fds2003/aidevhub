@@ -1,7 +1,7 @@
 ---
 slug: ollama
 title: "Ollama - Run LLMs Locally and in the Cloud"
-description: "Run open-source LLMs like Llama 3, Mistral on your machine. Now with free cloud inference for 120B models. OpenAI-compatible API."
+description: Local LLM runtime supporting Llama 3, Mistral, Phi, and 100+ open-source models with OpenAI-compatible API, GPU acceleration, and free cloud inference tier.
 category: AI
 tags: [ollama, local-llm, llama3, mistral, openai-api, self-hosted, open-source, edge-ai]
 website: https://ollama.com/

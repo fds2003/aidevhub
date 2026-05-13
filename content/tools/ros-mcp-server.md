@@ -1,7 +1,7 @@
 ---
 name: Ros-mcp-server
 slug: ros-mcp-server
-description: ROS MCP Server利用LLM将自然语言指令转化为ROS指令控制机器人，兼容ROS/ROS2，适用于多种平台。
+description: Bidirectional MCP bridge converting natural language instructions to ROS 1/2 navigation commands for automated robot control and sensor data retrieval.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Ros-mcp-server
 
-ROS MCP Server利用LLM将自然语言指令转化为ROS指令控制机器人，兼容ROS/ROS2，适用于多种平台。
+ROS MCP Server uses LLMs to convert natural language instructions into ROS commands for robot control, compatible with ROS/ROS2.
 
 ## Getting Started
 

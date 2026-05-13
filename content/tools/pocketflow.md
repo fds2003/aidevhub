@@ -1,7 +1,7 @@
 ---
 name: Pocketflow
 slug: pocketflow
-description: Pocket Flow是一个仅用100行代码实现的极简LLM框架，轻量且功能强大，支持Agent、Workflow、RAG等模式。
+description: 100-line LLM framework implementing Agent, Workflow, and RAG patterns through a minimal composable Python API for rapid prototyping.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Pocketflow
 
-Pocket Flow是一个仅用100行代码实现的极简LLM框架，轻量且功能强大，支持Agent、Workflow、RAG等模式。
+Pocket Flow is a minimalist LLM framework implemented in just 100 lines of code, lightweight yet powerful with Agent, Workflow, and RAG patterns.
 
 ## Getting Started
 

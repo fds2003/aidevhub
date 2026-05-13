@@ -1,10 +1,8 @@
 ---
 name: Copilot-gpt4-service
 slug: copilot-gpt4-service
-description: >-
-  copilot-gpt4-service 是一个服务，能将 GitHub Copilot 转换为 ChatGPT，支持通过 API 使用 GPT-4
-  模型进行对话。
-longDescription: ''
+description: Transparent proxy layer exposing GitHub Copilot as a standard OpenAI-compatible API endpoint with GPT-4 class model access.
+longDescription: ""
 category: ai-coding-tools
 tags:
   - ai-coding-tools
@@ -22,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Copilot-gpt4-service
 
-copilot-gpt4-service 是一个服务，能将 GitHub Copilot 转换为 ChatGPT，支持通过 API 使用 GPT-4 模型进行对话。
+Copilot-GPT4-Service is a service that converts GitHub Copilot into ChatGPT, allowing GPT-4 model conversations through an API.
 
 ## Getting Started
 

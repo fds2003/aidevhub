@@ -1,7 +1,7 @@
 ---
 name: Midjourney
 slug: midjourney
-description: Midjourney是一款AI绘画程序，用户只需输入一段图片的文字描述即可生成精美的绘画。
+description: Premium AI image synthesis platform supporting iterative refinement, style transfer, and consistent character generation through Discord-based interaction.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Midjourney
 
-Midjourney是一款AI绘画程序，用户只需输入一段图片的文字描述即可生成精美的绘画。
+Midjourney is an AI art generation program that creates beautiful images from simple text descriptions.
 
 ## Getting Started
 

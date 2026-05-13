@@ -1,7 +1,7 @@
 ---
 name: Tlm
 slug: tlm
-description: CodeLLaMa的本地CLI助手，无需API密钥，无需联网，支持多平台
+description: Offline-capable CLI assistant for local CodeLLaMa inference with no API key, no network, and no GPU required, supporting macOS, Linux, and Windows.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Tlm
 
-CodeLLaMa的本地CLI助手，无需API密钥，无需联网，支持多平台
+TLM is a local CLI assistant for CodeLLaMa that works without API keys or internet connection, supporting multiple platforms.
 
 ## Getting Started
 

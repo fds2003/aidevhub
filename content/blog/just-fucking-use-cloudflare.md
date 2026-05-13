@@ -1,10 +1,9 @@
 ---
-slug: just-fucking-use-cloudflare
-title: "Just Fucking Use Cloudflare - Stop Paying Seventeen Different Bills"
-description: "Stop bleeding money on AWS, Vercel, PlanetScale, and S3. Use Cloudflare's all-in-one edge platform instead. Zero egress fees, 0ms cold starts, and generous free tiers."
+slug: "just-fucking-use-cloudflare"
+title: "Just Fucking Use Cloudflare — Stop Paying Seventeen Different Bills"
+description: "Stop bleeding money on AWS, Vercel, PlanetScale, and S3. Use Cloudflare all-in-one edge platform instead with zero egress fees and generous free tiers."
 category: Cloudflare
-tags: [cloudflare, cloudflare-workers, cloudflare-pages, cloudflare-r2, cloudflare-d1, zero-egress, serverless, edge-computing, aws-alternative, vercel-alternative]
-author: AI Dev Hub
+tags: [chatgpt, ai, llm, prompt-engineering, programming]
 coverImage: /images/blog/just-fucking-use-cloudflare.png
 readingTime: 8
 createdAt: 2026-05-09

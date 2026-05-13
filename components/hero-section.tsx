@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Code2, Bot, Workflow, Boxes, Sparkles } from 'lucide-react'
+import { ArrowRight, Code2, Bot, Workflow, Boxes } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CATEGORIES } from '@/lib/constants'
 import { Badge } from '@/components/ui/glass-badge'
@@ -26,15 +26,6 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#00D9FF]/10 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="container relative text-center">
-        {/* Terminal Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-mono bg-[#111118] border border-[#1c1c2e] rounded-full animate-fade-in">
-          <Sparkles className="w-3.5 h-3.5 text-[#00D9FF]" />
-          <span className="text-zinc-400">Powered by </span>
-          <span className="text-[#00D9FF]">AI</span>
-          <span className="text-zinc-600 mx-1">//</span>
-          <span className="text-terminal-400">v2.0</span>
-        </div>
-
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: '60ms' }}>
           Your Premier AI Developer
           <br />

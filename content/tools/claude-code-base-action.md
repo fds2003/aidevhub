@@ -1,7 +1,7 @@
 ---
 name: Claude-code-base-action
 slug: claude-code-base-action
-description: Claude Code Base Action 是一个 GitHub Action，让你在工作流中运行 Claude Code，构建自定义工作流程。
+description: GitHub Action that integrates Claude Code into CI/CD pipelines for automated code review, refactoring, and test generation at pull request time.
 longDescription: ''
 category: ai-coding-tools
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Claude-code-base-action
 
-Claude Code Base Action 是一个 GitHub Action，让你在工作流中运行 Claude Code，构建自定义工作流程。
+Claude Code Base Action is a GitHub Action that lets you run Claude Code in your workflows to build custom automation pipelines.
 
 ## Getting Started
 

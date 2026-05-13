@@ -1,7 +1,7 @@
 ---
 name: Code-sandbox-mcp
 slug: code-sandbox-mcp
-description: LLM代码沙箱服务器
+description: MCP server that provisions sandboxed execution environments for LLMs to safely run untrusted code in isolated containers.
 longDescription: ''
 category: mcp
 tags:
@@ -20,7 +20,7 @@ publishedAt: '2026-05-09'
 ---
 # Code-sandbox-mcp
 
-LLM代码沙箱服务器
+LLM Code Sandbox Server provides a secure, sandboxed environment for LLMs to execute code safely.
 
 ## Getting Started
 

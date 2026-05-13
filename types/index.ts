@@ -33,6 +33,10 @@ export interface Post {
   updatedAt: string
   publishedAt?: string
   featured?: boolean
+  /** Markdown：2026 年对旧文的补充，展示在正文前 */
+  updateNote2026?: string
+  /** 为 true 时不展示「旧文默认提示框」（仍会展示 updateNote2026 若有） */
+  hideLegacy2026Banner?: boolean
 }
 
 export interface Workflow {

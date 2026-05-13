@@ -7,7 +7,7 @@ category: ai-agents
 tags:
   - ai-agents
   - langchain
-website: 'https://github.com/langchain-ai/langchain'
+website: 'https://www.langchain.com/'
 affiliateUrl: ''
 pricing: open-source
 features: []
@@ -24,7 +24,7 @@ LangChain is a framework for developing language model-powered applications, ena
 
 ## Getting Started
 
-[Visit Langchain](https://github.com/langchain-ai/langchain)
+[Visit Langchain](https://www.langchain.com/)
 
 ## Use Cases
 

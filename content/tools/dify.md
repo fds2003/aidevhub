@@ -7,7 +7,7 @@ category: ai-agents
 tags:
   - ai-agents
   - dify
-website: 'https://github.com/langgenius/dify'
+website: 'https://dify.ai/'
 affiliateUrl: ''
 pricing: open-source
 features: []
@@ -24,7 +24,7 @@ Dify is a platform for developing LLM (Large Language Model) applications with a
 
 ## Getting Started
 
-[Visit Dify](https://github.com/langgenius/dify)
+[Visit Dify](https://dify.ai/)
 
 ## Use Cases
 

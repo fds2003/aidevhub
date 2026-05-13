@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowRight, ExternalLink, Check, X as XIcon, Globe, Star } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink, Check, X as XIcon, Globe } from 'lucide-react'
 import { GlassCard } from '@/components/ui/glass-card'
 import { Badge, ToolBadge } from '@/components/ui/glass-badge'
 import { Breadcrumbs } from '@/components/breadcrumbs'
@@ -126,12 +126,9 @@ export default async function ToolDetailPage({ params }: PageProps) {
                   Visit Website
                   <ExternalLink className="w-4 h-4" />
                 </a>
-                <div className="flex items-center justify-center gap-4 mt-3 text-xs text-zinc-600 font-mono">
-                  <span className="flex items-center gap-1">
-                    <Star className="w-3 h-3" /> 4.8/5
-                  </span>
-                  <span>10K+ users</span>
-                </div>
+                <p className="mt-3 text-xs text-zinc-600 font-mono text-center">
+                  Ratings and usage stats are not tracked here — see the vendor for current figures.
+                </p>
               </div>
             </div>
           </GlassCard>

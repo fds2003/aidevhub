@@ -5,7 +5,7 @@ description: AI-native code editor forked from VS Code with deep IDE integration
 longDescription: Cursor is an AI-first code editor that combines the power of AI with a familiar VS Code interface. It features AI pair programming, intelligent code completion, and natural language editing.
 category: ai-coding-tools
 tags: [ai, code-editor, vscode, pair-programming, autocomplete]
-website: https://cursor.sh
+website: https://cursor.com
 pricing: freemium
 features:
   - AI pair programming

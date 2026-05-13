@@ -7,7 +7,7 @@ category: ai-agents
 tags:
   - ai-agents
   - crewai
-website: 'https://github.com/joaomdmoura/crewAI'
+website: 'https://www.crewai.com/'
 affiliateUrl: ''
 pricing: open-source
 features: []
@@ -24,7 +24,7 @@ CrewAI coordinates role-playing autonomous AI agents to collaborate seamlessly o
 
 ## Getting Started
 
-[Visit Crewai](https://github.com/joaomdmoura/crewAI)
+[Visit Crewai](https://www.crewai.com/)
 
 ## Use Cases
 

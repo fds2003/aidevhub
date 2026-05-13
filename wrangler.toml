@@ -1,4 +1,5 @@
 name = "aidevhub-api"
+# 路径相对于本文件（src/wrangler.toml）
 main = "workers/index.ts"
 compatibility_date = "2024-01-01"
 

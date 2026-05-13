@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - claude-engineer
-website: 'https://github.com/Doriandarko/claude-engineer/blob/main/readme.md'
+website: 'https://github.com/Doriandarko/claude-engineer'
 affiliateUrl: ''
 pricing: open-source
 features: []
@@ -24,7 +24,7 @@ Claude Engineer is an open-source GitHub project that provides automation and AI
 
 ## Getting Started
 
-[Visit Claude-engineer](https://github.com/Doriandarko/claude-engineer/blob/main/readme.md)
+[Visit Claude-engineer](https://github.com/Doriandarko/claude-engineer)
 
 ## Use Cases
 

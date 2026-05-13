@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - layernorm
-website: 'https://github.com/karpathy/llm.c/blob/master/doc/layernorm/layernorm.md'
+website: 'https://github.com/karpathy/llm.c'
 affiliateUrl: ''
 pricing: open-source
 features: []
@@ -24,7 +24,7 @@ Documentation about layernorm from the karpathy/llm.c GitHub project.
 
 ## Getting Started
 
-[Visit Layernorm](https://github.com/karpathy/llm.c/blob/master/doc/layernorm/layernorm.md)
+[Visit Layernorm](https://github.com/karpathy/llm.c)
 
 ## Use Cases
 

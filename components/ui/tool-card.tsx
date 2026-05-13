@@ -25,7 +25,7 @@ export interface ToolCardProps extends HTMLAttributes<HTMLDivElement> {
 
 export const ToolCard = forwardRef<HTMLDivElement, ToolCardProps>(
   ({ className, tool, variant = "default", ...props }, ref) => {
-    const { slug, name, tagline, logo, pricing, categories, featured, rating, users, trending } = tool;
+    const { slug, name, tagline, logo, pricing, categories, featured, trending } = tool;
 
     if (variant === "compact") {
       return (

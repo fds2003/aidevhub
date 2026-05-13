@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - copilot
-website: 'https://chatdoc.com/'
+website: 'https://github.com/features/copilot'
 affiliateUrl: ''
 pricing: freemium
 features: []
@@ -24,7 +24,7 @@ GitHub Copilot generates code from text descriptions, helping developers write b
 
 ## Getting Started
 
-[Visit copilot](https://chatdoc.com/)
+[Visit copilot](https://github.com/features/copilot)
 
 ## Use Cases
 

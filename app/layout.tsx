@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Layout } from '@/components/layout'
-import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/constants'
+import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://aidevhub.net',
+    url: SITE_URL,
     siteName: SITE_NAME,
     title: `${SITE_NAME} — AI Development Tools & Resources`,
     description: SITE_DESCRIPTION,

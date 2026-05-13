@@ -15,6 +15,8 @@ Your premier destination for AI Coding Tools, MCP Ecosystem, AI Agents, and Work
 
 ## 快速部署
 
+完整步骤（Pages / Workers / D1 / CI）见 **[DEPLOYMENT.md](./DEPLOYMENT.md)**。
+
 ### 1. 安装 Wrangler CLI
 
 ```bash

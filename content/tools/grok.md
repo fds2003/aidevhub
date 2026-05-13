@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - grok
-website: 'https://grok.x.ai'
+website: 'https://grok.com/'
 affiliateUrl: ''
 pricing: freemium
 features: []
@@ -24,7 +24,7 @@ Grok is an AI assistant developed by xAI, Elon Musk's AI company, designed for n
 
 ## Getting Started
 
-[Visit Grok](https://grok.x.ai)
+[Visit Grok](https://grok.com/)
 
 ## Use Cases
 

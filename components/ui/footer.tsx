@@ -3,11 +3,12 @@
 // Footer - Modern footer with gradient accent
 import Link from "next/link";
 import { Sparkles, Github, Twitter, Rss } from "lucide-react";
+import { AUTHOR_EMAIL, SOCIAL_LINKS } from "@/lib/constants";
 
 const FOOTER_LINKS = {
   tools: [
     { label: "All Tools", href: "/tools" },
-    { label: "AI Coding", href: "/categories/ai-coding" },
+    { label: "AI Coding", href: "/categories/ai-coding-tools" },
     { label: "MCP Servers", href: "/categories/mcp" },
     { label: "AI Agents", href: "/categories/ai-agents" },
   ],
@@ -17,15 +18,10 @@ const FOOTER_LINKS = {
     { label: "MCP Ecosystem", href: "/mcp" },
     { label: "Categories", href: "/categories" },
   ],
-  company: [
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-    { label: "Privacy", href: "/privacy" },
-    { label: "Terms", href: "/terms" },
-  ],
+  company: [{ label: "Contact", href: `mailto:${AUTHOR_EMAIL}` }],
   social: [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Github, href: SOCIAL_LINKS.github, label: "GitHub" },
+    { icon: Twitter, href: SOCIAL_LINKS.twitter, label: "Twitter" },
     { icon: Rss, href: "/rss.xml", label: "RSS" },
   ],
 };

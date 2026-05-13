@@ -12,6 +12,7 @@ import { getRelatedPosts, getRelatedTools, getRelatedWorkflows } from '@/lib/rel
 import { SITE_URL } from '@/lib/constants'
 import { format } from 'date-fns'
 import { MDXRemote } from '@/components/mdx-remote'
+import { BlogPostUpdate2026 } from '@/components/blog-post-update-2026'
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -141,6 +142,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
             </header>
           </div>
+
+          <BlogPostUpdate2026 post={post} />
 
           {/* Content with TOC sidebar */}
           <div className="flex gap-8">

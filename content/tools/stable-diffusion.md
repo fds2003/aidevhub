@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - stable-diffusion
-website: 'https://github.com/CompVis/stable-diffusion'
+website: 'https://stability.ai/'
 affiliateUrl: ''
 pricing: open-source
 features: []
@@ -24,7 +24,7 @@ Stable Diffusion is a text-to-image diffusion model that generates images from t
 
 ## Getting Started
 
-[Visit stable-diffusion](https://github.com/CompVis/stable-diffusion)
+[Visit stable-diffusion](https://stability.ai/)
 
 ## Use Cases
 

@@ -66,9 +66,18 @@ export default function CloudflarePage() {
   return (
     <>
       <SEOHead
-        title="Cloudflare - All-in-One Edge Computing Platform"
-        description="Learn to use the full Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees, zero cold starts, unlimited free tier."
-        tags={['cloudflare', 'workers', 'pages', 'r2', 'd1', 'zero egress', 'serverless', 'edge computing']}
+        title="Cloudflare 专题 - 一站式边缘计算平台"
+        description="学习使用 Cloudflare 全家桶：Workers、R2、D1、KV、Pages、Queues 和 Workers AI。零 egress 费用，零冷启动，无限免费额度。"
+        tags={[
+          'cloudflare',
+          'cloudflare workers',
+          'cloudflare pages',
+          'cloudflare r2',
+          'cloudflare d1',
+          'zero egress',
+          'serverless',
+          'edge computing',
+        ]}
       />
 
       {/* Hero Section */}
@@ -209,9 +218,6 @@ export default function CloudflarePage() {
                   tagline: tool.description,
                   pricing: tool.pricing,
                   categories: [tool.category],
-                  rating: 5,
-                  users: '100K+',
-                  trending: true,
                 }}
               />
             ))}

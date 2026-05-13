@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - claude
-website: 'https://AIPRM.com/'
+website: 'https://claude.ai/'
 affiliateUrl: ''
 pricing: freemium
 features: []
@@ -24,7 +24,7 @@ Claude is Anthropic's AI assistant that offers easier registration than alternat
 
 ## Getting Started
 
-[Visit Claude](https://AIPRM.com/)
+[Visit Claude](https://claude.ai/)
 
 ## Use Cases
 

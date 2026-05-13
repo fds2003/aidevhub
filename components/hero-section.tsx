@@ -1,31 +1,66 @@
+import type { ElementType } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Code2, Bot, Workflow, Boxes } from 'lucide-react'
+import { ArrowRight, Code2, Bot, BookOpen, Workflow, Boxes, Sparkles, Scale, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { CATEGORIES } from '@/lib/constants'
-import { Badge } from '@/components/ui/glass-badge'
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, ElementType> = {
   Code2,
   Bot,
   Workflow,
   Boxes,
+  Scale,
 }
 
-// Stats data
-const stats = [
-  { label: 'AI Tools', value: '50+', icon: Code2 },
-  { label: 'MCP Servers', value: '25+', icon: Boxes },
-  { label: 'Workflows', value: '40+', icon: Workflow },
-  { label: 'Community', value: '10K+', icon: Bot },
-]
+export type HeroStatsProps = {
+  toolCount: number
+  articleCount: number
+  workflowCount: number
+}
 
-export function HeroSection() {
+type CountStat = {
+  key: string
+  kind: 'count'
+  value: string
+  unit: string
+  icon: ElementType
+}
+
+type CadenceStat = {
+  key: string
+  kind: 'cadence'
+  title: string
+  sub: string
+  icon: ElementType
+}
+
+export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStatsProps) {
+  const stats: (CountStat | CadenceStat)[] = [
+    { key: 'tools', kind: 'count', value: String(toolCount), unit: '款工具', icon: Code2 },
+    { key: 'posts', kind: 'count', value: String(articleCount), unit: '篇文章', icon: BookOpen },
+    {
+      key: 'cadence',
+      kind: 'cadence',
+      title: '每周更新',
+      sub: `工作流模板 ${workflowCount} 条，数字与内容库一致`,
+      icon: RefreshCw,
+    },
+  ]
   return (
     <section className="relative pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#00D9FF]/10 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="container relative text-center">
+        {/* Terminal Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-mono bg-[#111118] border border-[#1c1c2e] rounded-full animate-fade-in">
+          <Sparkles className="w-3.5 h-3.5 text-[#00D9FF]" />
+          <span className="text-zinc-400">Powered by </span>
+          <span className="text-[#00D9FF]">AI</span>
+          <span className="text-zinc-600 mx-1">{'//'}</span>
+          <span className="text-terminal-400">v2.0</span>
+        </div>
+
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: '60ms' }}>
           Your Premier AI Developer
           <br />
@@ -49,15 +84,34 @@ export function HeroSection() {
           </Button>
         </div>
 
-        {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '240ms' }}>
-          {stats.map((stat, i) => (
-            <div key={stat.label} className="px-6 py-4 bg-[#111118]/60 border border-[#1c1c2e] rounded-xl backdrop-blur-sm">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <stat.icon className="w-4 h-4 text-[#00D9FF]" />
-                <span className="text-2xl md:text-3xl font-bold text-white font-mono">{stat.value}</span>
-              </div>
-              <span className="text-xs text-zinc-500 font-mono">{stat.label}</span>
+        {/* Stats — 真实数字，避免虚标 */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '240ms' }}>
+          {stats.map((stat) => (
+            <div
+              key={stat.key}
+              className="px-6 py-4 bg-[#111118]/60 border border-[#1c1c2e] rounded-xl backdrop-blur-sm"
+            >
+              {stat.kind === 'count' ? (
+                <>
+                  <div className="flex items-center justify-center gap-2 flex-wrap">
+                    <stat.icon className="w-4 h-4 text-[#00D9FF] shrink-0" />
+                    <span className="text-2xl md:text-3xl font-bold text-white font-mono tabular-nums">
+                      {stat.value}
+                      <span className="text-base md:text-lg font-semibold text-zinc-300 font-sans ml-1.5">
+                        {stat.unit}
+                      </span>
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <stat.icon className="w-4 h-4 text-[#00D9FF] shrink-0" />
+                    <span className="text-lg md:text-xl font-semibold text-white">{stat.title}</span>
+                  </div>
+                  <p className="text-xs text-zinc-500 text-center leading-relaxed">{stat.sub}</p>
+                </>
+              )}
             </div>
           ))}
         </div>

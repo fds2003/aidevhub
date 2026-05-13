@@ -1,153 +1,160 @@
 import Link from 'next/link'
-import { Boxes, Book, Server, ExternalLink } from 'lucide-react'
+import type { Metadata } from 'next'
+import { Boxes, BookOpen, ExternalLink, Sparkles } from 'lucide-react'
+import { GlassCard } from '@/components/ui/glass-card'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { McpHostMatrix } from '@/components/mcp-host-matrix'
+import { McpDirectoryClient } from '@/components/mcp-directory-client'
+import { getAllMCPServers, getMcpDirectoryStats } from '@/lib/mcp-directory'
 
-export const metadata = {
-  title: 'MCP Ecosystem',
-  description: 'Explore the Model Context Protocol ecosystem, servers, tutorials, and use cases.',
+export const metadata: Metadata = {
+  title: 'MCP 服务器目录与兼容矩阵',
+  description:
+    '收录官方参考、社区与商业 MCP 服务器：安装命令、典型场景，以及 Claude / Cursor / Windsurf 客户端能力对照。附 MCP Registry 与站内工具/工作流连结。',
+  openGraph: {
+    title: 'MCP 服务器目录与兼容矩阵 | AI Dev Hub',
+    description:
+      'Model Context Protocol 精选目录：七十余条服务器条目、安装命令、场景与宿主兼容说明。',
+  },
 }
-
-const mcpServers = [
-  {
-    name: 'Filesystem',
-    description: 'Read and write files on your local filesystem',
-    repository: 'https://github.com/modelcontextprotocol/servers/tree/main/filesystem',
-  },
-  {
-    name: 'GitHub',
-    description: 'Interact with GitHub repositories, issues, and pull requests',
-    repository: 'https://github.com/modelcontextprotocol/servers/tree/main/github',
-  },
-  {
-    name: 'Slack',
-    description: 'Send messages and manage Slack channels',
-    repository: 'https://github.com/modelcontextprotocol/servers/tree/main/slack',
-  },
-  {
-    name: 'Brave Search',
-    description: 'Search the web using Brave Search API',
-    repository: 'https://github.com/modelcontextprotocol/servers/tree/main/brave-search',
-  },
-]
 
 const tutorials = [
   {
-    title: 'Getting Started with MCP',
-    description: 'Learn the basics of MCP and how to set up your first server.',
-    href: '/blog/getting-started-mcp',
+    title: '用 MCP 做服务器开发工作流',
+    description: '从环境到迭代的步骤式工作流，适合第一次搭自有 MCP。',
+    href: '/workflows/building-with-mcp-server-development-workflow',
   },
   {
-    title: 'Building Custom MCP Servers',
-    description: 'Create your own MCP server for custom functionality.',
-    href: '/blog/building-custom-mcp-servers',
+    title: 'Model Context Protocol 是什么',
+    description: '协议定位、能力与站内工具条目。',
+    href: '/tools/model-context-protocol',
+  },
+  {
+    title: 'FastMCP 快速搭服务',
+    description: 'TypeScript 侧常见脚手架与工具链。',
+    href: '/tools/fastmcp',
+  },
+  {
+    title: 'Playwright MCP',
+    description: '浏览器自动化类 MCP 工具说明。',
+    href: '/tools/mcp-playwright',
   },
 ]
 
 export default function MCPPage() {
+  const servers = getAllMCPServers()
+  const stats = getMcpDirectoryStats()
+
   return (
-    <div className="container py-12">
-      <div className="mb-12">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="p-3 bg-primary/10 rounded-lg">
-            <Boxes className="h-10 w-10 text-primary" />
+    <div className="min-h-screen bg-[#080810]">
+      <div className="container max-w-6xl py-12 md:py-16">
+        <header className="mb-12">
+          <div className="mb-4 flex items-center gap-3">
+            <div className="rounded-xl border border-[#1c1c2e] bg-[#111118] p-3">
+              <Boxes className="h-9 w-9 text-[#00D9FF]" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight text-zinc-100 md:text-4xl">
+                MCP 服务器目录
+              </h1>
+              <p className="mt-1 text-sm text-zinc-500">
+                Model Context Protocol · 工具与数据源的标准化接入
+              </p>
+            </div>
           </div>
-          <h1 className="text-4xl font-bold">MCP Ecosystem</h1>
-        </div>
-        <p className="text-xl text-muted-foreground max-w-3xl">
-          The Model Context Protocol (MCP) is an open protocol that enables AI models
-          to connect with external tools, data sources, and services. Explore servers,
-          tutorials, and use cases.
-        </p>
-      </div>
+          <p className="max-w-3xl text-lg leading-relaxed text-zinc-400">
+            面向选型与落地：按<strong className="text-zinc-200">官方参考 / 社区 / 商业</strong>
+            分类浏览 <strong className="text-zinc-200">{stats.total}</strong>{' '}
+            条服务器，每条含安装命令与典型场景；下方矩阵概括{' '}
+            <strong className="text-zinc-200">Claude Desktop、Claude Code、Cursor、Windsurf</strong>{' '}
+            对 stdio、远程与 OAuth 类工具的常见支持方式（截至 2026-05，以各厂商文档为准）。
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <span className="rounded-lg border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-emerald-300">
+              官方参考 {stats.official}
+            </span>
+            <span className="rounded-lg border border-sky-500/20 bg-sky-500/10 px-3 py-1 text-sky-300">
+              社区 {stats.community}
+            </span>
+            <span className="rounded-lg border border-amber-500/20 bg-amber-500/10 px-3 py-1 text-amber-200">
+              商业 {stats.commercial}
+            </span>
+          </div>
+        </header>
 
-      {/* What is MCP */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-4">What is MCP?</h2>
-        <Card>
-          <CardContent className="prose prose-lg max-w-none p-6">
-            <p>
-              MCP (Model Context Protocol) is a standardization effort that allows AI models
-              to interact with external tools and data sources in a consistent way. Instead of
-              building custom integrations for each tool, developers can build MCP servers that
-              work with any MCP-compatible client.
+        <section className="mb-14" aria-labelledby="mcp-intro">
+          <h2 id="mcp-intro" className="mb-4 text-xl font-semibold text-zinc-100">
+            为什么值得做深 MCP 内容
+          </h2>
+          <GlassCard variant="glass" padding="lg" className="text-zinc-400 leading-relaxed">
+            <p className="mb-3">
+              MCP 把「模型能调什么工具」从各 IDE 私协议里抽成开放协议：同一服务器可接到 Claude、Cursor、Windsurf
+              等不同客户端。开发者更关心的是：<strong className="text-zinc-200">装什么、怎么装、用在哪类任务</strong>
+              ，以及客户端是否支持 stdio / 远程 / OAuth。
             </p>
-            <h3>Key Benefits</h3>
-            <ul>
-              <li><strong>Standardization</strong>: One protocol for all tool integrations</li>
-              <li><strong>Extensibility</strong>: Build custom servers for your needs</li>
-              <li><strong>Interoperability</strong>: Works across different AI platforms</li>
-              <li><strong>Security</strong>: Sandboxed tool execution</li>
-            </ul>
-          </CardContent>
-        </Card>
-      </section>
+            <p className="flex flex-wrap items-center gap-2">
+              <Sparkles className="h-4 w-4 text-purple-400" />
+              <span>
+                官方注册与发现：
+                <a
+                  href="https://registry.modelcontextprotocol.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 text-purple-400 hover:text-purple-300"
+                >
+                  MCP Registry
+                  <ExternalLink className="ml-0.5 inline h-3 w-3" />
+                </a>
+              </span>
+            </p>
+          </GlassCard>
+        </section>
 
-      {/* Popular MCP Servers */}
-      <section className="mb-12">
-        <div className="flex items-center gap-2 mb-4">
-          <Server className="h-6 w-6" />
-          <h2 className="text-2xl font-bold">Popular MCP Servers</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {mcpServers.map((server) => (
-            <Card key={server.name}>
-              <CardHeader>
-                <CardTitle className="text-lg">{server.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{server.description}</p>
-                <Button variant="outline" size="sm" asChild>
-                  <a
-                    href={server.repository}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View on GitHub <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+        <section className="mb-14" aria-labelledby="mcp-matrix">
+          <h2 id="mcp-matrix" className="mb-4 text-xl font-semibold text-zinc-100">
+            宿主客户端能力矩阵
+          </h2>
+          <McpHostMatrix />
+        </section>
 
-      {/* Tutorials */}
-      <section className="mb-12">
-        <div className="flex items-center gap-2 mb-4">
-          <Book className="h-6 w-6" />
-          <h2 className="text-2xl font-bold">Tutorials</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {tutorials.map((tutorial) => (
-            <Card key={tutorial.title} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-lg">{tutorial.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{tutorial.description}</p>
-                <Button asChild>
-                  <Link href={tutorial.href}>Read Tutorial</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+        <section className="mb-14" aria-labelledby="mcp-directory">
+          <h2 id="mcp-directory" className="mb-4 text-xl font-semibold text-zinc-100">
+            服务器列表
+          </h2>
+          <McpDirectoryClient servers={servers} />
+        </section>
 
-      {/* Get Started */}
-      <section className="text-center">
-        <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-        <p className="text-muted-foreground mb-6">
-          Check out our detailed guide on getting started with MCP.
-        </p>
-        <Button asChild>
-          <Link href="/blog/getting-started-mcp">
-            Read the Guide
-          </Link>
-        </Button>
-      </section>
+        <section className="mb-14" aria-labelledby="mcp-learn">
+          <div className="mb-4 flex items-center gap-2">
+            <BookOpen className="h-5 w-5 text-zinc-400" />
+            <h2 id="mcp-learn" className="text-xl font-semibold text-zinc-100">
+              教程与站内资源
+            </h2>
+          </div>
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {tutorials.map((t) => (
+              <li key={t.href}>
+                <GlassCard variant="default" hover className="h-full p-5">
+                  <h3 className="mb-2 font-medium text-zinc-100">{t.title}</h3>
+                  <p className="mb-4 text-sm text-zinc-500">{t.description}</p>
+                  <Button asChild variant="outline" size="sm" className="border-[#1c1c2e]">
+                    <Link href={t.href}>打开</Link>
+                  </Button>
+                </GlassCard>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <footer className="border-t border-[#1c1c2e] pt-10 text-center">
+          <p className="mb-4 text-zinc-500 text-sm">
+            安装命令与包名以各仓库 README 为准；归档类参考实现请注意安全模型与维护状态。
+          </p>
+          <Button asChild className="bg-purple-600 hover:bg-purple-500">
+            <Link href="/tools">浏览全部 MCP 类工具</Link>
+          </Button>
+        </footer>
+      </div>
     </div>
   )
 }

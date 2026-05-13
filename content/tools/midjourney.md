@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - midjourney
-website: 'https://blog.csdn.net/qq233325332/article/details/126775956'
+website: 'https://www.midjourney.com/'
 affiliateUrl: ''
 pricing: freemium
 features: []
@@ -24,7 +24,7 @@ Midjourney is an AI art generation program that creates beautiful images from si
 
 ## Getting Started
 
-[Visit Midjourney](https://blog.csdn.net/qq233325332/article/details/126775956)
+[Visit Midjourney](https://www.midjourney.com/)
 
 ## Use Cases
 

@@ -7,7 +7,7 @@ category: ai-coding-tools
 tags:
   - ai-coding-tools
   - chatgpt
-website: 'https://chat.openai.com'
+website: 'https://chatgpt.com/'
 affiliateUrl: ''
 pricing: freemium
 features: []
@@ -24,7 +24,7 @@ ChatGPT is a conversational AI assistant that helps developers with coding, debu
 
 ## Getting Started
 
-[Visit chatgpt](https://chat.openai.com)
+[Visit chatgpt](https://chatgpt.com/)
 
 ## Use Cases
 

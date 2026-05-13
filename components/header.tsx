@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X, Github } from 'lucide-react'
-import { NAV_ITEMS, SITE_NAME } from '@/lib/constants'
+import { NAV_ITEMS, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 
@@ -50,7 +50,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           {/* GitHub */}
           <a
-            href="https://github.com"
+            href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center justify-center w-8 h-8 rounded-lg text-zinc-500 hover:text-white hover:bg-[#111118] transition-all"

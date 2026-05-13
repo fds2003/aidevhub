@@ -1,51 +1,25 @@
-# AI Dev Hub - LLMs.txt
-> Your premier destination for AI Coding Tools, MCP Ecosystem, AI Agents, and Workflow automation.
+# AI Dev Hub
 
-## Tools
-- [Claude Code](/tools/claude-code) - Anthropic's CLI coding tool with agentic capabilities
-- [Cursor](/tools/cursor) - AI-first code editor for pair programming
-- [GitHub Copilot](/tools/github-copilot) - Microsoft's AI pair programming tool
-- [Windsurf](/tools/windsurf) - Codeium's AI-driven IDE
-- [FastMCP](/tools/fastmcp) - Build MCP servers quickly in Python
-- [Dify](/tools/dify) - Open-source LLM app development platform
-- [AutoGPT](/tools/autogpt) - Autonomous AI agent framework
-- [Ollama](/tools/ollama) - Run local LLMs easily
-- [ChatGPT](/tools/chatgpt) - OpenAI's conversational AI
-- [Claude](/tools/claude) - Anthropic's AI assistant
-- [Copilot](/tools/copilot) - GitHub Copilot coding assistant
-- [CrewAI](/tools/crewai) - Multi-agent orchestration framework
-- [Coze](/tools/coze) - AI bot development platform
-- [LangChain](/tools/langchain) - LLM application framework
-- [Midjourney](/tools/midjourney) - AI art generation
-- [Perplexity](/tools/perplexity) - AI-powered search engine
-- [Stable Diffusion](/tools/stable-diffusion) - Open-source AI image generation
-- [Zapier](/tools/zapier) - Workflow automation platform
-- [MCP Model Context Protocol](/tools/model-context-protocol) - Open protocol for AI tool integration
+Curated AI coding tools, MCP resources, workflows, and articles for developers.
 
-## Blog Posts
-- [ChatGPT Complete Guide](/blog/chatgpt-complete-guide-from-beginner-to-advanced)
-- [Claude AI Complete Guide](/blog/claude-ai-the-complete-guide-to-anthropics-assistant)
-- [GitHub Copilot vs Cursor vs Windsurf](/blog/github-copilot-vs-cursor-vs-windsurf-which-ai-coding-tool-is-best)
-- [Getting Started with MCP](/blog/getting-started-with-mcp-build-your-first-mcp-server)
-- [AutoGPT and AI Agents Guide](/blog/autogpt-and-ai-agents-a-beginners-guide-to-autonomous-ai)
-- [Stable Diffusion Complete Guide](/blog/stable-diffusion-complete-guide-to-ai-image-generation)
-- [Midjourney Tutorial](/blog/midjourney-tutorial-how-to-create-stunning-ai-art)
-- [Best AI Coding Tools 2024](/blog/best-ai-coding-tools-2024)
-- [Cursor vs Windsurf Comparison](/blog/cursor-vs-windsurf)
-- [MCP Getting Started Tutorial](/blog/getting-started-mcp)
-- [How to Use Perplexity AI](/blog/how-to-use-perplexity-ai-for-research-and-development)
-- [Dify AI Applications](/blog/dify-building-ai-applications-with-open-source-tools)
-- [Zapier Developer Workflow](/blog/zapier-and-automation-streamline-your-developer-workflow)
-- [New Bing Copilot Guide](/blog/new-bing-copilot-complete-guide-ai-powered-search)
-- [Ollama Local LLM Guide](/blog/ollama-running-local-llms-made-simple)
+## Start here
+- Site home: https://aidevhub.net/
+- Full URL index: https://aidevhub.net/sitemap.xml
+- Tools directory: https://aidevhub.net/tools
+- Blog: https://aidevhub.net/blog
+- Workflows: https://aidevhub.net/workflows
+- MCP hub: https://aidevhub.net/mcp
+- Categories: https://aidevhub.net/categories
 
-## Workflows
-- [AI Pair Programming Workflow](/workflows/ai-pair-programming)
-- [ChatGPT Prompt Engineering Workflow](/workflows/chatgpt-prompt-engineering-workflow)
-- [Building with MCP Workflow](/workflows/building-with-mcp-server-development-workflow)
-- [AI-Powered Code Review Workflow](/workflows/ai-powered-code-review-workflow)
-- [Local LLM Setup Workflow](/workflows/local-llm-setup-and-usage-workflow)
-- [CrewAI Multi-Agent Workflow](/workflows/crewai-multi-agent-collaboration-workflow)
+## Example tool pages (verify others under /tools)
+- https://aidevhub.net/tools/cursor
+- https://aidevhub.net/tools/claude-code
+- https://aidevhub.net/tools/model-context-protocol
 
-## About
-AI Dev Hub helps developers discover, compare, and master AI tools for coding, automation, and workflow optimization.
+## Example articles (verify others under /blog)
+- https://aidevhub.net/blog/just-fucking-use-cloudflare
+- https://aidevhub.net/blog/cloudflare-free-tier-complete-guide
+
+## Example workflows (verify others under /workflows)
+- https://aidevhub.net/workflows/ai-pair-programming
+- https://aidevhub.net/workflows/building-with-mcp-server-development-workflow

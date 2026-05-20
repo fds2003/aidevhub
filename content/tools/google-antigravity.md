@@ -27,9 +27,9 @@ alternatives:
   - claude-code
   - cursor
   - windsurf
-createdAt: 2026-05-20
-updatedAt: 2026-05-20
-publishedAt: 2026-05-20
+createdAt: "2026-05-20T14:30:00.000Z"
+updatedAt: "2026-05-20T14:30:00.000Z"
+publishedAt: "2026-05-20T14:30:00.000Z"
 ---
 
 # Google Antigravity - The Autonomous AI Coding Agent

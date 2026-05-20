@@ -1,11 +1,12 @@
 ---
 title: "Google Antigravity 2.0: The Ultimate Autonomous AI Coding Agent by Google DeepMind"
+slug: "introducing-google-antigravity-2-0"
 description: "Discover Google Antigravity 2.0, the best autonomous AI coding agent and developer assistant from Google DeepMind. Explore its features, architecture, and why it is the top Cursor and Claude Code alternative for professional software engineering."
 category: ai-coding-tools
 tags: [google-antigravity-2.0, ai-coding-agent, deepmind-coding-assistant, autonomous-ai-developer, cursor-alternative]
-createdAt: 2026-05-20
-updatedAt: 2026-05-20
-publishedAt: 2026-05-20
+createdAt: "2026-05-20T14:30:00.000Z"
+updatedAt: "2026-05-20T14:30:00.000Z"
+publishedAt: "2026-05-20T14:30:00.000Z"
 ---
 
 # Google Antigravity 2.0: The Ultimate Autonomous AI Coding Agent by Google DeepMind

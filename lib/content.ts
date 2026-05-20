@@ -33,10 +33,15 @@ export function getAllTools(): Tool[] {
   const toolsDir = path.join(CONTENT_DIR, 'tools')
   const files = getFiles(toolsDir)
   
-  return files.map((file) => {
-    const filePath = path.join(toolsDir, file)
-    return normalizeTool(parseFrontmatter<Tool>(filePath))
-  })
+  return files
+    .map((file) => {
+      const filePath = path.join(toolsDir, file)
+      return normalizeTool(parseFrontmatter<Tool>(filePath))
+    })
+    .sort((a, b) => 
+      new Date(b.publishedAt || b.createdAt).getTime() - 
+      new Date(a.publishedAt || a.createdAt).getTime()
+    )
 }
 
 export function getToolBySlug(slug: string): Tool | null {

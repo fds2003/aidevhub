@@ -1,11 +1,12 @@
 ---
 title: "Google Antigravity 2.0 Tutorial: The Complete Guide to the Best AI Coding Assistant"
+slug: "google-antigravity-tutorial-guide"
 description: "Learn how to use Google Antigravity 2.0, the best autonomous AI coding agent by Google DeepMind. Follow this step-by-step tutorial to configure its API keys, master slash commands like /goal and /schedule, and orchestrate developer subagents."
 category: ai-coding-tools
 tags: [google-antigravity-tutorial, how-to-use-antigravity, best-ai-coding-assistant, autonomous-ai-developer, deepmind-coding-agent]
-createdAt: 2026-05-20
-updatedAt: 2026-05-20
-publishedAt: 2026-05-20
+createdAt: "2026-05-20T14:00:00.000Z"
+updatedAt: "2026-05-20T14:00:00.000Z"
+publishedAt: "2026-05-20T14:00:00.000Z"
 ---
 
 # Google Antigravity 2.0 Tutorial: The Complete Guide to the Best AI Coding Assistant

@@ -1,7 +1,7 @@
 ---
-title: "Prompt 缓存与工具设计：把长 system 提示从成本中心挪开"
+title: "Prompt Caching and Tool Design: Moving Long System Prompts out of the Cost Center"
 slug: "prompt-caching-tool-design-2026-05"
-description: "面向已在多轮对话里重复塞长指令、或频繁调用工具的开发者：如何拆分消息、设计工具 JSON schema，并与供应商缓存语义对齐。"
+description: "For developers repeatedly passing long instructions in multi-turn chats or invoking tools frequently: how to structure messages, design JSON schemas for tools, and align with provider caching logic."
 category: "prompts"
 tags: ["prompt-engineering", "tools", "caching", "editorial-2026"]
 author: "AI Dev Hub"
@@ -13,15 +13,19 @@ featured: false
 hideLegacy2026Banner: true
 ---
 
-2026 年主流 API 已普遍支持 **prompt caching** 或等价语义：对「前缀稳定、后缀变化」的请求按前缀计费打折。要吃到折扣，关键是**稳定字节序列**，而不是在 system 里写小作文。
+In 2026, mainstream LLM APIs universally support **prompt caching** or equivalent semantic features, offering substantial discounts for requests with a stable prefix and dynamic suffix. To leverage this discount, the key is keeping a **stable byte sequence** rather than writing long prose in your system prompt.
 
-**实践顺序**  
-1. 把**角色、政策、输出 schema** 放进固定前缀；把用户可变内容放后缀。  
-2. 避免在前缀里拼接时间戳、随机 ID 或「整段 few-shot 每次shuffle」。  
-3. 工具定义用 **JSON Schema** 固定字段顺序（生成端若打乱，缓存键会失效）。
+---
 
-**工具设计**  
-- 粒度：宁可多几个「窄工具」，也不要一个「万能 JSON blob」让模型猜字段。  
-- 错误信息：返回可机读的 `error_code`，便于模型自纠与你在 trace 里聚合。
+## 1. Structuring for Cache Hits
+1. Place **persona, guidelines, and output schemas** inside the static prefix, and user-dependent dynamic variables in the suffix.
+2. Avoid injecting volatile components (such as timestamps, random IDs, or shuffled few-shot examples) into the prefix.
+3. Use a deterministic **JSON Schema** for tool definitions to lock key order (if your generator client shuffles keys, the cache key becomes invalid).
 
-与 2023 年《10 个 ChatGPT 提示词技巧》对照：老文讲「怎么写得像样」，本文讲「怎么在**长驻**与**多轮**里写得又稳又省」。
+## 2. Tool Design Best Practices
+* **Granularity**: Prefer several single-purpose, "narrow" tools over one "all-in-one" JSON blob that forces the model to guess parameters.
+* **Error Handling**: Return machine-readable `error_code` outputs so the LLM can self-correct, and you can aggregate errors easily in your tracing system.
+
+---
+
+*Recommended reading alongside our 2023 guide "10 ChatGPT Prompting Techniques": that post covers how to write effective prompts, while this one focuses on keeping long-context and multi-turn runs cost-effective and deterministic.*

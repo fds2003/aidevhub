@@ -1,7 +1,7 @@
 ---
-title: "Graph RAG：什么时候值得把图引进检索管线？"
+title: "Graph RAG: When and Why You Should Introduce Graphs into Your Retrieval Pipeline"
 slug: "graph-rag-when-why-2026-05"
-description: "在向量检索与关键词之外，图结构擅长表达关系与多跳约束；本文用决策视角谈成本、数据准备与维护，不绑定某一厂商实现。"
+description: "Beyond vector search and keywords, graph structures excel at representing relationships and multi-hop constraints. This article examines the trade-offs in costs, data preparation, and maintenance."
 category: "ai-news"
 tags: ["graph-rag", "rag", "knowledge-graph", "editorial-2026"]
 author: "AI Dev Hub"
@@ -13,18 +13,22 @@ featured: false
 hideLegacy2026Banner: true
 ---
 
-Graph RAG 不是「比向量 RAG 更高级」的同义词，而是**在关系密集、需要多跳约束或可解释路径**时，才值得为图付运维税。
+Graph RAG is not a synonym for "advanced vector RAG." Rather, it is a specialized approach. You should only pay the "graph operational tax" when your data is **relationship-dense, requires multi-hop constraints, or demands explainable retrieval paths**.
 
-**适合认真考虑的场景**  
-- 合规 / 安全问答：需要显式引用「条款—章节—例外」链。  
-- 故障诊断：设备—部件—告警码之间存在稳定拓扑。  
-- 研发知识：API—版本—弃用关系需要随发布更新。
+---
 
-**不适合硬上的场景**  
-- 语料主要是长散文、关系稀疏；图构建会退化成高成本关键词网。  
-- 没有 owner 维护实体对齐与消歧；图会在三个月内变成垃圾边集合。
+## When to Seriously Consider Graph RAG
+* **Compliance & Policy Q&A**: Requires explicit citation chains, such as "Clause ── Chapter ── Exception."
+* **Root Cause & Diagnosis**: Requires mapping structured topologies like "Device ── Component ── Alarm Code."
+* **Developer Knowledge Bases**: Requires mapping dependency relations such as "API ── Version ── Deprecation" that change dynamically with software releases.
 
-**工程折中**  
-常见路线是：**向量召回 + 小范围子图扩展**（k-hop 限制 + 置信阈值），而不是一次把全库图谱塞进上下文。
+## When to Avoid Graph RAG
+* **Sparse, Unstructured Prose**: If your corpus consists primarily of narrative prose with sparse connections, graph construction degenerates into a costly keyword index network.
+* **Lack of Ownership for Entity Resolution**: Without clear ownership to maintain entity alignment and deduplication, the graph will deteriorate into a noisy, fragmented web of useless edges within three months.
 
-与站内 2024 年《详述 RAG 的 5 步流程》长文搭配阅读：那篇讲「流水线骨架」，本篇讲「何时为骨架加一条图的肋骨」。
+## Engineering Trade-offs
+A common production pattern is **hybrid retrieval**: retrieve candidate entities via **vector search**, and then perform **local subgraph expansion** (enforcing a strict k-hop limit and confidence thresholds) rather than dumping the entire global graph into the context window.
+
+---
+
+*Recommended reading alongside our 2024 post "A 5-Step Pipeline for Production RAG": that article covers the RAG skeleton, whereas this post discusses when to add graph architecture to that skeleton.*

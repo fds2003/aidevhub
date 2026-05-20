@@ -6,9 +6,9 @@ category: "mcp"
 tags: ["mcp", "google-antigravity", "api-integration", "custom-tools"]
 author: "AI Dev Hub"
 readingTime: 6
-createdAt: "2026-05-22T10:00:00.000Z"
-updatedAt: "2026-05-22T10:00:00.000Z"
-publishedAt: "2026-05-22T10:00:00.000Z"
+createdAt: "2026-05-23"
+updatedAt: "2026-05-23"
+publishedAt: "2026-05-23"
 featured: false
 hideLegacy2026Banner: true
 ---

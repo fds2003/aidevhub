@@ -1,14 +1,14 @@
 ---
-title: "Prompt Caching: Reducing Agent Token Overhead by 90% in Large Repositories"
+title: "Prompt Caching: Reducing Agent Token Cost by 90% in Large Repositories"
 slug: "google-antigravity-prompt-caching"
-description: "Discover how Google Antigravity 2.0 leverages Gemini's Context Caching to make continuous codebase analysis highly cost-effective by caching static codebase contexts."
+description: "Discover how Google Antigravity 2.0 leverages Gemini's Context Caching to make codebase analysis highly cost-effective by caching static contexts."
 category: "ai-agents"
 tags: ["prompt-caching", "gemini-api", "cost-optimization", "google-antigravity"]
 author: "AI Dev Hub"
 readingTime: 5
-createdAt: "2026-05-23T10:00:00.000Z"
-updatedAt: "2026-05-23T10:00:00.000Z"
-publishedAt: "2026-05-23T10:00:00.000Z"
+createdAt: "2026-05-24"
+updatedAt: "2026-05-24"
+publishedAt: "2026-05-24"
 featured: false
 hideLegacy2026Banner: true
 ---

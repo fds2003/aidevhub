@@ -1,14 +1,14 @@
 ---
-title: "Test-Driven AI Coding: Automating the Code-Test-Fix Loop inside Sandboxes"
+title: "Test-Driven AI Coding: Automating the Code-Test-Fix Loop in Sandboxes"
 slug: "google-antigravity-tdd-self-correcting-loop"
-description: "Learn how Google Antigravity 2.0 uses closed-loop Test-Driven Development (TDD) to automate writing unit tests, running them in isolated shells, and self-correcting buggy implementations."
+description: "Learn how Google Antigravity 2.0 uses closed-loop TDD to automate writing unit tests, running them in sandboxes, and self-correcting buggy code."
 category: "ai-agents"
 tags: ["tdd", "google-antigravity", "automation", "testing"]
 author: "AI Dev Hub"
 readingTime: 6
-createdAt: "2026-05-24T10:00:00.000Z"
-updatedAt: "2026-05-24T10:00:00.000Z"
-publishedAt: "2026-05-24T10:00:00.000Z"
+createdAt: "2026-05-25"
+updatedAt: "2026-05-25"
+publishedAt: "2026-05-25"
 featured: false
 hideLegacy2026Banner: true
 ---

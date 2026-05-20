@@ -1,14 +1,14 @@
 ---
 title: "Orchestrating Subagents: Running Parallel Background Threads Safely"
 slug: "google-antigravity-subagent-orchestration"
-description: "Explore the multi-agent delegation capabilities of Google Antigravity 2.0 and learn how it coordinates specialized subagents to tackle repository research in parallel."
+description: "Learn how Google Antigravity 2.0 coordinates specialized subagents to tackle complex repository research and automated testing tasks in parallel."
 category: "ai-agents"
 tags: ["google-antigravity", "multi-agent", "subagents", "software-architecture"]
 author: "AI Dev Hub"
 readingTime: 5
-createdAt: "2026-05-21T10:00:00.000Z"
-updatedAt: "2026-05-21T10:00:00.000Z"
-publishedAt: "2026-05-21T10:00:00.000Z"
+createdAt: "2026-05-22"
+updatedAt: "2026-05-22"
+publishedAt: "2026-05-22"
 featured: false
 hideLegacy2026Banner: true
 ---
@@ -53,7 +53,7 @@ In the Antigravity workspace, defining a new subagent requires specifying its sc
 // Example definition of a subagent
 await defineSubagent({
   name: "DatabaseDebugger",
-  description: "Queries db schema and analyzes slow query logs in isolation",
+  description: "Learn how Google Antigravity 2.0 coordinates specialized subagents to tackle complex repository research and automated testing tasks in parallel.",
   enable_write_tools: true, // Restricted to DB migrations and test directories
   system_prompt: "You are a database debugger. Focus purely on diagnosing query performance..."
 });

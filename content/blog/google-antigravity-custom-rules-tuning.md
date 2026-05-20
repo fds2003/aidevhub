@@ -1,14 +1,14 @@
 ---
 title: "Writing Custom Rules: Tuning Agent Behavior via Rules and Directives"
 slug: "google-antigravity-custom-rules-tuning"
-description: "Master the art of controlling AI agent output. Learn how to configure custom rules and directives in Google Antigravity 2.0 to enforce coding conventions, tech stacks, and safety parameters."
+description: "Learn how to configure custom rules and directives in Google Antigravity 2.0 to enforce coding conventions, tech stacks, and security boundaries."
 category: "ai-agents"
 tags: ["google-antigravity", "configuration", "best-practices", "code-quality"]
 author: "AI Dev Hub"
 readingTime: 5
-createdAt: "2026-05-25T10:00:00.000Z"
-updatedAt: "2026-05-25T10:00:00.000Z"
-publishedAt: "2026-05-25T10:00:00.000Z"
+createdAt: "2026-05-26"
+updatedAt: "2026-05-26"
+publishedAt: "2026-05-26"
 featured: false
 hideLegacy2026Banner: true
 ---

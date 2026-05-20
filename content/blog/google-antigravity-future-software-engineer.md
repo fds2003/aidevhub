@@ -1,14 +1,14 @@
 ---
-title: "Beyond Autocomplete: Transitioning to the Era of Autonomous Software Engineers"
+title: "Beyond Autocomplete: Transition to Autonomous Software Engineers"
 slug: "google-antigravity-future-software-engineer"
 description: "Explore the evolution of AI-powered development, comparing autocomplete tools like Cursor with autonomous coding agents like Google Antigravity 2.0."
 category: "ai-agents"
 tags: ["future-of-coding", "google-antigravity", "ai-agents", "software-engineering"]
 author: "AI Dev Hub"
 readingTime: 6
-createdAt: "2026-05-26T10:00:00.000Z"
-updatedAt: "2026-05-26T10:00:00.000Z"
-publishedAt: "2026-05-26T10:00:00.000Z"
+createdAt: "2026-05-27"
+updatedAt: "2026-05-27"
+publishedAt: "2026-05-27"
 featured: false
 hideLegacy2026Banner: true
 ---

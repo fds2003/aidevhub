@@ -1,14 +1,14 @@
 ---
 title: "Multi-file Refactoring: How AI Agents Manage Cross-Module Consistency"
 slug: "google-antigravity-multi-file-refactoring"
-description: "Discover how Google Antigravity 2.0 leverages AST parsing and compile-driven feedback loops to safely apply multi-file refactoring tasks across complex codebases."
+description: "Learn how Google Antigravity 2.0 uses AST parsing and compiled feedback loops to safely apply multi-file refactoring tasks across complex codebases."
 category: "ai-agents"
 tags: ["google-antigravity", "refactoring", "ast-parsing", "engineering"]
 author: "AI Dev Hub"
 readingTime: 6
-createdAt: "2026-05-20T17:59:00.000Z"
-updatedAt: "2026-05-20T17:59:00.000Z"
-publishedAt: "2026-05-20T17:59:00.000Z"
+createdAt: "2026-05-21"
+updatedAt: "2026-05-21"
+publishedAt: "2026-05-21"
 featured: false
 hideLegacy2026Banner: true
 ---

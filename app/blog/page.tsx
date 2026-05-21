@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Calendar, ArrowRight, Tag } from 'lucide-react'
-import { Badge } from '@/components/ui/glass-badge'
 import { getAllPosts } from '@/lib/content'
 import { format } from 'date-fns'
 

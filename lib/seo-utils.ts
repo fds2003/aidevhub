@@ -29,7 +29,6 @@ export function generateSEOProps({
   modifiedAt,
   author,
   tags,
-  schema,
 }: SEOProps): Metadata {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME
   const fullDescription = description || SITE_DESCRIPTION

@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, ArrowRight, Clock, BookOpen, Copy, Check } from 'lucide-react'
+import { ArrowLeft, ArrowRight, Clock, BookOpen } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { getAllTools, getAllPosts, getAllWorkflows, getWorkflowBySlug } from '@/lib/content'
 import { getRelatedPosts } from '@/lib/related-posts'
-import { SITE_URL } from '@/lib/constants'
 import { CopyToClipboard } from '@/components/ui/copy-to-clipboard'
 import type { Metadata } from 'next'
 
@@ -131,7 +130,7 @@ export default async function WorkflowDetailPage({ params }: PageProps) {
             </h2>
             {workflow.steps
               .sort((a, b) => a.order - b.order)
-              .map((step, index) => (
+              .map((step) => (
                 <Card key={step.order} className="relative overflow-hidden">
                   {/* Step number indicator */}
                   <div className="absolute top-0 left-0 w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg rounded-br-lg">

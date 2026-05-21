@@ -44,12 +44,6 @@ export function generateArticleSchema(post: Post, siteUrl: string) {
  * Generate SoftwareApplication schema for tools
  */
 export function generateSoftwareSchema(tool: Tool, siteUrl: string) {
-  const pricingType = tool.pricing === 'free' 
-    ? 'https://schema.org/FreeDigitalAsset'
-    : tool.pricing === 'freemium'
-      ? 'https://schema.org/FreeOrAdSupportedProduct'
-      : 'https://schema.org/PaidProduct'
-
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',

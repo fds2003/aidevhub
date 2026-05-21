@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, Github } from 'lucide-react'
+import { Menu, Github } from 'lucide-react'
 import { NAV_ITEMS, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'

@@ -4,7 +4,6 @@
  */
 
 const AVERAGE_READING_SPEED = 200 // words per minute
-const AVERAGE_CODE_READING_SPEED = 30 // lines per minute for code blocks
 
 /**
  * Calculate estimated reading time for content

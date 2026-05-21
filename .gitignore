@@ -4,3 +4,5 @@ out/
 scripts/data/
 .env.local
 .env.production
+temp-release/
+

@@ -68,6 +68,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://aidevhub.net/blog/google-antigravity-cli-vs-ide-guide</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aidevhub.net/blog/the-price-butcher-of-ai-coding</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://aidevhub.net/workflows</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

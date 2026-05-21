@@ -6,14 +6,14 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-[#1c1c2e] bg-[#080810]">
+    <footer className="border-t border-border bg-background">
       <div className="container py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded bg-[#00D9FF]/10 border border-[#00D9FF]/20 flex items-center justify-center">
-                <span className="text-[#00D9FF] text-xs font-mono font-bold">AI</span>
+              <div className="w-6 h-6 rounded bg-primary/10 border border-primary/20 flex items-center justify-center">
+                <span className="text-primary text-xs font-mono font-bold">AI</span>
               </div>
               <span className="font-semibold text-white font-mono">{SITE_NAME}</span>
             </div>
@@ -30,7 +30,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-sm">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-zinc-500 hover:text-[#00D9FF] transition-colors">
+                  <Link href={item.href} className="text-zinc-500 hover:text-primary transition-colors">
                     {item.label}
                   </Link>
                 </li>
@@ -45,12 +45,12 @@ export function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/rss.xml" className="text-zinc-500 hover:text-[#00D9FF] transition-colors">
+                <Link href="/rss.xml" className="text-zinc-500 hover:text-primary transition-colors">
                   RSS Feed
                 </Link>
               </li>
               <li>
-                <Link href="/sitemap.xml" className="text-zinc-500 hover:text-[#00D9FF] transition-colors">
+                <Link href="/sitemap.xml" className="text-zinc-500 hover:text-primary transition-colors">
                   Sitemap
                 </Link>
               </li>
@@ -64,11 +64,11 @@ export function Footer() {
             </h3>
             <div className="flex gap-3">
               <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-lg border border-[#1c1c2e] text-zinc-500 hover:text-white hover:border-[#282838] transition-all">
+                className="w-8 h-8 flex items-center justify-center rounded-lg border border-border text-zinc-500 hover:text-white hover:border-border-hover transition-all">
                 <Twitter className="w-4 h-4" />
               </a>
               <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-lg border border-[#1c1c2e] text-zinc-500 hover:text-white hover:border-[#282838] transition-all">
+                className="w-8 h-8 flex items-center justify-center rounded-lg border border-border text-zinc-500 hover:text-white hover:border-border-hover transition-all">
                 <Github className="w-4 h-4" />
               </a>
             </div>
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#1c1c2e] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-zinc-600 font-mono">
             &copy; {currentYear} {SITE_NAME}. All rights reserved.
           </p>

@@ -6,36 +6,36 @@
 
 @layer base {
   :root {
-    /* Obsidian Palette */
-    --background:    240 13% 4%;
-    --surface:       240 13% 7%;
-    --card:          240 13% 9%;
+    /* Deep Space Palette */
+    --background:    240 50% 3%;
+    --surface:       240 40% 6%;
+    --card:          240 40% 6%;
     --card-foreground: 240 9% 94%;
-    --popover:       240 13% 9%;
+    --popover:       240 40% 6%;
     --popover-foreground: 240 9% 94%;
 
-    /* Brand: Cyan + Purple */
-    --primary:       189 100% 50%;
-    --primary-hover: 189 100% 60%;
-    --primary-foreground: 240 13% 4%;
+    /* Brand: Electric Cyan + Rich Purple */
+    --primary:       193 100% 50%; /* #00BBFF */
+    --primary-hover: 193 100% 60%;
+    --primary-foreground: 240 50% 3%;
 
-    /* Secondary */
-    --secondary:     247 37% 21%;
-    --secondary-foreground: 240 9% 94%;
+    --secondary:     261 80% 58%; /* #7C3AED */
+    --secondary-hover: 261 80% 68%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Terminal Green */
+    /* Terminal Green Accent */
     --accent:        153 100% 50%;
-    --accent-foreground: 240 13% 4%;
+    --accent-foreground: 240 50% 3%;
 
     /* Text */
-    --muted:         240 6% 35%;
+    --muted:         240 10% 45%;
     --foreground:    240 9% 94%;
 
     /* UI */
-    --border:        240 13% 12%;
-    --border-hover:  240 13% 18%;
-    --input:         240 13% 12%;
-    --ring:          189 100% 50%;
+    --border:        240 20% 12%;
+    --border-hover:  240 20% 18%;
+    --input:         240 20% 12%;
+    --ring:          193 100% 50%;
 
     /* States */
     --destructive:   350 100% 67%;

@@ -14,11 +14,11 @@ export const GlassCard = forwardRef<HTMLDivElement, CardProps>(
     const baseStyles = "rounded-xl transition-all duration-200";
 
     const variants = {
-      default: "bg-[#111118] border border-[#1c1c2e]",
-      glass: "bg-[#111118]/80 backdrop-blur-md border border-[#1c1c2e]/60",
-      elevated: "bg-[#111118] border border-[#1c1c2e] shadow-[0_4px_16px_rgba(0,0,0,0.4)]",
-      outline: "bg-transparent border border-[#1c1c2e]",
-      grid: "bg-[#111118] border border-[#1c1c2e] relative overflow-hidden",
+      default: "bg-surface border border-border",
+      glass: "bg-surface/80 backdrop-blur-md border border-border/60",
+      elevated: "bg-surface border border-border shadow-card-lg",
+      outline: "bg-transparent border border-border",
+      grid: "bg-surface border border-border relative overflow-hidden",
     };
 
     const paddings = {
@@ -29,7 +29,7 @@ export const GlassCard = forwardRef<HTMLDivElement, CardProps>(
     };
 
     const hoverStyles = hover
-      ? "hover:border-[#00D9FF]/20 hover:shadow-[0_0_16px_rgba(0,217,255,0.06)] hover:-translate-y-0.5 cursor-pointer"
+      ? "hover:border-primary/30 hover:shadow-glow-cyan hover:-translate-y-0.5 cursor-pointer"
       : "";
 
     return (
@@ -79,7 +79,7 @@ CardContent.displayName = "CardContent";
 
 export const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
-    <div ref={ref} className={cn("flex items-center mt-4 pt-4 border-t border-[#1c1c2e]", className)} {...props} />
+    <div ref={ref} className={cn("flex items-center mt-4 pt-4 border-t border-border", className)} {...props} />
   )
 );
 CardFooter.displayName = "CardFooter";

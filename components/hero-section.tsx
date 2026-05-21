@@ -61,16 +61,16 @@ export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStat
   return (
     <section className="relative pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#00D9FF]/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
       
       <div className="container relative text-center">
         {/* Terminal Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-mono bg-[#111118] border border-[#1c1c2e] rounded-full animate-fade-in">
-          <Sparkles className="w-3.5 h-3.5 text-[#00D9FF]" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-xs font-mono bg-surface border border-border rounded-full animate-fade-in">
+          <Sparkles className="w-3.5 h-3.5 text-primary" />
           <span className="text-zinc-400">Powered by </span>
-          <span className="text-[#00D9FF]">AI</span>
+          <span className="text-primary">AI</span>
           <span className="text-zinc-600 mx-1">{'//'}</span>
-          <span className="text-terminal-400">v2.0</span>
+          <span className="text-accent">v2.0</span>
         </div>
 
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: '60ms' }}>
@@ -101,12 +101,12 @@ export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStat
           {stats.map((stat) => (
             <div
               key={stat.key}
-              className="px-6 py-4 bg-[#111118]/60 border border-[#1c1c2e] rounded-xl backdrop-blur-sm"
+              className="px-6 py-4 bg-surface/60 border border-border/50 rounded-xl backdrop-blur-sm"
             >
               {stat.kind === 'count' ? (
                 <>
                   <div className="flex items-center justify-center gap-2 flex-wrap">
-                    <stat.icon className="w-4 h-4 text-[#00D9FF] shrink-0" />
+                    <stat.icon className="w-4 h-4 text-primary shrink-0" />
                     <span className="text-2xl md:text-3xl font-bold text-white font-mono tabular-nums">
                       {stat.value}
                       <span className="text-base md:text-lg font-semibold text-zinc-300 font-sans ml-1.5">
@@ -118,7 +118,7 @@ export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStat
               ) : (
                 <>
                   <div className="flex items-center justify-center gap-2 mb-1">
-                    <stat.icon className="w-4 h-4 text-[#00D9FF] shrink-0" />
+                    <stat.icon className="w-4 h-4 text-primary shrink-0" />
                     <span className="text-lg md:text-xl font-semibold text-white">{stat.title}</span>
                   </div>
                   <p className="text-xs text-zinc-500 text-center leading-relaxed">{stat.sub}</p>

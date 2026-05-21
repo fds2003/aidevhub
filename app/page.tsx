@@ -208,15 +208,15 @@ export default function HomePage() {
             {/* 大卡 — 最新文章（左 3 列） */}
             <Link
               href={`/blog/${latestPosts[0].slug}`}
-              className="lg:col-span-3 group relative flex flex-col justify-end min-h-[320px] rounded-2xl border border-white/[0.07] bg-gradient-to-b from-[#0A0A18] to-[#07070F] overflow-hidden hover:border-[#00BBFF]/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,187,255,0.08)]"
+              className="lg:col-span-3 group relative flex flex-col justify-end min-h-[320px] rounded-2xl border border-white/[0.07] bg-gradient-to-b from-surface/80 to-background overflow-hidden hover:border-primary/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,187,255,0.08)]"
             >
-              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#00BBFF] via-[#7C3AED] to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#04040C] via-[#04040C]/50 to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-primary via-secondary to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
               <div className="relative p-7">
                 <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3 block capitalize">
                   {latestPosts[0].category?.replace(/-/g, ' ')}
                 </span>
-                <h3 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-[#00BBFF] transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-primary transition-colors line-clamp-2">
                   {latestPosts[0].title}
                 </h3>
                 <p className="text-sm text-zinc-400 line-clamp-2 leading-relaxed mb-4">
@@ -224,7 +224,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-zinc-600 font-mono">{latestPosts[0].date}</span>
-                  <span className="flex items-center gap-1 text-xs font-mono text-[#00BBFF] group-hover:gap-2 transition-all">
+                  <span className="flex items-center gap-1 text-xs font-mono text-primary group-hover:gap-2 transition-all">
                     Read <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
@@ -237,20 +237,20 @@ export default function HomePage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex-1 relative flex flex-col justify-between rounded-2xl border border-white/[0.06] bg-[#08081A]/60 p-5 overflow-hidden hover:border-white/[0.14] transition-all duration-200 hover:-translate-y-0.5"
+                  className="group flex-1 relative flex flex-col justify-between rounded-2xl border border-white/[0.06] bg-surface/60 p-5 overflow-hidden hover:border-white/[0.14] transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-gradient-to-b from-[#7C3AED]/60 to-[#00BBFF]/60" />
+                  <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-gradient-to-b from-secondary/60 to-primary/60" />
                   <div>
                     <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 block capitalize">
                       {post.category?.replace(/-/g, ' ')}
                     </span>
-                    <h4 className="text-sm font-semibold text-white leading-snug group-hover:text-[#00BBFF] transition-colors line-clamp-3">
+                    <h4 className="text-sm font-semibold text-white leading-snug group-hover:text-primary transition-colors line-clamp-3">
                       {post.title}
                     </h4>
                   </div>
                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-white/[0.05]">
                     <span className="text-xs text-zinc-600 font-mono">{post.date}</span>
-                    <ArrowRight className="w-3 h-3 text-zinc-600 group-hover:text-[#00BBFF] transition-colors" />
+                    <ArrowRight className="w-3 h-3 text-zinc-600 group-hover:text-primary transition-colors" />
                   </div>
                 </Link>
               ))}
@@ -265,13 +265,13 @@ export default function HomePage() {
       {/* Newsletter */}
       <GradientSection variant="gradient" size="lg">
         {/* Glow Effects */}
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 h-64 bg-[#00D9FF]/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-64 h-64 bg-[#7B61FF]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 h-64 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-64 h-64 bg-secondary/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="relative max-w-xl mx-auto text-center">
           {/* Terminal Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-mono bg-[#111118]/80 border border-[#1c1c2e] rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00FF87] animate-blink" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-mono bg-surface/80 border border-border rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-blink" />
             <span className="text-zinc-400">Newsletter</span>
           </div>
           
@@ -291,7 +291,7 @@ export default function HomePage() {
                 name="email"
                 placeholder="your@email.com"
                 required
-                className="w-full h-12 pl-10 pr-4 bg-[#111118] border border-[#1c1c2e] rounded-xl text-sm font-mono text-white placeholder:text-zinc-600 focus:outline-none focus:border-[#00D9FF]/50 focus:glow-cyan transition-all"
+                className="w-full h-12 pl-10 pr-4 bg-surface border border-border rounded-xl text-sm font-mono text-white placeholder:text-zinc-600 focus:outline-none focus:border-primary/50 focus:glow-cyan transition-all"
               />
             </div>
             <GlassButton size="lg" variant="cyan" type="submit" className="shrink-0 glow-cyan">
@@ -300,7 +300,7 @@ export default function HomePage() {
           </form>
           
           <p className="mt-4 text-xs text-zinc-600 font-mono">
-            <span className="text-[#00FF87]">✓</span> No spam, unsubscribe anytime.
+            <span className="text-accent">✓</span> No spam, unsubscribe anytime.
           </p>
         </div>
       </GradientSection>

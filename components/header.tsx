@@ -12,12 +12,12 @@ export function Header() {
   const [activeHref, setActiveHref] = useState('/')
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#1c1c2e] bg-[#080810]/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md">
       <div className="container flex h-14 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-7 h-7 rounded-lg bg-[#00D9FF]/10 border border-[#00D9FF]/20 flex items-center justify-center group-hover:border-[#00D9FF]/40 transition-colors">
-            <span className="text-[#00D9FF] text-sm font-mono font-bold">AI</span>
+          <div className="w-7 h-7 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:border-primary/40 transition-colors">
+            <span className="text-primary text-sm font-mono font-bold">AI</span>
           </div>
           <span className="text-sm font-semibold text-white tracking-tight font-mono">
             {SITE_NAME}
@@ -36,8 +36,8 @@ export function Header() {
                 className={cn(
                   "px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-150",
                   isActive
-                    ? "text-white bg-[#111118] border border-[#1c1c2e]"
-                    : "text-zinc-500 hover:text-white hover:bg-[#111118]/50"
+                    ? "text-white bg-surface border border-border"
+                    : "text-zinc-500 hover:text-white hover:bg-surface/50"
                 )}
               >
                 {item.label}
@@ -53,7 +53,7 @@ export function Header() {
             href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center justify-center w-8 h-8 rounded-lg text-zinc-500 hover:text-white hover:bg-[#111118] transition-all"
+            className="hidden sm:flex items-center justify-center w-8 h-8 rounded-lg text-zinc-500 hover:text-white hover:bg-surface transition-all"
             aria-label="GitHub"
           >
             <Github className="w-4 h-4" />
@@ -62,11 +62,11 @@ export function Header() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <button className="flex items-center justify-center w-8 h-8 rounded-lg text-zinc-500 hover:text-white hover:bg-[#111118] transition-all">
+              <button className="flex items-center justify-center w-8 h-8 rounded-lg text-zinc-500 hover:text-white hover:bg-surface transition-all">
                 <Menu className="w-4 h-4" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-72 bg-[#080810] border-l border-[#1c1c2e]">
+            <SheetContent side="right" className="w-72 bg-background border-l border-border">
               <nav className="flex flex-col gap-1 mt-8">
                 {NAV_ITEMS.map((item) => {
                   const isActive = activeHref === item.href
@@ -78,8 +78,8 @@ export function Header() {
                       className={cn(
                         "px-4 py-3 text-sm font-medium rounded-lg transition-all",
                         isActive
-                          ? "text-[#00D9FF] bg-[#00D9FF]/5 border border-[#00D9FF]/20"
-                          : "text-zinc-400 hover:text-white hover:bg-[#111118]"
+                          ? "text-primary bg-primary/5 border border-primary/20"
+                          : "text-zinc-400 hover:text-white hover:bg-surface"
                       )}
                     >
                       {item.label}

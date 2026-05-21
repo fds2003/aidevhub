@@ -27,18 +27,18 @@ export const GlassButton = forwardRef<HTMLButtonElement, ButtonProps>(
         active:scale-[0.97]
       `,
       secondary: `
-        bg-[#111118] border border-[#1c1c2e] text-zinc-300
-        hover:bg-[#161620] hover:border-[#282838] hover:text-white
+        bg-surface border border-border text-zinc-300
+        hover:bg-surface/80 hover:border-border-hover hover:text-white
         active:scale-[0.97]
       `,
       ghost: `
         bg-transparent text-zinc-400
-        hover:bg-[#111118] hover:text-white
+        hover:bg-surface hover:text-white
         active:scale-[0.97]
       `,
       outline: `
-        bg-transparent border border-[#1c1c2e] text-zinc-300
-        hover:bg-[#111118] hover:border-[#00D9FF]/30 hover:text-cyan-400
+        bg-transparent border border-border text-zinc-300
+        hover:bg-surface hover:border-primary/30 hover:text-primary
         active:scale-[0.97]
       `,
       cyan: `

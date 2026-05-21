@@ -60,18 +60,18 @@ const config: Config = {
         cyan: {
           300: '#67E8F9',
           400: '#22D3EE',
-          500: '#00D9FF',   // primary
+          500: 'hsl(var(--primary))',   // primary
           600: '#0891B2',
         },
         terminal: {
           300: '#6EE7B7',
           400: '#34D399',
-          500: '#00FF87',   // accent
+          500: 'hsl(var(--accent))',   // accent
         },
         obsidian: {
-          900: '#111118',
-          950: '#080810',
-          border: '#1c1c2e',
+          900: 'hsl(var(--surface))',
+          950: 'hsl(var(--background))',
+          border: 'hsl(var(--border))',
         },
       },
       borderRadius: {
@@ -86,7 +86,7 @@ const config: Config = {
         'card-lg':    '0 8px 24px rgba(0,0,0,0.5)',
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #7B61FF 0%, #00D9FF 100%)',
+        'hero-gradient': 'linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%)',
       },
       keyframes: {
         'accordion-down': {

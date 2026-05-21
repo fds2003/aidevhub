@@ -1,4 +1,4 @@
-import { ArrowRight, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { GradientSection, SectionHeader } from '@/components/ui/gradient-section';
 import { ToolCard } from '@/components/ui/tool-card';
 import { GlassCard } from '@/components/ui/glass-card';
@@ -29,7 +29,6 @@ export default function HomePage() {
     title: post.title,
     excerpt: post.description,
     category: post.category,
-    readTime: post.readingTime ? `${post.readingTime} min` : '5 min',
     date: format(new Date(post.publishedAt || post.createdAt), 'MMM d, yyyy'),
   }))
 
@@ -193,6 +192,7 @@ export default function HomePage() {
       </GradientSection>
 
       {/* Latest Articles */}
+      {/* Latest Articles — Editorial Layout */}
       <GradientSection variant="muted" size="lg">
         <SectionHeader
           badge="From the Blog"
@@ -204,39 +204,63 @@ export default function HomePage() {
           }
         />
         {latestPosts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger-children">
-            {latestPosts.map((post, index) => (
-              <GlassCard key={post.slug} hover padding="lg" className="animate-fade-in">
-                {index === 0 && (
-                  <div className="mb-4">
-                    <Badge variant="cyan" size="sm">Featured</Badge>
-                  </div>
-                )}
-                <div className="flex items-center gap-3 mb-3">
-                  <Badge variant="outline" size="sm">{post.category}</Badge>
-                  <div className="flex items-center gap-1 text-zinc-600 text-xs font-mono">
-                    <Clock className="w-3 h-3" />
-                    {post.readTime}
-                  </div>
-                </div>
-                <h3 className="text-base font-semibold text-white mb-3 leading-snug">
-                  <a href={`/blog/${post.slug}`} className="hover:text-[#00D9FF] transition-colors">
-                    {post.title}
-                  </a>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
+            {/* 大卡 — 最新文章（左 3 列） */}
+            <Link
+              href={`/blog/${latestPosts[0].slug}`}
+              className="lg:col-span-3 group relative flex flex-col justify-end min-h-[320px] rounded-2xl border border-white/[0.07] bg-gradient-to-b from-[#0A0A18] to-[#07070F] overflow-hidden hover:border-[#00BBFF]/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_40px_rgba(0,187,255,0.08)]"
+            >
+              <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#00BBFF] via-[#7C3AED] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#04040C] via-[#04040C]/50 to-transparent" />
+              <div className="relative p-7">
+                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-3 block capitalize">
+                  {latestPosts[0].category?.replace(/-/g, ' ')}
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2 leading-tight group-hover:text-[#00BBFF] transition-colors line-clamp-2">
+                  {latestPosts[0].title}
                 </h3>
-                <p className="text-sm text-zinc-500 mb-4 line-clamp-2 leading-relaxed">{post.excerpt}</p>
+                <p className="text-sm text-zinc-400 line-clamp-2 leading-relaxed mb-4">
+                  {latestPosts[0].excerpt}
+                </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-zinc-600 font-mono">{post.date}</span>
-                  <Link href={`/blog/${post.slug}`} className="text-xs font-mono text-[#00D9FF] hover:underline">
-                    Read →</Link>
+                  <span className="text-xs text-zinc-600 font-mono">{latestPosts[0].date}</span>
+                  <span className="flex items-center gap-1 text-xs font-mono text-[#00BBFF] group-hover:gap-2 transition-all">
+                    Read <ArrowRight className="w-3 h-3" />
+                  </span>
                 </div>
-              </GlassCard>
-            ))}
+              </div>
+            </Link>
+
+            {/* 右列 2 张小卡 */}
+            <div className="lg:col-span-2 flex flex-col gap-5">
+              {latestPosts.slice(1, 3).map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group flex-1 relative flex flex-col justify-between rounded-2xl border border-white/[0.06] bg-[#08081A]/60 p-5 overflow-hidden hover:border-white/[0.14] transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <div className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-gradient-to-b from-[#7C3AED]/60 to-[#00BBFF]/60" />
+                  <div>
+                    <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 block capitalize">
+                      {post.category?.replace(/-/g, ' ')}
+                    </span>
+                    <h4 className="text-sm font-semibold text-white leading-snug group-hover:text-[#00BBFF] transition-colors line-clamp-3">
+                      {post.title}
+                    </h4>
+                  </div>
+                  <div className="flex items-center justify-between mt-3 pt-3 border-t border-white/[0.05]">
+                    <span className="text-xs text-zinc-600 font-mono">{post.date}</span>
+                    <ArrowRight className="w-3 h-3 text-zinc-600 group-hover:text-[#00BBFF] transition-colors" />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         ) : (
           <p className="text-zinc-500 font-mono text-sm">No posts found.</p>
         )}
       </GradientSection>
+
 
       {/* Newsletter */}
       <GradientSection variant="gradient" size="lg">

@@ -8,7 +8,7 @@ author: "AI Dev Hub"
 readingTime: 6
 createdAt: "2026-05-21"
 updatedAt: "2026-05-21"
-publishedAt: "2026-05-21"
+publishedAt: "2026-05-21T09:00:00Z"
 featured: false
 hideLegacy2026Banner: true
 ---

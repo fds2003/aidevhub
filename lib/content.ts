@@ -54,21 +54,51 @@ export function getToolsByCategory(category: string): Tool[] {
   return getAllTools().filter((tool) => tool.category === category)
 }
 
+// NOTE: gray-matter 会把 YAML 裸日期（如 2026-05-21）解析为 Date 对象，
+// 必须用 instanceof 判断后统一转为毫秒数，不能直接调用 .split()
+function toDateMs(val: unknown): number {
+  if (!val) return 0
+  if (val instanceof Date) return val.getTime()
+  const ms = new Date(String(val)).getTime()
+  return isNaN(ms) ? 0 : ms
+}
+
+function toDateDayStr(val: unknown): string {
+  if (!val) return '1970-01-01'
+  if (val instanceof Date) return val.toISOString().split('T')[0]
+  return String(val).split('T')[0]
+}
+
 // Posts
 export function getAllPosts(): Post[] {
   const postsDir = path.join(CONTENT_DIR, 'blog')
   const files = getFiles(postsDir)
-  
+
+  const todayStr = new Date().toISOString().split('T')[0]
+
   return files
     .map((file) => {
       const filePath = path.join(postsDir, file)
       return parseFrontmatter<Post>(filePath)
     })
-    .sort((a, b) => 
-      new Date(b.publishedAt || b.createdAt).getTime() - 
-      new Date(a.publishedAt || a.createdAt).getTime()
-    )
+    .sort((a, b) => {
+      const pubA = a.publishedAt || a.createdAt
+      const pubB = b.publishedAt || b.createdAt
+
+      const dayA = toDateDayStr(pubA)
+      const dayB = toDateDayStr(pubB)
+
+      // 未来日期的文章排到末尾
+      const isFutureA = dayA > todayStr
+      const isFutureB = dayB > todayStr
+      if (isFutureA && !isFutureB) return 1
+      if (!isFutureA && isFutureB) return -1
+
+      // 同等情况按时间戳降序（最新在前）
+      return toDateMs(pubB) - toDateMs(pubA)
+    })
 }
+
 
 export function getPostBySlug(slug: string): Post | null {
   const filePath = path.join(CONTENT_DIR, 'blog', `${slug}.md`)

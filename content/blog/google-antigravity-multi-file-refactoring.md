@@ -51,6 +51,16 @@ Before writing a single line of code, Antigravity generates a local call-graph.
 * **AST Parsing**: Instead of doing text-based grepping, it parses the codebase into an Abstract Syntax Tree (AST).
 * **Dependency Resolution**: It traces where the target function, class, or module is imported and invoked across the workspace. This outputs a precise list of files that require modification.
 
+### Why Not Just Use Regex? (AST vs Regex)
+
+A common question is: *Why go through the trouble of parsing an AST when we can just use Regex for search-and-replace?* 
+
+While Regex is fine for simple renames, it quickly becomes a nightmare for cross-file structural refactoring. AST provides three critical advantages:
+
+1. **Resolving Aliases & Scope**: If a downstream file imports a function with an alias (`import { fetchData as getUser }`), or if a different module happens to use a local variable with the exact same name, Regex will blindly fail or overwrite the wrong code. AST traces the true dependency graph and respects local scope.
+2. **Complex Structural Refactoring**: Imagine upgrading a signature from `getUser(id, token)` to `getUser({ id, token, cache: true })`. If the arguments span multiple lines or contain nested function calls, writing a Regex to capture and rebuild them is practically impossible. With AST, the agent simply transforms an `Arguments` node into an `ObjectExpression` node.
+3. **Absolute Zero False-Positives**: Regex operates on plain text; it cannot distinguish between a function call, a comment block, or a string literal that happens to contain the same word. AST understands the precise syntactic role of every token, ensuring 100% safety when combined with compiler feedback loops.
+
 ### Phase 2: Generating Surgical Diffs
 Once the target files are identified, the agent uses a specialized tool (`multi_replace_file_content`) to target non-contiguous lines.
 * **Precise Replacements**: Instead of rewriting whole files (which is expensive and prone to context loss), it replaces specific lines matching the AST node changes.

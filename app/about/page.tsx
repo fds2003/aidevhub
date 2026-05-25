@@ -3,8 +3,8 @@ import { GlassCard, CardTitle, CardDescription, CardHeader, CardContent } from '
 import { Bot, Code2, Boxes, Rocket, Users, Zap } from 'lucide-react'
 
 export const metadata = {
-  title: '关于我们 - AI Dev Hub',
-  description: '了解 AI Dev Hub 的愿景、产品和服务。我们致力于为现代开发者提供最前沿的 AI 编程工具和自动化工作流整合。',
+  title: 'About Us - AI Dev Hub',
+  description: 'Learn about the mission, products, and services of AI Dev Hub. We are dedicated to providing modern developers with cutting-edge AI coding tools and workflow integrations.',
 }
 
 export default function AboutPage() {
@@ -13,37 +13,37 @@ export default function AboutPage() {
       {/* Hero Section */}
       <GradientSection className="py-24 md:py-32" variant="gradient">
         <div className="container px-4 md:px-6 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
-            关于我们
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 font-mono">
+            About Us
           </h1>
           <p className="text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto leading-relaxed">
-            AI Dev Hub 致力于为现代开发者打造最专业、最全面的 AI 编程工具与自动化工作流聚合平台。我们相信，AI 将重塑软件工程的未来。
+            AI Dev Hub is dedicated to building the most professional and comprehensive aggregation platform for AI development tools and automated workflows. We believe AI will reshape the future of software engineering.
           </p>
         </div>
       </GradientSection>
 
       <div className="container max-w-5xl mx-auto px-4 py-16 space-y-24">
         
-        {/* 公司介绍 Company */}
+        {/* Our Vision */}
         <section className="space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-white tracking-tight">我们的愿景</h2>
+            <h2 className="text-3xl font-bold text-white tracking-tight">Our Vision</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
-          <GlassCard variant="glass" padding="lg" className="prose prose-invert max-w-none">
-            <p className="text-lg text-zinc-300 leading-loose">
-              在这个 AI 技术日新月异的时代，开发者面临着前所未有的机遇与挑战。各种代码生成工具、智能 IDE 和自动化 Agent 层出不穷，但如何挑选最适合团队的技术栈，如何将它们无缝集成到现有工作流中，依然是一个巨大的痛点。
+          <GlassCard variant="glass" padding="lg" className="text-zinc-300 space-y-4 leading-relaxed">
+            <p className="text-lg leading-loose">
+              In this rapidly evolving era of AI technology, developers face unprecedented opportunities and challenges. While code generation tools, intelligent IDEs, and autonomous Agents emerge daily, choosing the right tech stack and integrating them seamlessly into existing workflows remains a major pain point.
             </p>
-            <p className="text-lg text-zinc-300 leading-loose mt-4">
-              <strong>AI Dev Hub</strong> 应运而生。我们的核心使命是降低开发者拥抱 AI 的门槛，通过深度评测、前沿教程和开箱即用的 MCP (Model Context Protocol) 整合方案，帮助每一位软件工程师完成向 &quot;10x AI 开发者&quot; 的蜕变。
+            <p className="text-lg leading-loose">
+              <strong>AI Dev Hub</strong> was born to lower the barrier for developers embracing AI. Through in-depth reviews, cutting-edge tutorials, and out-of-the-box Model Context Protocol (MCP) integrations, we help every software engineer evolve into a &quot;10x AI Developer.&quot;
             </p>
           </GlassCard>
         </section>
 
-        {/* 产品体系 Products */}
+        {/* Our Core Products */}
         <section className="space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-white tracking-tight">我们的核心产品</h2>
+            <h2 className="text-3xl font-bold text-white tracking-tight">Our Core Products</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -52,11 +52,11 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Code2 className="w-6 h-6 text-primary" />
                 </div>
-                <CardTitle>AI 编程工具导航</CardTitle>
+                <CardTitle>AI Coding Navigation</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  全面收录、横向评测市面上主流的 AI 编程辅助工具（Cursor, GitHub Copilot, Claude Code 等），帮您找到最契合需求的编程副驾。
+                  Comprehensive collections and horizontal evaluations of mainstream AI coding assistants (Cursor, GitHub Copilot, Claude Code, etc.) to help you find your perfect programming co-pilot.
                 </CardDescription>
               </CardContent>
             </GlassCard>
@@ -66,11 +66,11 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4">
                   <Boxes className="w-6 h-6 text-purple-400" />
                 </div>
-                <CardTitle>MCP 生态枢纽</CardTitle>
+                <CardTitle>MCP Hub</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  深度解析 Model Context Protocol 协议。提供丰富的 MCP Server 搭建教程、开源整合方案及最佳实践，连接大模型与本地环境。
+                  In-depth exploration of the Model Context Protocol (MCP). We provide rich MCP Server tutorials, open-source integration recipes, and best practices to bridge LLMs and local systems.
                 </CardDescription>
               </CardContent>
             </GlassCard>
@@ -80,21 +80,21 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
                   <Bot className="w-6 h-6 text-blue-400" />
                 </div>
-                <CardTitle>AI Agents 剖析</CardTitle>
+                <CardTitle>AI Agent Analysis</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  深入探讨 Google Antigravity、AutoGPT 等顶级自主智能体框架的底层运行机制。提供从 0 到 1 打造私有化 Agent 的完整指南。
+                  Deep dives into autonomous agent frameworks like Google Antigravity, AutoGPT, and others. We provide step-by-step guides to build private AI agents from scratch.
                 </CardDescription>
               </CardContent>
             </GlassCard>
           </div>
         </section>
 
-        {/* 服务内容 Services */}
+        {/* Our Services */}
         <section className="space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-white tracking-tight">我们提供的服务</h2>
+            <h2 className="text-3xl font-bold text-white tracking-tight">Our Services</h2>
             <div className="w-16 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,12 +102,12 @@ export default function AboutPage() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Rocket className="w-6 h-6 text-primary" />
-                  <CardTitle>企业级 AI 转型咨询</CardTitle>
+                  <CardTitle>Enterprise AI Consulting</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  为研发团队量身定制 AI 工具链导入方案。从工具选型、安全合规评估到团队培训，全链路提升研发效能。
+                  Tailored AI toolchain integration roadmaps for development teams. From tool selection, safety compliance assessments, to team training, we elevate your engineering velocity.
                 </CardDescription>
               </CardContent>
             </GlassCard>
@@ -116,12 +116,12 @@ export default function AboutPage() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Zap className="w-6 h-6 text-yellow-400" />
-                  <CardTitle>定制化 MCP/Agent 开发</CardTitle>
+                  <CardTitle>Custom MCP & Agent Development</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  根据您的特定业务系统（如内部 Jira、GitLab、云服务器），开发安全可靠的专属 MCP 接口和自动化处理 Agent。
+                  Develop secure, dedicated MCP interfaces and automated agents connected to your specific internal systems, such as Jira, GitLab, or cloud servers.
                 </CardDescription>
               </CardContent>
             </GlassCard>
@@ -130,12 +130,12 @@ export default function AboutPage() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Code2 className="w-6 h-6 text-purple-400" />
-                  <CardTitle>前沿技术评测与专栏</CardTitle>
+                  <CardTitle>Tech Reviews & Sponsored Columns</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  订阅我们深度硬核的技术专栏，或邀请我们对您的 AI 开发者产品进行专业视角的体验评测与技术输出。
+                  Subscribe to our hardcore technical columns, or invite us to conduct in-depth product reviews and write sponsored technical articles for your AI developer products.
                 </CardDescription>
               </CardContent>
             </GlassCard>
@@ -144,12 +144,12 @@ export default function AboutPage() {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Users className="w-6 h-6 text-blue-400" />
-                  <CardTitle>开发者社区与共创</CardTitle>
+                  <CardTitle>Developer Community & Co-creation</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  加入极客云集的 AI 开发者社区。我们定期举办线上 Workshop、技术闭门会，与行业先锋共探 AI 编程前沿。
+                  Join a community of tech enthusiasts. We regularly host online workshops and private meetups to explore the future of AI programming with industry pioneers.
                 </CardDescription>
               </CardContent>
             </GlassCard>

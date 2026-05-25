@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, Github } from 'lucide-react'
-import { NAV_ITEMS, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
+import { Menu } from 'lucide-react'
+import { NAV_ITEMS, SITE_NAME } from '@/lib/constants'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 
@@ -48,16 +48,6 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          {/* GitHub */}
-          <a
-            href={SOCIAL_LINKS.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center justify-center w-8 h-8 rounded-lg text-zinc-500 hover:text-white hover:bg-surface transition-all"
-            aria-label="GitHub"
-          >
-            <Github className="w-4 h-4" />
-          </a>
 
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>

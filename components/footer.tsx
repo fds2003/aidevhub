@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Github, Twitter } from 'lucide-react'
-import { SITE_NAME, NAV_ITEMS, SOCIAL_LINKS } from '@/lib/constants'
+import { Mail, Building2 } from 'lucide-react'
+import { SITE_NAME, NAV_ITEMS, AUTHOR_EMAIL } from '@/lib/constants'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -57,19 +57,21 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Social */}
+          {/* Connect */}
           <div>
             <h3 className="text-xs font-mono font-semibold text-zinc-400 uppercase tracking-wider mb-4">
               Connect
             </h3>
-            <div className="flex gap-3">
-              <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-lg border border-border text-zinc-500 hover:text-white hover:border-border-hover transition-all">
-                <Twitter className="w-4 h-4" />
+            <div className="flex flex-col gap-2.5">
+              <a href={`mailto:${AUTHOR_EMAIL}`}
+                className="flex items-center gap-2 text-sm text-zinc-500 hover:text-primary transition-colors group">
+                <Mail className="w-4 h-4 group-hover:text-primary transition-colors" />
+                <span className="font-mono text-xs sm:text-sm truncate">{AUTHOR_EMAIL}</span>
               </a>
-              <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer"
-                className="w-8 h-8 flex items-center justify-center rounded-lg border border-border text-zinc-500 hover:text-white hover:border-border-hover transition-all">
-                <Github className="w-4 h-4" />
+              <a href="mailto:business@aidevhub.net"
+                className="flex items-center gap-2 text-sm text-zinc-500 hover:text-purple-400 transition-colors group">
+                <Building2 className="w-4 h-4 text-purple-500/80 group-hover:text-purple-400 transition-colors" />
+                <span className="font-mono text-xs sm:text-sm truncate">business@aidevhub.net</span>
               </a>
             </div>
           </div>

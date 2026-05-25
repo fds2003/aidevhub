@@ -79,9 +79,18 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-zinc-600 font-mono">
-            &copy; {currentYear} {SITE_NAME}. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
+            <p className="text-xs text-zinc-600 font-mono">
+              &copy; {currentYear} {SITE_NAME}. All rights reserved.
+            </p>
+            <div className="flex gap-3 text-xs text-zinc-600 font-mono">
+              <Link href="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
+              <span className="text-zinc-700">&middot;</span>
+              <Link href="/terms" className="hover:text-primary transition-colors">Terms</Link>
+              <span className="text-zinc-700">&middot;</span>
+              <Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link>
+            </div>
+          </div>
           <p className="text-xs text-zinc-600 font-mono">
             Built with AI · Powered by curiosity
           </p>

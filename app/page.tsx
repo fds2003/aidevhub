@@ -5,6 +5,7 @@ import { GlassCard } from '@/components/ui/glass-card';
 import { Badge } from '@/components/ui/glass-badge';
 import { GlassButton } from '@/components/ui/glass-button';
 import { HeroSection } from '@/components/hero-section';
+import { NewsletterForm } from '@/components/newsletter-form';
 import { computeContentStats } from '@/lib/content-stats';
 import { getAllTools, getAllPosts, getAllWorkflows } from '@/lib/content';
 import Link from 'next/link';
@@ -283,21 +284,7 @@ export default function HomePage() {
             No spam — unsubscribe anytime.
           </p>
           
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="/api/subscribe" method="POST">
-            <div className="flex-1 relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-600 font-mono text-sm">→</span>
-              <input
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-                required
-                className="w-full h-12 pl-10 pr-4 bg-surface border border-border rounded-xl text-sm font-mono text-white placeholder:text-zinc-600 focus:outline-none focus:border-primary/50 focus:glow-cyan transition-all"
-              />
-            </div>
-            <GlassButton size="lg" variant="cyan" type="submit" className="shrink-0 glow-cyan">
-              Subscribe
-            </GlassButton>
-          </form>
+          <NewsletterForm />
           
           <p className="mt-4 text-xs text-zinc-600 font-mono">
             <span className="text-accent">✓</span> No spam, unsubscribe anytime.

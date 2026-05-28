@@ -2,7 +2,7 @@ import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard } from '@/components/ui/glass-card'
 
 export const metadata = {
-  title: 'Privacy Policy - AI Dev Hub',
+  title: 'Privacy Policy',
   description: 'AI Dev Hub Privacy Policy. We respect your privacy and are committed to explaining how we collect, use, and protect your information.',
 }
 

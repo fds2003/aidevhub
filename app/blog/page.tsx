@@ -49,17 +49,21 @@ export default function BlogPage() {
       <section className="border-b border-white/[0.06] bg-[#04040A]">
         <div className="container px-4 py-4">
           <div className="flex flex-wrap gap-2 justify-center">
-            <button className="px-3 py-1 text-xs font-mono font-medium rounded-full bg-[#00BBFF]/10 text-[#00BBFF] border border-[#00BBFF]/30 transition-all">
+            <Link href="/blog" className="px-3 py-1 text-xs font-mono font-medium rounded-full bg-[#00BBFF]/10 text-[#00BBFF] border border-[#00BBFF]/30 transition-all">
               All
-            </button>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className="px-3 py-1 text-xs font-mono font-medium rounded-full text-zinc-500 border border-white/[0.06] hover:text-white hover:border-white/20 transition-all"
-              >
-                {cat}
-              </button>
-            ))}
+            </Link>
+            {categories.map((cat) => {
+              const slug = cat.toLowerCase().replace(/\s+/g, '-')
+              return (
+                <Link
+                  key={cat}
+                  href={`/categories/${slug}`}
+                  className="px-3 py-1 text-xs font-mono font-medium rounded-full text-zinc-500 border border-white/[0.06] hover:text-white hover:border-white/20 transition-all"
+                >
+                  {cat}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>

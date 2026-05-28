@@ -24,6 +24,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: category.name,
     description: category.description,
+    alternates: {
+      canonical: `/categories/${slug}`,
+    },
+    openGraph: {
+      title: `${category.name} | AI Dev Hub`,
+      description: category.description,
+    },
   }
 }
 
@@ -59,15 +66,17 @@ export default async function CategoryPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold mb-4">Tools ({tools.length})</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {tools.map((tool) => (
-                  <Card key={tool.slug}>
-                    <CardHeader>
-                      <CardTitle className="text-xl">{tool.name}</CardTitle>
-                      <Badge variant="outline">{tool.pricing}</Badge>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{tool.description}</p>
-                    </CardContent>
-                  </Card>
+                  <Link key={tool.slug} href={`/tools/${tool.slug}`}>
+                    <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+                      <CardHeader>
+                        <CardTitle className="text-xl">{tool.name}</CardTitle>
+                        <Badge variant="outline">{tool.pricing}</Badge>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">{tool.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -78,14 +87,16 @@ export default async function CategoryPage({ params }: PageProps) {
               <h2 className="text-2xl font-bold mb-4">Articles ({posts.length})</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {posts.map((post) => (
-                  <Card key={post.slug}>
-                    <CardHeader>
-                      <CardTitle className="text-xl">{post.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{post.description}</p>
-                    </CardContent>
-                  </Card>
+                  <Link key={post.slug} href={`/blog/${post.slug}`}>
+                    <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+                      <CardHeader>
+                        <CardTitle className="text-xl">{post.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-muted-foreground">{post.description}</p>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             </section>

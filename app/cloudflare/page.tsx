@@ -3,7 +3,17 @@ import { getAllTools } from '@/lib/content';
 import { ToolCard } from '@/components/ui/tool-card';
 import { Badge } from '@/components/ui/glass-badge';
 import { GlassCard } from '@/components/ui/glass-card';
-import { SEOHead } from '@/components/seo-head';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cloudflare hub — edge platform in one place | AI Dev Hub',
+  description: 'Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers.',
+  keywords: ['cloudflare', 'cloudflare workers', 'cloudflare pages', 'cloudflare r2', 'cloudflare d1', 'zero egress', 'serverless', 'edge computing'],
+  openGraph: {
+    title: 'Cloudflare hub — edge platform in one place | AI Dev Hub',
+    description: 'Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers.',
+  },
+}
 
 export default function CloudflarePage() {
   const allTools = getAllTools();
@@ -65,21 +75,6 @@ export default function CloudflarePage() {
 
   return (
     <>
-      <SEOHead
-        title="Cloudflare hub — edge platform in one place"
-        description="Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers."
-        tags={[
-          'cloudflare',
-          'cloudflare workers',
-          'cloudflare pages',
-          'cloudflare r2',
-          'cloudflare d1',
-          'zero egress',
-          'serverless',
-          'edge computing',
-        ]}
-      />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-yellow-500/10" />

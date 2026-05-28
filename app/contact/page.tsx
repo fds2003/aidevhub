@@ -3,7 +3,7 @@ import { GlassCard, CardTitle, CardDescription, CardHeader, CardContent } from '
 import { Mail, Building2 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Contact Us - AI Dev Hub',
+  title: 'Contact Us',
   description: 'Get in touch with AI Dev Hub. Contact us for business partnerships, editorial inquiries, tool submissions, or general feedback.',
 }
 

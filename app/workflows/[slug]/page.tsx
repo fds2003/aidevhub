@@ -8,6 +8,8 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { getAllTools, getAllPosts, getAllWorkflows, getWorkflowBySlug } from '@/lib/content'
 import { getRelatedPosts } from '@/lib/related-posts'
 import { CopyToClipboard } from '@/components/ui/copy-to-clipboard'
+import { generateBreadcrumbSchema, generateHowToSchema } from '@/lib/seo-schema'
+import { SITE_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -59,8 +61,32 @@ export default async function WorkflowDetailPage({ params }: PageProps) {
   const relatedPosts = getRelatedPosts(workflow, allPosts, 3)
   const hasRelated = relatedWorkflows.length > 0 || relatedPosts.length > 0
 
+  // Schema.org structured data
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: 'AI Dev Hub', url: '/' },
+      { name: 'Workflows', url: '/workflows' },
+      { name: workflow.title, url: `/workflows/${slug}` },
+    ],
+    SITE_URL
+  )
+
+  const howToSchema = generateHowToSchema(
+    workflow.title,
+    workflow.description,
+    workflow.steps?.map((s) => ({ name: s.title, text: s.description })) || []
+  )
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       <div className="container py-12 max-w-4xl">
         {/* Breadcrumbs */}
         <Breadcrumbs

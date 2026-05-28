@@ -4,6 +4,7 @@ import { Layout } from '@/components/layout'
 import {
   GA4_MEASUREMENT_ID,
   SITE_DESCRIPTION,
+  SITE_KEYWORDS,
   SITE_NAME,
   SITE_URL,
 } from '@/lib/constants'
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
   metadataBase: new URL(SITE_URL),
   openGraph: {
     type: 'website',
@@ -51,6 +53,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate" type="application/rss+xml" title="AI Dev Hub" href="/rss.xml" />
+        <link rel="alternate" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'} hrefLang="en" />
+        <link rel="alternate" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'} hrefLang="x-default" />
         <meta name="theme-color" content="#080810" />
         <script
           type="application/ld+json"

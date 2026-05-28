@@ -3,7 +3,7 @@ import { GlassCard, CardTitle, CardDescription, CardHeader, CardContent } from '
 import { Bot, Code2, Boxes, Rocket, Users, Zap } from 'lucide-react'
 
 export const metadata = {
-  title: 'About Us - AI Dev Hub',
+  title: 'About Us',
   description: 'Learn about the mission, products, and services of AI Dev Hub. We are dedicated to providing modern developers with cutting-edge AI coding tools and workflow integrations.',
 }
 

@@ -2,7 +2,7 @@ import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard } from '@/components/ui/glass-card'
 
 export const metadata = {
-  title: 'Terms of Service - AI Dev Hub',
+  title: 'Terms of Service',
   description: 'AI Dev Hub Terms of Service. Understand the rules, codes of conduct, and legal terms applicable to your use of our services.',
 }
 

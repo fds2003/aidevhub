@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${tool.name} - AI Dev Hub`,
       description: tool.description,
       type: 'website',
-      images: tool.logo ? [{ url: `${SITE_URL}${tool.logo}` }] : [],
+      images: tool.logo ? [{ url: `${SITE_URL}${tool.logo}` }] : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',

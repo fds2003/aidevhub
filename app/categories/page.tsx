@@ -6,6 +6,16 @@ import { CATEGORIES } from '@/lib/constants'
 export const metadata = {
   title: 'Categories',
   description: 'Browse AI tools and content by category.',
+  alternates: { canonical: '/categories' },
+  openGraph: {
+    title: 'Categories | AI Dev Hub',
+    description: 'Browse AI tools and content by category.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Categories | AI Dev Hub',
+    description: 'Browse AI tools and content by category.',
+  },
 }
 
 const iconMap: Record<string, React.ElementType> = {

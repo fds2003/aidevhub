@@ -7,6 +7,16 @@ import { getAllWorkflows } from '@/lib/content'
 export const metadata = {
   title: 'AI Workflows',
   description: 'Discover proven workflows for AI-powered development, productivity, and automation.',
+  alternates: { canonical: '/workflows' },
+  openGraph: {
+    title: 'AI Workflows | AI Dev Hub',
+    description: 'Discover proven workflows for AI-powered development, productivity, and automation.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Workflows | AI Dev Hub',
+    description: 'Discover proven workflows for AI-powered development, productivity, and automation.',
+  },
 }
 
 const difficultyColors = {

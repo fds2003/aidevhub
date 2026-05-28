@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       modifiedTime: post.updatedAt ? new Date(post.updatedAt).toISOString() : undefined,
       authors: [post.author || 'AI Dev Hub'],
       tags: post.tags || [],
-      images: post.coverImage ? [{ url: `${SITE_URL}${post.coverImage}` }] : [],
+      images: post.coverImage ? [{ url: `${SITE_URL}${post.coverImage}` }] : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',

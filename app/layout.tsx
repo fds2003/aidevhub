@@ -53,8 +53,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate" type="application/rss+xml" title="AI Dev Hub" href="/rss.xml" />
-        <link rel="alternate" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'} hrefLang="en" />
-        <link rel="alternate" href={process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'} hrefLang="x-default" />
+        <link rel="alternate" href={SITE_URL} hrefLang="en" />
+        <link rel="alternate" href={SITE_URL} hrefLang="x-default" />
         <meta name="theme-color" content="#080810" />
         <script
           type="application/ld+json"
@@ -63,13 +63,13 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": SITE_NAME,
-              "url": process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net',
+              "url": SITE_URL,
               "description": SITE_DESCRIPTION,
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": {
                   "@type": "EntryPoint",
-                  "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://aidevhub.net'}/tools?search={search_term_string}`
+                  "urlTemplate": `${SITE_URL}/tools?search={search_term_string}`
                 },
                 "query-input": "required name=search_term_string"
               }

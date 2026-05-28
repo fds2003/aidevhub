@@ -4,6 +4,7 @@
  */
 
 import type { Post, Tool } from '@/types'
+import { getWordCount } from './reading-time'
 
 /**
  * Generate Article schema for blog posts
@@ -36,7 +37,8 @@ export function generateArticleSchema(post: Post, siteUrl: string) {
     },
     articleSection: post.category,
     keywords: post.tags?.join(', '),
-    wordCount: post.content ? post.content.split(/\s+/).length : 0,
+    wordCount: post.content ? getWordCount(post.content) : 0,
+    timeRequired: post.readingTime ? `PT${post.readingTime}M` : undefined,
   }
 }
 
@@ -44,6 +46,7 @@ export function generateArticleSchema(post: Post, siteUrl: string) {
  * Generate SoftwareApplication schema for tools
  */
 export function generateSoftwareSchema(tool: Tool, siteUrl: string) {
+  const hasFreeTier = tool.pricing === 'free' || tool.pricing === 'open-source' || tool.pricing === 'freemium'
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -52,12 +55,14 @@ export function generateSoftwareSchema(tool: Tool, siteUrl: string) {
     url: tool.website || `${siteUrl}/tools/${tool.slug}`,
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',
-    offers: {
-      '@type': 'Offer',
-      price: tool.pricing === 'free' ? '0' : tool.pricing === 'freemium' ? '0' : undefined,
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-    },
+    ...(hasFreeTier ? {
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+      },
+    } : {}),
     screenshot: tool.logo ? `${siteUrl}${tool.logo}` : undefined,
   }
 }

@@ -11,7 +11,7 @@ publishedAt: "2026-05-20T14:00:00.000Z"
 
 # Google Antigravity 2.0 Tutorial: The Complete Guide to the Best AI Coding Assistant
 
-![Google Antigravity Banner](/images/blog/google-antigravity-hero.png)
+![Google Antigravity Banner](/images/blog/google-antigravity-hero.webp)
 
 Autonomous AI coding agents have progressed rapidly from mere autocompletion models to fully autonomous software developers. Among these next-generation systems, **Google Antigravity 2.0**—developed by the **Google DeepMind** team—stands out as the **best AI coding assistant** on the market. 
 
@@ -56,7 +56,7 @@ export OPENAI_API_KEY="sk-proj-xxxx..."
 
 To get the most out of **Antigravity AI**, it is crucial to understand how it handles codebase modifications. Instead of applying edits blindly, it uses a highly structured, self-verifying loop:
 
-![Google Antigravity Workflow](/images/blog/google-antigravity-workflow.png)
+![Google Antigravity Workflow](/images/blog/google-antigravity-workflow.webp)
 
 1. **Research & Map**: Reads imports, navigates directories, and runs `grep` queries to map dependencies.
 2. **Plan**: Writes an `implementation_plan.md` detail sheet and pauses for developer approval.

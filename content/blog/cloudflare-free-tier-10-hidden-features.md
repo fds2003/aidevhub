@@ -4,7 +4,7 @@ title: "10 Hidden Features in Cloudflare Free Tier That Will Blow Your Mind"
 description: "Cloudflare free tier is not a watered-down version. DNS+CDN+SSL trifecta, R2 image hosting at zero cost, unlimited Pages bandwidth, 100K daily Workers requests."
 category: Cloudflare
 tags: [cloudflare, free-tier, cdn, serverless, dns]
-coverImage: /images/blog/cloudflare-free-tier.png
+coverImage: /images/blog/cloudflare-free-tier.webp
 author: AI Dev Hub
 readingTime: 10
 createdAt: 2026-05-09

@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, cloudflare-d1, d1-database, serverless-sqlite, edge-database, planetscale-alternative, supabase-alternative]
 website: https://developers.cloudflare.com/d1/
 pricing: free
-logo: /images/tools/cloudflare-d1.png
+logo: /images/tools/cloudflare-d1.webp
 features:
   - "SQLite at the edge"
   - "5M free reads per day"

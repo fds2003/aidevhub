@@ -6,7 +6,7 @@ category: AI
 tags: [ollama, local-llm, llama3, mistral, openai-api, self-hosted, open-source, edge-ai]
 website: https://ollama.com/
 pricing: free
-logo: /images/tools/ollama.png
+logo: /images/tools/ollama.webp
 features:
   - "Run LLMs locally on your machine"
   - "Free cloud inference"

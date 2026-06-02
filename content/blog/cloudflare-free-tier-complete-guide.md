@@ -4,7 +4,7 @@ title: "Complete Guide to Cloudflare Free Tier Resources"
 description: "Detailed breakdown of Cloudflare Workers, KV, Pages, R2, and D1 free tier limits — with code examples for reverse proxy, API acceleration, edge computing, and static hosting."
 category: Cloudflare
 tags: [cloudflare, free-tier, workers, pages, d1, r2, kv, serverless]
-coverImage: /images/blog/cloudflare-free-guide.png
+coverImage: /images/blog/cloudflare-free-guide.webp
 author: AI Dev Hub
 readingTime: 12
 createdAt: 2026-05-09

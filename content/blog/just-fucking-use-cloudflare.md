@@ -4,7 +4,7 @@ title: "Just Fucking Use Cloudflare — Stop Paying Seventeen Different Bills"
 description: "Stop bleeding money on AWS, Vercel, PlanetScale, and S3. Use Cloudflare all-in-one edge platform instead with zero egress fees and generous free tiers."
 category: Cloudflare
 tags: [chatgpt, ai, llm, prompt-engineering, programming]
-coverImage: /images/blog/just-fucking-use-cloudflare.png
+coverImage: /images/blog/just-fucking-use-cloudflare.webp
 readingTime: 8
 createdAt: 2026-05-09
 updatedAt: 2026-05-09

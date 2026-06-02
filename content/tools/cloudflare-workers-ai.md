@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, workers-ai, edge-ai, llama3, openai-alternative, replicate-alternative, stable-diffusion, local-llm-alternative]
 website: https://developers.cloudflare.com/workers-ai/
 pricing: free
-logo: /images/tools/cloudflare-ai.png
+logo: /images/tools/cloudflare-ai.webp
 features:
   - "10k free neurons/day"
   - "Run models at the edge"

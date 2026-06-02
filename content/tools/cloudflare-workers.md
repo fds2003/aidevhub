@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, cloudflare-workers, serverless, edge-computing, lambda-alternative, vercel-functions-alternative, zero-cold-start]
 website: https://workers.cloudflare.com/
 pricing: free
-logo: /images/tools/cloudflare-workers.png
+logo: /images/tools/cloudflare-workers.webp
 features:
   - "0ms cold starts - truly global serverless"
   - "JavaScript, Python, Rust, Go support"

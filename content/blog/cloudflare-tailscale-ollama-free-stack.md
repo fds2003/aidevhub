@@ -4,7 +4,7 @@ title: "Cloudflare + Tailscale + Ollama — The Zero-Cost Full-Stack Architectur
 description: "Three free-tier services forming a complete production stack: Cloudflare for edge hosting, Tailscale for secure networking, and Ollama for local AI inference."
 category: Cloudflare
 tags: [cloudflare, tailscale, ollama, serverless, mesh-vpn, local-llm]
-coverImage: /images/blog/free-stack.png
+coverImage: /images/blog/free-stack.webp
 author: AI Dev Hub
 readingTime: 10
 createdAt: 2026-05-09

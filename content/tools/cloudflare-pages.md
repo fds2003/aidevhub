@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, cloudflare-pages, static-hosting, vercel-alternative, netlify-alternative, free-hosting, jamstack]
 website: https://pages.cloudflare.com/
 pricing: free
-logo: /images/tools/cloudflare-pages.png
+logo: /images/tools/cloudflare-pages.webp
 features:
   - "Unlimited sites - all free"
   - "Instant preview deployments"

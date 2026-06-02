@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, cloudflare-r2, r2-storage, s3-alternative, object-storage, zero-egress, aws-s3-alternative]
 website: https://developers.cloudflare.com/r2/
 pricing: free
-logo: /images/tools/cloudflare-r2.png
+logo: /images/tools/cloudflare-r2.webp
 features:
   - "10GB free storage"
   - "Zero egress fees - forever"

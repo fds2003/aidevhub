@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, cloudflare-queues, message-queue, sqs-alternative, rabbitmq-alternative, durable-queue, zero-egress]
 website: https://developers.cloudflare.com/queues/
 pricing: free
-logo: /images/tools/cloudflare-queues.png
+logo: /images/tools/cloudflare-queues.webp
 features:
   - "100K operations/day free"
   - "Zero egress fees"

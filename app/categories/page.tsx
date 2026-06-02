@@ -8,12 +8,12 @@ export const metadata = {
   description: 'Browse AI tools and content by category.',
   alternates: { canonical: '/categories' },
   openGraph: {
-    title: 'Categories | AI Dev Hub',
+    title: 'Categories',
     description: 'Browse AI tools and content by category.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Categories | AI Dev Hub',
+    title: 'Categories',
     description: 'Browse AI tools and content by category.',
   },
 }

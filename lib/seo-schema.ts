@@ -105,23 +105,24 @@ export function generateFAQSchema(faqs: Array<{ question: string; answer: string
 }
 
 /**
- * Generate HowTo schema for tutorials
+ * Generate ItemList schema for workflow steps
+ * (HowTo schema was deprecated Sept 2023; use ItemList instead)
  */
-export function generateHowToSchema(
+export function generateStepListSchema(
   title: string,
   description: string,
   steps: Array<{ name: string; text: string }>
 ) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'HowTo',
+    '@type': 'ItemList',
     name: title,
     description,
-    step: steps.map((step, index) => ({
-      '@type': 'HowToStep',
+    itemListElement: steps.map((step, index) => ({
+      '@type': 'ListItem',
       position: index + 1,
       name: step.name,
-      text: step.text,
+      description: step.text,
     })),
   }
 }

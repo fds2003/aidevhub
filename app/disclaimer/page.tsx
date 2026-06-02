@@ -1,9 +1,14 @@
 import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard } from '@/components/ui/glass-card'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'Disclaimer',
   description: 'AI Dev Hub Disclaimer. Understand the nature of the information provided on our site, and our policies regarding third-party tools, AI-generated code, and liability.',
+  openGraph: { title: 'Disclaimer' },
+  twitter: { title: 'Disclaimer' },
+  alternates: { canonical: '/disclaimer' },
 }
 
 export default function DisclaimerPage() {

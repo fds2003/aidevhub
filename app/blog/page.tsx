@@ -3,9 +3,14 @@ import { Calendar, ArrowRight, Tag } from 'lucide-react'
 import { getAllPosts } from '@/lib/content'
 import { format } from 'date-fns'
 
-export const metadata = {
-  title: 'Blog — AI Dev Hub',
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Blog',
   description: 'Tutorials, guides, and insights on AI coding tools, MCP, and developer productivity.',
+  openGraph: { title: 'Blog' },
+  twitter: { title: 'Blog' },
+  alternates: { canonical: '/blog' },
 }
 
 // NOTE: 博客列表采用 Editorial Layout

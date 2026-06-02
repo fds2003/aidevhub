@@ -1,9 +1,14 @@
 import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard } from '@/components/ui/glass-card'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'AI Dev Hub Privacy Policy. We respect your privacy and are committed to explaining how we collect, use, and protect your information.',
+  openGraph: { title: 'Privacy Policy' },
+  twitter: { title: 'Privacy Policy' },
+  alternates: { canonical: '/privacy' },
 }
 
 export default function PrivacyPage() {

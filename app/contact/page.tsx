@@ -2,9 +2,14 @@ import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard, CardTitle, CardDescription, CardHeader, CardContent } from '@/components/ui/glass-card'
 import { Mail, Building2 } from 'lucide-react'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with AI Dev Hub. Contact us for business partnerships, editorial inquiries, tool submissions, or general feedback.',
+  openGraph: { title: 'Contact Us' },
+  twitter: { title: 'Contact Us' },
+  alternates: { canonical: '/contact' },
 }
 
 export default function ContactPage() {

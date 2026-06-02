@@ -6,3 +6,9 @@ scripts/data/
 .env.production
 temp-release/
 
+# OS / editor artifacts
+.DS_Store
+
+# Build info (regenerated on each build)
+tsconfig.tsbuildinfo
+

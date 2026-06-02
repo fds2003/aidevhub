@@ -5,6 +5,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Tools Directory',
   description: 'Discover the best AI coding tools, editors, and assistants for developers.',
+  openGraph: { title: 'AI Tools Directory' },
+  twitter: { title: 'AI Tools Directory' },
+  alternates: { canonical: '/tools' },
 }
 
 export default function ToolsPage() {

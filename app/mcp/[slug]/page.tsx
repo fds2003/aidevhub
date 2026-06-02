@@ -76,9 +76,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: desc,
     alternates: { canonical },
     openGraph: {
-      title: `${title} | AI Dev Hub`,
+      title,
       description: server.summary,
       url: canonical,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: server.summary,
     },
   }
 }

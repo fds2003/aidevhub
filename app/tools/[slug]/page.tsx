@@ -5,7 +5,7 @@ import { GlassCard } from '@/components/ui/glass-card'
 import { Badge, ToolBadge } from '@/components/ui/glass-badge'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { getAllTools, getAllPosts, getAllWorkflows, getToolBySlug } from '@/lib/content'
-import { generateSoftwareSchema } from '@/lib/seo-schema'
+import { generateSoftwareSchema, generateBreadcrumbSchema } from '@/lib/seo-schema'
 import { getRelatedPosts, getRelatedWorkflows } from '@/lib/related-posts'
 import { SITE_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
@@ -28,14 +28,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: tool.name,
     description: tool.description,
     openGraph: {
-      title: `${tool.name} - AI Dev Hub`,
+      title: tool.name,
       description: tool.description,
       type: 'website',
       images: tool.logo ? [{ url: `${SITE_URL}${tool.logo}` }] : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${tool.name} - AI Dev Hub`,
+      title: tool.name,
       description: tool.description,
     },
     alternates: {
@@ -61,6 +61,14 @@ export default async function ToolDetailPage({ params }: PageProps) {
 
   // Generate schema.org SoftwareApplication markup
   const softwareSchema = generateSoftwareSchema(tool, SITE_URL)
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: 'AI Dev Hub', url: '/' },
+      { name: 'Tools', url: '/tools' },
+      { name: tool.name, url: `/tools/${slug}` },
+    ],
+    SITE_URL
+  )
 
   return (
     <>
@@ -68,6 +76,10 @@ export default async function ToolDetailPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main className="min-h-screen bg-[#080810]">

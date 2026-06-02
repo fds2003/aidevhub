@@ -8,7 +8,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { getAllTools, getAllPosts, getAllWorkflows, getWorkflowBySlug } from '@/lib/content'
 import { getRelatedPosts } from '@/lib/related-posts'
 import { CopyToClipboard } from '@/components/ui/copy-to-clipboard'
-import { generateBreadcrumbSchema, generateHowToSchema } from '@/lib/seo-schema'
+import { generateBreadcrumbSchema, generateStepListSchema } from '@/lib/seo-schema'
 import { SITE_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 
@@ -30,14 +30,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: workflow.title,
     description: workflow.description,
     openGraph: {
-      title: `${workflow.title} - AI Dev Hub`,
+      title: workflow.title,
       description: workflow.description,
       type: 'website',
       images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${workflow.title} - AI Dev Hub`,
+      title: workflow.title,
       description: workflow.description,
     },
     alternates: {
@@ -77,7 +77,7 @@ export default async function WorkflowDetailPage({ params }: PageProps) {
     SITE_URL
   )
 
-  const howToSchema = generateHowToSchema(
+  const stepListSchema = generateStepListSchema(
     workflow.title,
     workflow.description,
     workflow.steps?.map((s) => ({ name: s.title, text: s.description })) || []
@@ -91,7 +91,7 @@ export default async function WorkflowDetailPage({ params }: PageProps) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(stepListSchema) }}
       />
       <div className="container py-12 max-w-4xl">
         {/* Breadcrumbs */}

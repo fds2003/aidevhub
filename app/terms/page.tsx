@@ -1,9 +1,14 @@
 import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard } from '@/components/ui/glass-card'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'AI Dev Hub Terms of Service. Understand the rules, codes of conduct, and legal terms applicable to your use of our services.',
+  openGraph: { title: 'Terms of Service' },
+  twitter: { title: 'Terms of Service' },
+  alternates: { canonical: '/terms' },
 }
 
 export default function TermsPage() {

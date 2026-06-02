@@ -1,5 +1,3 @@
-"use client";
-
 // Badge Component - Category/Status badges with gradient backgrounds
 import { forwardRef, HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";

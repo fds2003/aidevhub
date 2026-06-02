@@ -2,9 +2,14 @@ import { GradientSection } from '@/components/ui/gradient-section'
 import { GlassCard, CardTitle, CardDescription, CardHeader, CardContent } from '@/components/ui/glass-card'
 import { Bot, Code2, Boxes, Rocket, Users, Zap } from 'lucide-react'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: 'About Us',
   description: 'Learn about the mission, products, and services of AI Dev Hub. We are dedicated to providing modern developers with cutting-edge AI coding tools and workflow integrations.',
+  openGraph: { title: 'About Us' },
+  twitter: { title: 'About Us' },
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {

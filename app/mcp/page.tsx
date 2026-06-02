@@ -11,8 +11,15 @@ export const metadata: Metadata = {
   title: 'MCP server directory & compatibility matrix',
   description:
     'Curated official, community, and commercial MCP servers with install commands, typical use cases, and Claude / Cursor / Windsurf client notes. Links to the MCP Registry plus on-site tools and workflows.',
+  alternates: { canonical: '/mcp' },
   openGraph: {
-    title: 'MCP server directory & compatibility matrix | AI Dev Hub',
+    title: 'MCP server directory & compatibility matrix',
+    description:
+      'Model Context Protocol directory: 70+ server entries, install commands, scenarios, and host compatibility notes.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MCP server directory & compatibility matrix',
     description:
       'Model Context Protocol directory: 70+ server entries, install commands, scenarios, and host compatibility notes.',
   },

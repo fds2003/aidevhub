@@ -6,11 +6,17 @@ import { GlassCard } from '@/components/ui/glass-card';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cloudflare hub — edge platform in one place | AI Dev Hub',
+  title: 'Cloudflare hub — edge platform in one place',
   description: 'Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers.',
   keywords: ['cloudflare', 'cloudflare workers', 'cloudflare pages', 'cloudflare r2', 'cloudflare d1', 'zero egress', 'serverless', 'edge computing'],
+  alternates: { canonical: '/cloudflare' },
   openGraph: {
-    title: 'Cloudflare hub — edge platform in one place | AI Dev Hub',
+    title: 'Cloudflare hub — edge platform in one place',
+    description: 'Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cloudflare hub — edge platform in one place',
     description: 'Learn the Cloudflare stack: Workers, R2, D1, KV, Pages, Queues, and Workers AI. Zero egress fees on R2, no cold starts on Workers, generous free tiers.',
   },
 }

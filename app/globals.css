@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
 @layer base {
   :root {
     /* Deep Space Palette */
@@ -51,19 +49,18 @@
   html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
-    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+    @apply font-sans;
     font-weight: 600;
     letter-spacing: -0.02em;
   }
 
   code, pre {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    @apply font-mono;
     font-feature-settings: "liga" 1;
   }
 }
@@ -81,40 +78,6 @@
   border-radius: 4px;
 }
 
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slide-up {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
-}
-
-@keyframes border-glow {
-  0%, 100% { border-color: rgba(0, 217, 255, 0.15); }
-  50%       { border-color: rgba(0, 217, 255, 0.35); }
-}
-
-.animate-fade-in  { animation: fade-in 0.4s ease-out forwards; }
-.animate-slide-up { animation: slide-up 0.5s ease-out forwards; }
-.animate-shimmer  {
-  background: linear-gradient(90deg, transparent, rgba(0,217,255,0.06) 50%, transparent);
-  background-size: 200% 100%;
-  animation: shimmer 2.5s linear infinite;
-}
-.animate-blink    { animation: blink 1s step-end infinite; }
-.animate-border-glow { animation: border-glow 3s ease-in-out infinite; }
 
 .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
 .stagger-children > *:nth-child(2) { animation-delay: 60ms; }
@@ -156,9 +119,9 @@
 .prose pre code { @apply bg-transparent p-0 text-zinc-300 border-none; }
 .prose blockquote {
   @apply border-l-2 border-[#00FF87] pl-5 py-2 my-6 text-zinc-400 italic bg-[#111118]/60 rounded-r-lg;
-  font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+  font-family: var(--font-mono), monospace; font-size: 0.9rem;
 }
-.prose img { @apply rounded-lg my-8; border: 1px solid #1c1c2e; }
+.prose img { @apply rounded-lg my-8; border: 1px solid #1c1c2e; loading: lazy; }
 .prose hr  { @apply my-12 border-[#1c1c2e]; }
 .prose table { @apply w-full my-6 border-collapse; }
 .prose th   { @apply bg-[#111118] text-left p-3 border border-[#1c1c2e] font-semibold text-white; }

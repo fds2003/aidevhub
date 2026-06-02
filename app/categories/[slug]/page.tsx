@@ -28,13 +28,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/categories/${slug}`,
     },
     openGraph: {
-      title: `${category.name} | AI Dev Hub`,
+      title: category.name,
       description: category.description,
       images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${category.name} | AI Dev Hub`,
+      title: category.name,
       description: category.description,
     },
   }

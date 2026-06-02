@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { forwardRef, ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";

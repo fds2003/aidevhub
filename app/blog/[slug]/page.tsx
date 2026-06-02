@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/glass-badge'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { TableOfContents } from '@/components/table-of-contents'
 import { getAllPosts, getAllTools, getAllWorkflows, getPostBySlug } from '@/lib/content'
-import { generateArticleSchema } from '@/lib/seo-schema'
+import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo-schema'
 import { calculateReadingTime, formatReadingTime } from '@/lib/reading-time'
 import { getRelatedPosts, getRelatedTools, getRelatedWorkflows } from '@/lib/related-posts'
 import { SITE_URL } from '@/lib/constants'
@@ -77,6 +77,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   // Generate schema.org Article markup
   const articleSchema = generateArticleSchema(post, SITE_URL)
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    [
+      { name: 'AI Dev Hub', url: '/' },
+      { name: 'Blog', url: '/blog' },
+      { name: post.title, url: `/blog/${slug}` },
+    ],
+    SITE_URL
+  )
 
   return (
     <>
@@ -84,6 +92,10 @@ export default async function BlogPostPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main className="min-h-screen bg-[#080810]">

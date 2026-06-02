@@ -1,25 +1,34 @@
 # AI Dev Hub
 
-Curated AI coding tools, MCP resources, workflows, and articles for developers.
+> Your definitive resource for AI-powered development tools, MCP servers, AI agents, and workflow automation. Discover, compare, and master the best AI tools for modern developers.
 
-## Start here
-- Site home: https://aidevhub.net/
-- Full URL index: https://aidevhub.net/sitemap.xml
-- Tools directory: https://aidevhub.net/tools
-- Blog: https://aidevhub.net/blog
-- Workflows: https://aidevhub.net/workflows
-- MCP hub: https://aidevhub.net/mcp
-- Categories: https://aidevhub.net/categories
+## Sections
 
-## Example tool pages (verify others under /tools)
-- https://aidevhub.net/tools/cursor
-- https://aidevhub.net/tools/claude-code
-- https://aidevhub.net/tools/model-context-protocol
+- /tools — AI Tools Directory: 70+ curated tools (Cursor, Claude Code, GitHub Copilot, Windsurf, AutoGPT, etc.) with features, pricing, pros/cons
+- /blog — Technical Articles: deep dives into AI coding, MCP ecosystem, agent orchestration, prompt engineering
+- /mcp — MCP Server Directory & Compatibility Matrix: official, community, and commercial MCP servers with install commands and host compatibility (Claude Desktop, Claude Code, Cursor, Windsurf)
+- /workflows — AI Workflow Guides: step-by-step automation workflows with difficulty levels and tool integrations
+- /categories — Browse by Category: AI Coding Tools, MCP Ecosystem, AI Agents, AI Workflow, Comparisons
+- /cloudflare — Cloudflare Hub: Workers, R2, D1, KV, Pages, Queues, Workers AI — edge platform in one place
 
-## Example articles (verify others under /blog)
-- https://aidevhub.net/blog/just-fucking-use-cloudflare
-- https://aidevhub.net/blog/cloudflare-free-tier-complete-guide
+## Key Pages
 
-## Example workflows (verify others under /workflows)
-- https://aidevhub.net/workflows/ai-pair-programming
-- https://aidevhub.net/workflows/building-with-mcp-server-development-workflow
+- /tools/claude-code — Claude Code CLI by Anthropic
+- /tools/cursor — Cursor AI Editor
+- /tools/github-copilot — GitHub Copilot
+- /tools/windsurf — Windsurf (Codeium)
+- /tools/model-context-protocol — What is MCP?
+- /tools/google-antigravity — Google Antigravity AI Coding Agent
+- /blog/introducing-google-antigravity-2-0 — Google Antigravity 2.0 Overview
+- /blog/google-antigravity-subagent-orchestration — Subagent Orchestration Guide
+- /blog/google-antigravity-prompt-caching — Prompt Caching: 90% Token Cost Reduction
+- /blog/just-fucking-use-cloudflare — Why Use Cloudflare for Everything
+
+## Full URL Index
+
+https://aidevhub.net/sitemap.xml
+
+## Contact
+
+- General: hello@aidevhub.net
+- Business: business@aidevhub.net

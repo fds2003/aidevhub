@@ -6,7 +6,7 @@ category: MCP
 difficulty: intermediate
 duration: 30 min
 tools:
-  - mcp-server-fastmcp
+  - fastmcp
   - claude-code
 steps:
   - order: 1
@@ -17,7 +17,7 @@ steps:
   - order: 2
     title: Configure the Tool
     description: Set up and configure your AI tool.
-    prompt: 'Guide me through configuring mcp-server-fastmcp, claude-code.'
+    prompt: 'Guide me through configuring fastmcp, claude-code.'
     code: ''
   - order: 3
     title: Define Your Task
@@ -39,7 +39,7 @@ featured: false
 Step-by-step workflow for creating and deploying MCP servers
 
 ## Prerequisites
-- **mcp-server-fastmcp**: Installed and configured
+- **fastmcp**: Installed and configured
 - **claude-code**: Installed and configured
 - Basic understanding of AI tools
 - A project or task to work on

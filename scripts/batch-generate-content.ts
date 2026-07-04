@@ -114,7 +114,7 @@ const WORKFLOW_TOPICS: { title: string; description: string; category: string; d
     category: 'MCP',
     difficulty: 'intermediate',
     duration: '30 min',
-    tools: ['mcp-server-fastmcp', 'claude-code'],
+    tools: ['fastmcp', 'claude-code'],
     tutorialNames: ['model-context-protocol', 'fastmcp'],
   },
   {

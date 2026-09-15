@@ -33,6 +33,11 @@ export default function HomePage() {
     date: format(new Date(post.publishedAt || post.createdAt), 'MMM d, yyyy'),
   }))
 
+  // Antigravity guide series — internal-link hub for the site's strongest content cluster
+  const antigravityPosts = allPosts
+    .filter((post) => post.slug.includes('antigravity'))
+    .slice(0, 6)
+
   const categories = [
     {
       name: 'AI Coding',
@@ -262,6 +267,41 @@ export default function HomePage() {
         )}
       </GradientSection>
 
+
+      {/* Antigravity Guides — internal linking for the flagship series */}
+      {antigravityPosts.length > 0 && (
+        <GradientSection variant="grid" size="lg">
+          <SectionHeader
+            badge="Guide Series"
+            title="Google Antigravity Guides"
+            description="From first install to rules, subagents, and cost tuning — the complete Antigravity playbook."
+            action={
+              <GlassButton variant="secondary" size="sm" as="link" href="/blog">
+                All Posts <ArrowRight className="w-4 h-4 ml-2" />
+              </GlassButton>
+            }
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {antigravityPosts.map((post) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col rounded-2xl border border-white/[0.06] bg-surface/60 p-5 hover:border-primary/30 transition-all duration-200 hover:-translate-y-0.5"
+              >
+                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest mb-2 block">
+                  {post.category?.replace(/-/g, ' ')}
+                </span>
+                <h3 className="text-sm font-semibold text-white leading-snug group-hover:text-primary transition-colors line-clamp-2 mb-2 flex-1">
+                  {post.title}
+                </h3>
+                <span className="text-xs font-mono text-primary flex items-center gap-1 mt-auto">
+                  Read guide <ArrowRight className="w-3 h-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </GradientSection>
+      )}
 
       {/* Newsletter */}
       <GradientSection variant="gradient" size="lg">

@@ -1,12 +1,21 @@
 ---
-title: "Google Antigravity 2.0 Tutorial: The Complete Guide to the Best AI Coding Assistant"
+title: "Google Antigravity 2.0 Tutorial: Setup, API Keys & Subagents in 7 Steps (2026)"
 slug: "google-antigravity-tutorial-guide"
-description: "Learn how to use Google Antigravity 2.0, the best autonomous AI coding agent by Google DeepMind. Follow this step-by-step tutorial to configure its API keys, master slash commands like /goal and /schedule, and orchestrate developer subagents."
+description: "Step-by-step Google Antigravity 2.0 tutorial: install the CLI, configure your API key, master /goal and /schedule slash commands, orchestrate subagents, and set up zero-trust security gating."
 category: ai-coding-tools
 tags: [google-antigravity-tutorial, how-to-use-antigravity, best-ai-coding-assistant, autonomous-ai-developer, deepmind-coding-agent]
 createdAt: "2026-05-20T14:00:00.000Z"
-updatedAt: "2026-05-20T14:00:00.000Z"
+updatedAt: "2026-09-15T00:00:00.000Z"
 publishedAt: "2026-05-20T14:00:00.000Z"
+faqs:
+  - question: "How do I set the antigravity_api_key environment variable?"
+    answer: "Export ANTIGRAVITY_API_KEY in your shell profile or place it in a project-level .env file. The CLI reads it at startup; run 'antigravity doctor' to confirm the key is detected and billing is active."
+  - question: "What is a subagent in Google Antigravity?"
+    answer: "A subagent is a background task defined with a name, role, prompt, and workspace (branch or worktree). Subagents run in parallel via /goal orchestration and report progress back through the send_message tool without locking your terminal."
+  - question: "How do I define subagents in Antigravity?"
+    answer: "Pass a subagents array when launching a goal: each entry needs TypeName, Role, Prompt, and Workspace fields. See Step 6 of this tutorial for a working DBAuditor example."
+  - question: "Does Antigravity work without an API key?"
+    answer: "No. Antigravity requires an active API key tied to a Google account or workspace. The free tier includes limited agent tasks per month; paid tiers raise limits and unlock larger context windows."
 ---
 
 # Google Antigravity 2.0 Tutorial: The Complete Guide to the Best AI Coding Assistant
@@ -221,4 +230,6 @@ Because Antigravity can execute terminal commands, Google DeepMind has built a r
 
 By adopting the structured **Research -> Plan -> Execute -> Verify** model, Google Antigravity 2.0 turns AI-assisted coding into a collaborative, automated, and secure partnership. It is the ultimate tool for developers looking to boost their productivity and automate complex refactoring workflows.
 
-Ready to see how Google Antigravity fits into your project workspace? Visit our [Google Antigravity Tool Page](/tools/google-antigravity) to learn more about its commands, features, pricing, and integration steps!
+Ready to see how Google Antigravity fits into your project workspace? Visit our [Google Antigravity Tool Page](/tools/google-antigravity) to learn more about its commands, features, pricing, and integration steps.
+
+For deeper configuration, read our guide to [custom rules and agents.md tuning](/blog/google-antigravity-custom-rules-tuning), the [CLI vs IDE comparison](/blog/google-antigravity-cli-vs-ide-guide), or how [subagent orchestration](/blog/google-antigravity-subagent-orchestration) runs parallel background threads safely.

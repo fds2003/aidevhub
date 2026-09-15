@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Layout } from '@/components/layout'
+import { AnalyticsRouteTracker, AnalyticsGlobalClickHandler } from '@/components/analytics'
 import {
   GA4_MEASUREMENT_ID,
   SITE_DESCRIPTION,
@@ -27,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — AI Development Tools & Resources`,
+    default: `${SITE_NAME} — Google Antigravity Guides, Cloudflare & AI Dev Tools`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     title: {
-      default: `${SITE_NAME} — AI Development Tools & Resources`,
+      default: `${SITE_NAME} — Google Antigravity Guides, Cloudflare & AI Dev Tools`,
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: {
-      default: `${SITE_NAME} — AI Development Tools & Resources`,
+      default: `${SITE_NAME} — Google Antigravity Guides, Cloudflare & AI Dev Tools`,
       template: `%s | ${SITE_NAME}`,
     },
     description: SITE_DESCRIPTION,
@@ -117,6 +118,12 @@ export default function RootLayout({
         <Layout>{children}</Layout>
         {process.env.NODE_ENV === 'production' && GA4_MEASUREMENT_ID ? (
           <GoogleAnalytics gaId={GA4_MEASUREMENT_ID} />
+        ) : null}
+        {process.env.NODE_ENV === 'production' && GA4_MEASUREMENT_ID ? (
+          <>
+            <AnalyticsRouteTracker />
+            <AnalyticsGlobalClickHandler />
+          </>
         ) : null}
       </body>
     </html>

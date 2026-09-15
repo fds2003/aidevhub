@@ -33,6 +33,10 @@ export interface Post {
   updatedAt: string
   publishedAt?: string
   featured?: boolean
+  /** Optional FAQ section rendered at the end of the post + FAQPage schema */
+  faqs?: Array<{ question: string; answer: string }>
+  /** When true, this post is excluded from search indexing and the sitemap */
+  noindex?: boolean
   /** Optional 2026 editorial note (Markdown) shown before the article body */
   updateNote2026?: string
   /** When true, skip the default legacy banner (custom updateNote2026 still renders if set) */

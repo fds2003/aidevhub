@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next'
 import { SITE_URL, CATEGORIES } from '@/lib/constants'
 import { getAllTools, getAllPosts, getAllWorkflows } from '@/lib/content'
+import { postIsNoindex } from '@/lib/blog-legacy-2026'
 import { getMCPServerSlugs } from '@/lib/mcp-directory'
 
 /** With `output: 'export'`, mark routes as statically generated. */
@@ -107,12 +108,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const postPages = posts.map((post) => ({
-    url: `${SITE_URL}/blog/${post.slug}`,
-    lastModified: lastModifiedFrom(post.updatedAt, post.publishedAt || post.createdAt),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }))
+  const postPages = posts
+    .filter((post) => !postIsNoindex(post))
+    .map((post) => ({
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified: lastModifiedFrom(post.updatedAt, post.publishedAt || post.createdAt),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    }))
 
   const workflowPages = workflows.map((workflow) => ({
     url: `${SITE_URL}/workflows/${workflow.slug}`,

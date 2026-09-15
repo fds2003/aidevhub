@@ -9,6 +9,18 @@ export function postNeedsLegacy2026Banner(post: Post): boolean {
   return t < LEGACY_CUTOFF
 }
 
+/**
+ * Legacy posts (pre-2025) are off-topic for the current site focus
+ * (Antigravity / Cloudflare / MCP). They are excluded from the sitemap and
+ * marked noindex so they stop diluting topical authority. Explicit
+ * `noindex: false` in frontmatter keeps a legacy post indexable.
+ */
+export function postIsNoindex(post: Post): boolean {
+  if (post.noindex === false) return false
+  if (post.noindex) return true
+  return new Date(post.publishedAt || post.createdAt).getTime() < LEGACY_CUTOFF
+}
+
 export function postHasCustom2026Note(post: Post): boolean {
   return Boolean(post.updateNote2026?.trim())
 }

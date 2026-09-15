@@ -6,13 +6,14 @@ import { Badge } from '@/components/ui/glass-badge'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { TableOfContents } from '@/components/table-of-contents'
 import { getAllPosts, getAllTools, getAllWorkflows, getPostBySlug } from '@/lib/content'
-import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo-schema'
+import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo-schema'
 import { calculateReadingTime, formatReadingTime } from '@/lib/reading-time'
 import { getRelatedPosts, getRelatedTools, getRelatedWorkflows } from '@/lib/related-posts'
 import { SITE_URL } from '@/lib/constants'
 import { format } from 'date-fns'
 import { MDXRemote } from '@/components/mdx-remote'
 import { BlogPostUpdate2026 } from '@/components/blog-post-update-2026'
+import { postIsNoindex } from '@/lib/blog-legacy-2026'
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: post.title,
     description: post.description,
     authors: [{ name: post.author || 'AI Dev Hub' }],
+    robots: post.noindex || postIsNoindex(post) ? { index: false, follow: true } : undefined,
     openGraph: {
       title: post.title,
       description: post.description,
@@ -85,6 +87,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     ],
     SITE_URL
   )
+  const faqSchema = post.faqs?.length ? generateFAQSchema(post.faqs) : null
 
   return (
     <>
@@ -97,6 +100,12 @@ export default async function BlogPostPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       <main className="min-h-screen bg-[#080810]">
         <article className="container py-8">
@@ -176,6 +185,21 @@ export default async function BlogPostPage({ params }: PageProps) {
                     </Badge>
                   ))}
                 </div>
+              )}
+
+              {/* FAQ section (matches FAQPage JSON-LD) */}
+              {post.faqs && post.faqs.length > 0 && (
+                <GlassCard padding="lg" className="mb-8">
+                  <h2 className="text-xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
+                  <div className="space-y-6">
+                    {post.faqs.map((faq) => (
+                      <div key={faq.question}>
+                        <h3 className="text-sm font-semibold text-white mb-2">{faq.question}</h3>
+                        <p className="text-sm text-zinc-400 leading-relaxed">{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </GlassCard>
               )}
 
               {/* Related content */}

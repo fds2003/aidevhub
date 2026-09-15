@@ -74,14 +74,13 @@ export function HeroSection({ toolCount, articleCount, workflowCount }: HeroStat
         </div>
 
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: '60ms' }}>
-          Your Premier AI Developer
+          Google Antigravity Guides, Cloudflare
           <br />
-          <span className="text-primary">Productivity Platform</span>
+          <span className="text-primary">&amp; AI Dev Tools Hub</span>
         </h1>
         
         <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in" style={{ animationDelay: '120ms' }}>
-          Discover the best AI Coding Tools, MCP Ecosystem, AI Agents, and
-          Workflow automation. Stay ahead in the AI-powered development era.
+          Hands-on Antigravity rules &amp; agents.md recipes, Cloudflare Workers tutorials, and an MCP server directory — with a curated directory of AI coding tools.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in" style={{ animationDelay: '180ms' }}>

@@ -7,6 +7,7 @@ interface Env {
     CACHE: KVNamespace;
     TURNSTILE_SECRET_KEY?: string;
     NEXT_PUBLIC_API_URL?: string;
+    INDEXNOW_KEY?: string;
 }
 
 export default {
@@ -49,6 +50,11 @@ export default {
             // Track API
             if (path === '/api/track' && request.method === 'POST') {
                 return handleTrack(request, env, corsHeaders);
+            }
+
+            // IndexNow push (Bing/Seznam/Yandex)
+            if (path === '/api/indexnow' && request.method === 'POST') {
+                return handleIndexNow(request, env, corsHeaders);
             }
 
             // R2 Assets
@@ -196,6 +202,63 @@ async function handleSubscribe(request: Request, env: Env, corsHeaders: Record<s
             headers: { ...corsHeaders, 'Content-Type': 'application/json' }
         });
     }
+}
+
+// IndexNow Handler — push updated URLs to Bing/Seznam/Yandex.
+// POST /api/indexnow { "urls": ["https://aidevhub.net/blog/...", ...] }
+// Requires INDEXNOW_KEY var (must match /{key}.txt at the site root).
+async function handleIndexNow(request: Request, env: Env, corsHeaders: Record<string, string>) {
+    if (!env.INDEXNOW_KEY) {
+        return new Response(JSON.stringify({ error: 'INDEXNOW_KEY not configured' }), {
+            status: 501,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        });
+    }
+
+    let urls: string[] = [];
+    try {
+        const body = await request.json();
+        urls = Array.isArray(body.urls) ? body.urls.filter((u: unknown) => typeof u === 'string') : [];
+    } catch {
+        return new Response(JSON.stringify({ error: 'Invalid JSON body' }), {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        });
+    }
+
+    if (urls.length === 0 || urls.length > 100) {
+        return new Response(JSON.stringify({ error: 'Provide 1-100 urls' }), {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        });
+    }
+
+    // Only allow pushing this site's own URLs
+    const own = urls.filter((u) => {
+        try { return new URL(u).host === 'aidevhub.net'; } catch { return false; }
+    });
+    if (own.length === 0) {
+        return new Response(JSON.stringify({ error: 'No valid aidevhub.net URLs' }), {
+            status: 400,
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        });
+    }
+
+    const resp = await fetch('https://api.indexnow.org/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({
+            host: 'aidevhub.net',
+            key: env.INDEXNOW_KEY,
+            keyLocation: `https://aidevhub.net/${env.INDEXNOW_KEY}.txt`,
+            urlList: own,
+        }),
+    });
+
+    return new Response(JSON.stringify({ submitted: own.length, status: resp.status }), {
+        status: resp.ok ? 200 : 502,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+    });
 }
 
 // RSS Feed Handler

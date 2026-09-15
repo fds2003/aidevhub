@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs'
 import { getAllTools, getAllPosts, getAllWorkflows, getToolBySlug } from '@/lib/content'
 import { generateSoftwareSchema, generateBreadcrumbSchema } from '@/lib/seo-schema'
 import { getRelatedPosts, getRelatedWorkflows } from '@/lib/related-posts'
-import { SITE_URL } from '@/lib/constants'
+import { SITE_URL, normalizeToolName } from '@/lib/constants'
 import type { Metadata } from 'next'
 
 interface PageProps {
@@ -24,19 +24,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const tool = getToolBySlug(slug)
   if (!tool) return { title: 'Tool Not Found' }
 
+  const displayName = normalizeToolName(tool.name)
+  const title = `${displayName} — Review, Pricing & Alternatives`
+  const description = tool.description ||
+    `Discover ${displayName}: features, pricing, pros & cons, and how it compares to alternatives in 2026.`
+
   return {
-    title: tool.name,
-    description: tool.description,
+    title,
+    description,
     openGraph: {
-      title: tool.name,
-      description: tool.description,
+      title,
+      description,
       type: 'website',
       images: tool.logo ? [{ url: `${SITE_URL}${tool.logo}` }] : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: tool.name,
-      description: tool.description,
+      title,
+      description,
     },
     alternates: {
       canonical: `/tools/${slug}`,
@@ -132,6 +137,8 @@ export default async function ToolDetailPage({ params }: PageProps) {
                   href={tool.website}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-outbound
+                  data-tool-name={tool.name}
                   className="flex items-center justify-center gap-2 w-full h-12 px-6 bg-[#00D9FF] hover:bg-[#00D9FF]/90 text-[#080810] font-semibold rounded-xl transition-all glow-cyan"
                 >
                   <Globe className="w-4 h-4" />

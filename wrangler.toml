@@ -20,5 +20,9 @@ id = "d10501900f204e5ea0fcb557b5d49f19"
 NEXT_PUBLIC_SITE_URL = "https://aidevhub.net"
 
 # Cloudflare Pages 配置
-pages_build_output_dir = ".next"
+# ⚠️ 静态导出产物是 `out/`（含 index.html、sitemap.xml、llms-full.txt、
+# blog *.md 镜像、IndexNow 校验文件），而 `.next/` 只有 JS 块、没有 HTML 页面。
+# 若输出目录指向 `.next`，Pages 自动构建/无参 deploy 会漏掉全部 GEO 资产与页面，
+# 表现为线上 llms-full.txt / blog *.md 404。故必须指向 `out`。
+pages_build_output_dir = "out"
 

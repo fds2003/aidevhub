@@ -1,13 +1,13 @@
 ---
-title: "Test-Driven AI Coding: Automating the Code-Test-Fix Loop in Sandboxes"
+title: "Google Antigravity TDD: How It Writes Tests, Runs Them, and Fixes Its Own Bugs Automatically"
 slug: "google-antigravity-tdd-self-correcting-loop"
-description: "Learn how Google Antigravity 2.0 uses closed-loop TDD to automate writing unit tests, running them in sandboxes, and self-correcting buggy code."
+description: "How Google Antigravity 2.0 runs test-driven development in a sandbox: writing spec tests first, executing them, and self-correcting failing code until the suite is green — no manual review of edge cases needed."
 category: "ai-agents"
 tags: ["tdd", "google-antigravity", "automation", "testing"]
 author: "AI Dev Hub"
 readingTime: 6
 createdAt: "2026-05-25"
-updatedAt: "2026-05-25"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-25"
 featured: false
 hideLegacy2026Banner: true
@@ -18,6 +18,8 @@ The biggest issue with raw AI-generated code is **functional verification**. An 
 To bridge this gap, senior engineers rely on Test-Driven Development (TDD). 
 
 In **Google Antigravity 2.0**, the agent uses TDD as its primary code quality safeguard. By automating the write-test-run-correct loop inside its isolated sandbox, it guarantees that code meets functional specifications before asking for your merge approval.
+
+> **Quick Answer:** Antigravity writes the failing tests first (happy paths, boundaries, error cases), runs them in its sandbox to confirm they fail for the right reason, then implements the feature and re-runs until 100% green. Stack-trace output is parsed automatically, and the agent self-corrects line-level bugs without interrupting you.
 
 ---
 
@@ -84,5 +86,11 @@ By shifting verification from human code reviews to automated sandboxed test exe
 * **Living Documentation**: Every feature implemented by the agent comes pre-bundled with rich, functional unit tests.
 
 ---
+---
 
-*On Day 6, we'll learn how to customize and control this agent's coding style and validation parameters using custom project rules.*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Write custom rules with agents.md, .rules, strict mode & allow lists](/blog/google-antigravity-custom-rules-tuning)
+- [Cut agent token costs up to 90% with prompt caching](/blog/google-antigravity-prompt-caching)

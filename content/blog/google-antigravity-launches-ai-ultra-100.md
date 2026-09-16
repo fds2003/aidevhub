@@ -17,6 +17,8 @@ Google Antigravity has officially announced the launch of its new **Google AI Ul
 
 To celebrate the launch, Google is also running a limited-time promotion: new Ultra subscribers will receive **$100 in bonus credits** to act as a buffer if they exceed their monthly quota limits.
 
+> **Quick Answer:** Google AI Ultra costs **$100/month** and is built for heavy Antigravity agent workloads: it raises rate/usage limits for parallel subagents and multi-file loops, prioritizes frontier Gemini models for low latency, and ships a limited-time **$100 bonus-credit** buffer that absorbs quota overruns so autonomous coding sprints don't stall mid-task.
+
 ---
 
 ## What is Included in the $100/Month Google AI Ultra Plan?
@@ -39,3 +41,10 @@ The **Google AI Ultra** tier directly solves this bottleneck, offering enterpris
 ---
 
 *For a step-by-step guide on how to configure your credentials and leverage the agent's full potential, read our [Google Antigravity 2.0 Tutorial Guide](/blog/google-antigravity-tutorial-guide) or check out the [Google Antigravity Tool Page](/tools/google-antigravity).*
+
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Write custom rules with agents.md, .rules, strict mode & allow lists](/blog/google-antigravity-custom-rules-tuning)
+- [Cut agent token costs up to 90% with prompt caching](/blog/google-antigravity-prompt-caching)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)

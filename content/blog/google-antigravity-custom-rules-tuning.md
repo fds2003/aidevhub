@@ -1,7 +1,7 @@
 ---
-title: "Google Antigravity Custom Rules: agents.md, .rules Files, Strict Mode & Allow List (2026 Guide)"
+title: "How to Write Google Antigravity Custom Rules: agents.md, .rules, Strict Mode & Allow Lists (2026 Guide)"
 slug: "google-antigravity-custom-rules-tuning"
-description: "Complete guide to custom rules in Google Antigravity 2.0: how agents.md and .rules files work, where rule files live, strict mode, allow lists, turbo mode, and auto-retry configuration with copy-paste examples."
+description: "Learn how to write custom rules for Google Antigravity 2.0: where agents.md and .rules files go, how rule resolution works, and copy-paste configs for strict mode, allow lists, turbo mode, and auto-retry."
 category: "ai-agents"
 tags: ["google-antigravity", "configuration", "best-practices", "code-quality", "agents-md"]
 author: "AI Dev Hub"
@@ -33,6 +33,8 @@ Left to its own devices, an AI coding agent will write code based on its general
 To maintain codebase health, you must establish clear guardrails.
 
 In **Google Antigravity 2.0**, developers can enforce strict coding guidelines, safety rules, and architecture choices using **Custom Project Rules**, the **agents.md** convention, and per-directory `.rules` files. This guide covers the full configuration surface: where rule files live, how they resolve, and how to tune strict mode, allow lists, turbo mode, and auto-retry.
+
+> **Quick Answer:** Antigravity reads custom rules from three places, resolved top-down: global rules in `~/.gemini/antigravity/rules`, project rules in `./.gemini/rules`, and directory-scoped `.rules` files anywhere in the tree. `agents.md` sets baseline context; `.rules` carry Antigravity-specific constraints that override it on conflict. Use **strict mode** to fail hard on violations, an **allow list** for promptless command execution, and **turbo mode** only where mistakes are cheap to roll back.
 
 ---
 
@@ -230,4 +232,11 @@ Start with three files: `agents.md` for context, `.gemini/rules` for constraints
 
 ---
 
-*In the final Day 7 article, we wrap up the series by looking at the paradigm shift from autocompletion to fully autonomous software engineering. For the full series, start with the [Google Antigravity 2.0 tutorial](/blog/google-antigravity-tutorial-guide) or see how the [CLI compares to the IDE](/blog/google-antigravity-cli-vs-ide-guide).*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Run parallel subagents safely on isolated branches](/blog/google-antigravity-subagent-orchestration)
+- [Google Antigravity CLI vs. IDE: which one should you use?](/blog/google-antigravity-cli-vs-ide-guide)
+
+*This is the flagship post of our Google Antigravity 2.0 series. Start with the [tutorial](/blog/google-antigravity-tutorial-guide) if new to the tool, or jump straight to the [benchmark](/blog/google-antigravity-benchmark-2026-09) for cost & latency estimates plus a method to measure your own project.*

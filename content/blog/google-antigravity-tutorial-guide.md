@@ -1,11 +1,11 @@
 ---
-title: "Google Antigravity 2.0 Tutorial: Setup, API Keys & Subagents in 7 Steps (2026)"
+title: "Google Antigravity Tutorial: Install, API Keys, /goal & Subagents in 7 Steps (2026)"
 slug: "google-antigravity-tutorial-guide"
-description: "Step-by-step Google Antigravity 2.0 tutorial: install the CLI, configure your API key, master /goal and /schedule slash commands, orchestrate subagents, and set up zero-trust security gating."
+description: "Step-by-step Google Antigravity tutorial: install the CLI, set up your API key, use /goal and /schedule, orchestrate subagents, and configure zero-trust security gating in 7 steps."
 category: ai-coding-tools
 tags: [google-antigravity-tutorial, how-to-use-antigravity, best-ai-coding-assistant, autonomous-ai-developer, deepmind-coding-agent]
 createdAt: "2026-05-20T14:00:00.000Z"
-updatedAt: "2026-09-15T00:00:00.000Z"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-20T14:00:00.000Z"
 faqs:
   - question: "How do I set the antigravity_api_key environment variable?"
@@ -27,6 +27,8 @@ Autonomous AI coding agents have progressed rapidly from mere autocompletion mod
 Unlike standard chatbots that only suggest code snippets, the **Antigravity AI agent** operates directly on your local files, plans complex architectural migrations, compiles code, runs tests, and fixes its own bugs.
 
 In this comprehensive **Google Antigravity 2.0 tutorial**, we will take you step-by-step through installing, configuring, and mastering this advanced **autonomous AI developer** in your daily programming workflow.
+
+> **Quick Answer:** To get started: `npm install -g @google/antigravity`, export `ANTIGRAVITY_API_KEY`, then run `antigravity dev ./` in your project root. State a goal with `/goal`, review the generated `implementation_plan.md`, approve it, and Antigravity executes the multi-file changes inside an isolated sandbox branch — compiling and fixing its own errors before handing you a clean diff to merge.
 
 ---
 
@@ -233,3 +235,5 @@ By adopting the structured **Research -> Plan -> Execute -> Verify** model, Goog
 Ready to see how Google Antigravity fits into your project workspace? Visit our [Google Antigravity Tool Page](/tools/google-antigravity) to learn more about its commands, features, pricing, and integration steps.
 
 For deeper configuration, read our guide to [custom rules and agents.md tuning](/blog/google-antigravity-custom-rules-tuning), the [CLI vs IDE comparison](/blog/google-antigravity-cli-vs-ide-guide), or how [subagent orchestration](/blog/google-antigravity-subagent-orchestration) runs parallel background threads safely.
+
+For what a task actually costs per run, see our [cost & latency estimates for Google Antigravity](/blog/google-antigravity-benchmark-2026-09) — order-of-magnitude numbers built from Antigravity's published behavior plus a step-by-step method to measure your own project.

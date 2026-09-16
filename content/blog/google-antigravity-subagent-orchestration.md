@@ -1,13 +1,13 @@
 ---
-title: "Orchestrating Subagents: Running Parallel Background Threads Safely"
+title: "Google Antigravity Subagents: Run Parallel Background Tasks Safely (define_subagent, invoke_subagent)"
 slug: "google-antigravity-subagent-orchestration"
-description: "Learn how Google Antigravity 2.0 coordinates specialized subagents to tackle complex repository research and automated testing tasks in parallel."
+description: "How to orchestrate subagents in Google Antigravity 2.0: define_subagent and invoke_subagent, isolated branch workspaces, and how parallel background threads keep your main context clean."
 category: "ai-agents"
 tags: ["google-antigravity", "multi-agent", "subagents", "software-architecture"]
 author: "AI Dev Hub"
 readingTime: 5
 createdAt: "2026-05-22"
-updatedAt: "2026-05-22"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-22"
 featured: false
 hideLegacy2026Banner: true
@@ -20,6 +20,8 @@ If a single AI agent has to search a database, read file structures, compile log
 **Google Antigravity 2.0** solves this by implementing a **Multi-Agent Orchestration Architecture**. By spawning specialized subagents, the parent coordinator delegates tasks and runs background research threads concurrently. 
 
 Here is how it works under the hood.
+
+> **Quick Answer:** Define a subagent with `define_subagent` (name, role, system prompt, and which tools it can use), then launch it in the background with `invoke_subagent` — each subagent can run in an isolated Git `branch` or shared `worktree` so parallel work never overwrites the parent's files. Subagents report back non-blockingly via `send_message`; you get parallelism without context bloat or terminal lock-in.
 
 ---
 
@@ -81,5 +83,11 @@ How do these agents communicate without blocking the system or spamming the user
 By partitioning labor into isolated threads, Antigravity 2.0 achieves what monolithic agents cannot: **structured, parallel software engineering**. The parent coordinator acts as a manager, synthesizing findings and making final code integrations, while specialized subagents do the heavy lifting in parallel.
 
 ---
+---
 
-*In Day 3, we will shift focus to extending Antigravity's capabilities by building a custom Model Context Protocol (MCP) server.*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Cut agent token costs up to 90% with prompt caching](/blog/google-antigravity-prompt-caching)
+- [How the zero-trust sandbox protects your local system](/blog/google-antigravity-sandbox-security-deep-dive)

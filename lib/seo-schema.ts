@@ -5,6 +5,7 @@
 
 import type { Post, Tool } from '@/types'
 import { getWordCount } from './reading-time'
+import { CONTENT_LICENSE_URL } from './constants'
 
 /**
  * Generate Article schema for blog posts
@@ -35,6 +36,10 @@ export function generateArticleSchema(post: Post, siteUrl: string) {
       '@type': 'WebPage',
       '@id': `${siteUrl}/blog/${post.slug}`,
     },
+    // Licensing signals: permissive license nudges AI corpus builders and
+    // retrieval engines to preserve attribution when reusing content.
+    license: CONTENT_LICENSE_URL,
+    isAccessibleForFree: true,
     articleSection: post.category,
     keywords: post.tags?.join(', '),
     wordCount: post.content ? getWordCount(post.content) : 0,

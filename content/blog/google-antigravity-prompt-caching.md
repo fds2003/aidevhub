@@ -1,13 +1,13 @@
 ---
-title: "Prompt Caching: Reducing Agent Token Cost by 90% in Large Repositories"
+title: "Google Antigravity Token Cost: How to Cut Your API Bill up to 90% with Prompt Caching"
 slug: "google-antigravity-prompt-caching"
-description: "Discover how Google Antigravity 2.0 leverages Gemini's Context Caching to make codebase analysis highly cost-effective by caching static contexts."
+description: "Cut Google Antigravity token costs by up to 90% using Gemini context (prompt) caching: how the cache works, TTL management, and when caching makes agentic coding dramatically cheaper on large repos."
 category: "ai-agents"
 tags: ["prompt-caching", "gemini-api", "cost-optimization", "google-antigravity"]
 author: "AI Dev Hub"
 readingTime: 5
 createdAt: "2026-05-24"
-updatedAt: "2026-05-24"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-24"
 featured: false
 hideLegacy2026Banner: true
@@ -20,6 +20,8 @@ Because agents need to continually read files, remember system rules, and parse 
 To keep AI-native engineering affordable, **Google Antigravity 2.0** leverages one of Gemini's most powerful native API features: **Context Caching** (also known as Prompt Caching).
 
 Let's dissect how this technology slashes agentic development costs by up to 90%.
+
+> **Quick Answer:** Antigravity 2.0 automatically registers a Gemini **context cache** (min 32k tokens, ~300s TTL) containing your static context — rules, file tree, unchanged files — when the CLI launches. Every subsequent agent turn references the pre-compiled cache instead of re-parsing source code from scratch, cutting input-token costs by **50–90%** and slashing time-to-first-token. You don't configure anything manually: the cache is created, TTL-refreshed on activity, and evicted after ~5 min idle.
 
 ---
 
@@ -79,5 +81,11 @@ Antigravity optimizes the cache lifecycle automatically under the hood:
 Context caching shifts autonomous programming from a costly experiment to a practical daily tool. By minimizing repetitive token processing, Antigravity 2.0 allows you to run hours of autonomous coding, testing, and debugging loops for less than the cost of a cup of coffee.
 
 ---
+---
 
-*On Day 5, we will look at how Antigravity automates its own code validation by running a closed-loop Test-Driven Development (TDD) process inside sandboxes.*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Run parallel subagents safely on isolated branches](/blog/google-antigravity-subagent-orchestration)
+- [How Antigravity writes tests and fixes its own bugs](/blog/google-antigravity-tdd-self-correcting-loop)

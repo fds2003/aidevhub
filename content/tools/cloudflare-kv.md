@@ -6,7 +6,7 @@ category: Cloudflare
 tags: [cloudflare, cloudflare-kv, kv-store, key-value, redis-alternative, edge-cache, global-cache]
 website: https://developers.cloudflare.com/kv/
 pricing: free
-logo: /images/tools/cloudflare-kv.webp
+logo: "🔑"
 features:
   - "1M free reads per day"
   - "Global replication"

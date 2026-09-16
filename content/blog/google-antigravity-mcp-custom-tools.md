@@ -7,7 +7,7 @@ tags: ["mcp", "google-antigravity", "api-integration", "custom-tools"]
 author: "AI Dev Hub"
 readingTime: 6
 createdAt: "2026-05-23"
-updatedAt: "2026-05-23"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-23"
 featured: false
 hideLegacy2026Banner: true
@@ -18,6 +18,8 @@ Out of the box, Google Antigravity 2.0 is equipped with core tools for reading f
 To allow agents to communicate with any software resource, Antigravity integrates with the **Model Context Protocol (MCP)**. 
 
 In this tutorial, we will build a custom MCP server in Python and connect it directly to Antigravity as a brand new agent tool.
+
+> **Quick Answer:** To connect a private API or internal tool to Google Antigravity, write a small MCP server (FastMCP in Python is ~20 lines: declare tools with the `@mcp.tool()` decorator, docstrings describe when the agent should call them), then register it in `~/.gemini/antigravity/mcp_config.json` under `mcpServers`. Antigravity auto-discovers the tools on startup — no agent code changes needed.
 
 ---
 
@@ -114,5 +116,11 @@ The agent will respond:
 With MCP, the barrier to teaching AI agents about your custom corporate tools is completely gone. By packaging databases, APIs, or custom script suites into MCP endpoints, you turn Antigravity into a specialized, domain-expert engineer for your specific stack.
 
 ---
+---
 
-*For Day 4, we will look into the economics of agentic programming and see how to slash API token bills using Gemini's Context Caching.*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Cut agent token costs up to 90% with prompt caching](/blog/google-antigravity-prompt-caching)
+- [How the zero-trust sandbox protects your local system](/blog/google-antigravity-sandbox-security-deep-dive)

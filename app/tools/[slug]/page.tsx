@@ -36,7 +36,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title,
       description,
       type: 'website',
-      images: tool.logo ? [{ url: `${SITE_URL}${tool.logo}` }] : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
+      images: tool.logo && tool.logo.startsWith('/')
+        ? [{ url: `${SITE_URL}${tool.logo}` }]
+        : [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -229,6 +231,38 @@ export default async function ToolDetailPage({ params }: PageProps) {
                     className="px-4 py-2 text-sm font-mono text-zinc-400 bg-[#111118] border border-[#1c1c2e] rounded-lg hover:text-[#00D9FF] hover:border-[#00D9FF]/20 transition-all"
                   >
                     {alt.replace(/-/g, ' ')}
+                  </Link>
+                ))}
+              </div>
+            </GlassCard>
+          )}
+
+          {/* Complete guide series — anchored internal-link hub for the Antigravity pillar page */}
+          {tool.slug === 'google-antigravity' && (
+            <GlassCard padding="lg" className="mb-8">
+              <h2 className="text-lg font-semibold text-white mb-1 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#00D9FF]" />
+                The Complete Google Antigravity Guide Series
+              </h2>
+              <p className="text-sm text-zinc-500 mb-4">
+                From first install to cost tuning — a hands-on playbook for autonomous software development.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {[
+                  { href: '/blog/google-antigravity-tutorial-guide', label: 'Start here: install Antigravity, set API keys, and run your first /goal task in 7 steps' },
+                  { href: '/blog/google-antigravity-custom-rules-tuning', label: 'Write custom rules (agents.md, .rules) with strict mode and allow lists' },
+                  { href: '/blog/google-antigravity-benchmark-2026-09', label: 'Cost & latency estimates for Antigravity tasks + how to measure your own project' },
+                  { href: '/blog/google-antigravity-multi-file-refactoring', label: 'How multi-file refactoring stays safe across 47 files without breaking the build' },
+                  { href: '/blog/google-antigravity-prompt-caching', label: 'Cut agent token costs up to 90% with Gemini context (prompt) caching' },
+                  { href: '/blog/google-antigravity-subagent-orchestration', label: 'Orchestrate parallel subagents on isolated branches for large codebases' },
+                ].map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group flex items-start gap-2 rounded-lg border border-[#1c1c2e] bg-[#111118] p-3 hover:border-[#00D9FF]/30 transition-all"
+                  >
+                    <span className="text-[#00D9FF] mt-0.5 shrink-0">→</span>
+                    <span className="text-sm text-zinc-400 group-hover:text-white transition-colors leading-snug">{item.label}</span>
                   </Link>
                 ))}
               </div>

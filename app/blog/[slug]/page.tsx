@@ -9,7 +9,7 @@ import { getAllPosts, getAllTools, getAllWorkflows, getPostBySlug } from '@/lib/
 import { generateArticleSchema, generateBreadcrumbSchema, generateFAQSchema } from '@/lib/seo-schema'
 import { calculateReadingTime, formatReadingTime } from '@/lib/reading-time'
 import { getRelatedPosts, getRelatedTools, getRelatedWorkflows } from '@/lib/related-posts'
-import { SITE_URL } from '@/lib/constants'
+import { SITE_URL, CONTENT_LICENSE_NAME, CONTENT_LICENSE_URL } from '@/lib/constants'
 import { format } from 'date-fns'
 import { MDXRemote } from '@/components/mdx-remote'
 import { BlogPostUpdate2026 } from '@/components/blog-post-update-2026'
@@ -186,6 +186,30 @@ export default async function BlogPostPage({ params }: PageProps) {
                   ))}
                 </div>
               )}
+
+              {/* Cite & reuse (CC BY 4.0 + markdown mirror for AI/LLM pipelines) */}
+              <div className="rounded-lg border border-[#1c1c2e] bg-[#0c0c16] p-4 mb-8 font-mono text-xs leading-relaxed text-zinc-500">
+                <p className="mb-1">
+                  Reuse: licensed under{' '}
+                  <a href={CONTENT_LICENSE_URL} target="_blank" rel="noopener noreferrer" className="text-zinc-400 underline decoration-zinc-700 hover:text-[#00D9FF]">
+                    {CONTENT_LICENSE_NAME}
+                  </a>{' '}
+                  — quoting, summarizing, and republishing is permitted with attribution.
+                </p>
+                <p className="mb-1">
+                  Cite as: &ldquo;{post.title},&rdquo; AI Dev Hub, {SITE_URL}/blog/{slug}
+                </p>
+                <p>
+                  Markdown for AI/LLM consumption:{' '}
+                  <a href={`/blog/${slug}.md`} className="text-zinc-400 underline decoration-zinc-700 hover:text-[#00D9FF]">
+                    /blog/{slug}.md
+                  </a>{' '}
+                  · full corpus:{' '}
+                  <a href="/llms-full.txt" className="text-zinc-400 underline decoration-zinc-700 hover:text-[#00D9FF]">
+                    /llms-full.txt
+                  </a>
+                </p>
+              </div>
 
               {/* FAQ section (matches FAQPage JSON-LD) */}
               {post.faqs && post.faqs.length > 0 && (

@@ -1,13 +1,13 @@
 ---
-title: "Deep Dive: How Google Antigravity 2.0's Zero-Trust Sandbox Protects Your Local System"
+title: "Google Antigravity Sandbox Security: How the Zero-Trust Architecture Protects Your System"
 slug: "google-antigravity-sandbox-security-deep-dive"
-description: "An in-depth look at Google Antigravity's zero-trust permission architecture, sandbox execution, and how it prevents LLM hallucinations from damaging your local filesystem."
+description: "A deep dive into Google Antigravity 2.0's sandbox and zero-trust permission model: how file edits, shell commands, and network access are isolated, and how prompt-injection risks are mitigated."
 category: "ai-agents"
 tags: ["google-antigravity", "sandbox", "security", "agent-safety"]
 author: "AI Dev Hub"
 readingTime: 6
 createdAt: "2026-05-20T17:55:00.000Z"
-updatedAt: "2026-05-20T17:55:00.000Z"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-20T17:55:00.000Z"
 featured: false
 hideLegacy2026Banner: true
@@ -18,6 +18,8 @@ Autonomous coding agents are incredibly powerful, but they present a massive sec
 A single hallucinated regex replacement or an unvetted script download could destroy your operating system or compromise sensitive environment keys. 
 
 To solve this, Google Antigravity 2.0 implements a **Zero-Trust Sandbox Architecture**. In this article, we deep-dive into how it isolates file modifications, executes shell commands under human guardrails, and mitigates agentic security risks.
+
+> **Quick Answer:** Antigravity separates reasoning from execution with three layers: file edits stay inside a Git-based isolated workspace, terminal commands run in an isolated shell container, and any network or sensitive operation requires explicit human approval. High-risk commands (`rm -rf`, `git push --force`, outbound network calls) are blocked unless whitelisted — a hallucinated or prompt-injected agent simply cannot reach your real filesystem or keys without your sign-off.
 
 ---
 
@@ -81,5 +83,11 @@ Even with a zero-trust sandbox, developers should practice defense-in-depth when
 * **Review Diff Blocks**: Do not blindly press "Approve All" when the agent generates an implementation plan. Review the surgical diff chunks in the terminal.
 
 ---
+---
 
-*Want to start building safely? Check out our [Google Antigravity 2.0 Tutorial Guide](/blog/google-antigravity-tutorial-guide) to set up your secure workspace configuration.*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Write custom rules with agents.md, .rules, strict mode & allow lists](/blog/google-antigravity-custom-rules-tuning)
+- [Run parallel subagents safely on isolated branches](/blog/google-antigravity-subagent-orchestration)

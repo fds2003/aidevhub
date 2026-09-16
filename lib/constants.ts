@@ -10,6 +10,14 @@ export const AUTHOR = 'AI Dev Hub'
 export const AUTHOR_EMAIL = 'hello@aidevhub.net'
 
 /**
+ * Content licensing (GEO): a permissive, attribution-required license makes
+ * retrieval engines and corpus builders far likelier to keep the source URL
+ * when quoting or reusing our content.
+ */
+export const CONTENT_LICENSE_NAME = 'CC BY 4.0'
+export const CONTENT_LICENSE_URL = 'https://creativecommons.org/licenses/by/4.0/'
+
+/**
  * Display-name normalization for tool pages: 'leonardo' → 'Leonardo',
  * 'google-antigravity' → 'Google Antigravity', 'claude-code' → 'Claude Code'.
  */

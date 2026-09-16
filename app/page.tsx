@@ -33,9 +33,25 @@ export default function HomePage() {
     date: format(new Date(post.publishedAt || post.createdAt), 'MMM d, yyyy'),
   }))
 
-  // Antigravity guide series — internal-link hub for the site's strongest content cluster
+  // Antigravity guide series — internal-link hub for the site's strongest content cluster.
+  // Priority order: pillar tutorial, rules guide, fresh benchmark, multi-file refactoring,
+  // then remaining antigravity posts (cache, subagents, sandbox, MCP, TDD, CLI vs IDE...).
+  const ANTI_PREFERRED = [
+    'google-antigravity-tutorial-guide',
+    'google-antigravity-custom-rules-tuning',
+    'google-antigravity-benchmark-2026-09',
+    'google-antigravity-multi-file-refactoring',
+  ]
   const antigravityPosts = allPosts
     .filter((post) => post.slug.includes('antigravity'))
+    .sort((a, b) => {
+      const ia = ANTI_PREFERRED.indexOf(a.slug)
+      const ib = ANTI_PREFERRED.indexOf(b.slug)
+      if (ia !== -1 && ib !== -1) return ia - ib
+      if (ia !== -1) return -1
+      if (ib !== -1) return 1
+      return 0
+    })
     .slice(0, 6)
 
   const categories = [
@@ -295,7 +311,7 @@ export default function HomePage() {
                   {post.title}
                 </h3>
                 <span className="text-xs font-mono text-primary flex items-center gap-1 mt-auto">
-                  Read guide <ArrowRight className="w-3 h-3" />
+                  Google Antigravity guide <ArrowRight className="w-3 h-3" />
                 </span>
               </Link>
             ))}

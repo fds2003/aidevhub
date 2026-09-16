@@ -37,7 +37,21 @@ if [ ! -f "out/${INDEXNOW_KEY_FILE}" ]; then
     echo "ERROR: out/${INDEXNOW_KEY_FILE} missing — IndexNow ownership verification will fail." >&2
     exit 1
 fi
-echo "Build OK: out/ contains index.html, sitemap with ${URL_COUNT} URLs, and the IndexNow key file."
+if [ ! -s out/llms.txt ] || [ ! -s out/llms-full.txt ]; then
+    echo "ERROR: out/llms.txt / out/llms-full.txt missing — GEO asset generator did not run." >&2
+    exit 1
+fi
+BLOG_MD_COUNT=$(ls out/blog/*.md 2>/dev/null | wc -l)
+if [ "${BLOG_MD_COUNT:-0}" -lt 20 ]; then
+    echo "ERROR: out/blog/*.md has ${BLOG_MD_COUNT:-0} markdown mirrors (expected ≥20) — GEO asset generator did not run." >&2
+    exit 1
+fi
+RSS_ITEMS=$(grep -c '<item>' out/rss.xml || true)
+if [ "${RSS_ITEMS:-0}" -lt 10 ]; then
+    echo "ERROR: out/rss.xml has ${RSS_ITEMS:-0} items (expected ≥10) — generated feed is missing." >&2
+    exit 1
+fi
+echo "Build OK: out/ contains index.html, sitemap with ${URL_COUNT} URLs, llms.txt, ${BLOG_MD_COUNT} blog .md mirrors, rss.xml with ${RSS_ITEMS} items, and the IndexNow key file."
 
 # Deploy to Pages (full static export)
 echo "Deploying to Pages..."
@@ -51,6 +65,37 @@ echo "Live sitemap URLs: ${LIVE_URLS:-0}"
 if [ "${LIVE_URLS:-0}" -lt 100 ]; then
     echo "WARNING: live sitemap looks wrong (${LIVE_URLS:-0} URLs). Check the Pages deployment." >&2
     exit 1
+fi
+
+# P0-2 verify: GEO assets must be LIVE (llms-full.txt + blog .md mirrors).
+# Previously these 404'd live even though they existed in out/ — a Pages
+# deployment gap. Fail the deploy loudly if they are missing after publish.
+echo "Verifying GEO assets are live..."
+LIVE_LLMS_FULL=$(curl -fsS -o /dev/null -w "%{http_code}" https://aidevhub.net/llms-full.txt || echo 000)
+LIVE_BLOG_MD=$(curl -fsS -o /dev/null -w "%{http_code}" https://aidevhub.net/blog/google-antigravity-tutorial-guide.md || echo 000)
+echo "  llms-full.txt: ${LIVE_LLMS_FULL}   blog .md mirror: ${LIVE_BLOG_MD}"
+if [ "${LIVE_LLMS_FULL}" != "200" ] || [ "${LIVE_BLOG_MD}" != "200" ]; then
+    echo "WARNING: GEO assets not live (llms-full.txt=${LIVE_LLMS_FULL}, blog .md=${LIVE_BLOG_MD})." >&2
+    echo "         They are in out/ but Cloudflare Pages did not serve them. Check the" >&2
+    echo "         Pages build-output directory and any _redirects/_headers or route rules" >&2
+    echo "         that may be excluding *.txt / *.md." >&2
+fi
+
+# P0-1 verify: Cloudflare "Managed / AI Training" robots policy can override our
+# robots.ts and disallow the very AI crawlers our GEO strategy relies on. Detect
+# that here and print the exact console fix instead of failing the build.
+echo "Verifying robots.txt AI-crawler policy..."
+ROBOTS_BODY=$(curl -fsS https://aidevhub.net/robots.txt || echo "")
+if printf '%s' "$ROBOTS_BODY" | grep -q "ai-train=no" || \
+   printf '%s' "$ROBOTS_BODY" | grep -A1 "User-agent: GPTBot" | grep -q "Disallow: /" || \
+   printf '%s' "$ROBOTS_BODY" | grep -A1 "User-agent: ClaudeBot" | grep -q "Disallow: /"; then
+    echo "WARNING: Cloudflare managed-robots is overriding our robots.txt (AI crawlers Disallowed)." >&2
+    echo "         Our src/app/robots.ts allows GPTBot/ClaudeBot/CCBot/Google-Extended for GEO." >&2
+    echo "         FIX in Cloudflare Dashboard: your zone -> Security -> AI Training /" >&2
+    echo "         Managed Robots -> switch to Custom (or disable managed robots) so the" >&2
+    echo "         Next-generated robots.txt is served verbatim. Re-run this check after." >&2
+else
+    echo "  robots.txt serves our AI-crawler Allow policy — OK."
 fi
 
 echo "Deployment complete!"

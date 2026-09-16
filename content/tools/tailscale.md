@@ -6,7 +6,7 @@ category: Tools
 tags: [tailscale, vpn, wireguard, networking, self-hosted, homelab, zero-trust, mesh-vpn]
 website: https://tailscale.com/
 pricing: free
-logo: /images/tools/tailscale.webp
+logo: "🗺"
 features:
   - "Zero-config setup"
   - "WireGuard-based encryption"

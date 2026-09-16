@@ -1,13 +1,13 @@
 ---
-title: "Multi-file Refactoring: How AI Agents Manage Cross-Module Consistency"
+title: "Google Antigravity Multi-File Refactoring: How It Edits Dozens of Files Safely in One Task"
 slug: "google-antigravity-multi-file-refactoring"
-description: "Learn how Google Antigravity 2.0 uses AST parsing and compiled feedback loops to safely apply multi-file refactoring tasks across complex codebases."
+description: "How Google Antigravity 2.0 performs multi-file refactoring: AST-based call-graph mapping, surgical chunk replacements, and compiler feedback loops that keep cross-module renames from breaking your build."
 category: "ai-agents"
 tags: ["google-antigravity", "refactoring", "ast-parsing", "engineering"]
 author: "AI Dev Hub"
 readingTime: 6
 createdAt: "2026-05-21"
-updatedAt: "2026-05-21"
+updatedAt: "2026-09-15"
 publishedAt: "2026-05-21T09:00:00Z"
 featured: false
 hideLegacy2026Banner: true
@@ -18,6 +18,8 @@ Every developer knows the pain of large-scale refactoring. Changing a core inter
 If a human engineer can easily miss a cascade file change, how does an autonomous AI agent handle it?
 
 With **Google Antigravity 2.0**, the agent relies on Abstract Syntax Tree (AST) analysis combined with compiled feedback loops to perform complex, multi-file refactorings safely. In this post, we breakdown the technical mechanics behind this process.
+
+> **Quick Answer:** Give Antigravity a single high-level goal (e.g. "rename `getUserData` to `fetchUserProfile(userId, options)` across the project"). It first builds an AST-based call graph to find every affected file, then applies surgical chunk replacements instead of rewriting whole files, then runs the compiler in its sandbox and self-corrects until `tsc --noEmit` is clean. Everything runs in an isolated branch workspace, so a failed refactor rolls back atomically without touching your main branch.
 
 ---
 
@@ -84,5 +86,11 @@ Because Antigravity executes all file modifications in a virtualized branch work
 This fail-safe architecture ensures you never inherit a half-broken codebase.
 
 ---
+---
 
-*In our next post, we will explore how Antigravity handles background execution by orchestrating specialized subagents. Stay tuned for Day 2!*
+## Explore the Complete Google Antigravity Guide Series
+
+- [Start here: install Antigravity, API keys & your first /goal task in 7 steps](/blog/google-antigravity-tutorial-guide)
+- [Write custom rules with agents.md, .rules, strict mode & allow lists](/blog/google-antigravity-custom-rules-tuning)
+- [Cost & latency estimates: what a task actually costs on a Next.js codebase (and how to measure your own)](/blog/google-antigravity-benchmark-2026-09)
+- [Run parallel subagents safely on isolated branches](/blog/google-antigravity-subagent-orchestration)

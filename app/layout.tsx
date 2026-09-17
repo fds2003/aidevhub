@@ -82,6 +82,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="alternate" type="application/rss+xml" title="AI Dev Hub" href="/rss.xml" />
+        <meta name="yandex-verification" content="d457a30b87b5f3f9" />
         <meta name="theme-color" content="#080810" />
         <script
           type="application/ld+json"
